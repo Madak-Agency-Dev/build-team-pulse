@@ -11,6 +11,8 @@
     asana_week: { kind: 'query', tool: 'asana_search_tasks', args: { assignee_any: PEOPLE_IDS, completed: false, due_on_after: '{{today}}', due_on_before: '{{horizon}}', limit: 100, opt_fields: 'name,due_on,assignee.name,projects.name', sort_ascending: true, sort_by: 'due_date' } },
     commitments: { kind: 'file', name: 'commitments' },
     reminders: { kind: 'file', name: 'reminders' },
+    kudos: { kind: 'file', name: 'kudos' },
+    ideas: { kind: 'file', name: 'ideas' },
   };
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },

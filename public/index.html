@@ -309,6 +309,29 @@ html:not(.is-locked) .btp-login { display: none; }
 @media (max-width: 48rem) { #reminders { grid-template-columns: 1fr; } #reminders h3 { padding-top: 0; } .tp-reminders { margin-left: calc(var(--panel-pad) * -1 + var(--panel-inset)); }
   .tp-reminders li { grid-template-columns: 1.125rem minmax(0, 1fr); } .tp-rem-meta { grid-column: 2; text-align: left; } }
 
+/* For you */
+.tp-foryou { margin-bottom: var(--gap); }
+.tp-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-4); }
+.tp-pager { display: inline-flex; align-items: center; gap: .375rem; flex: none; }
+.tp-pager[hidden] { display: none; }
+.tp-pager .tp-navbtn { width: 2rem; height: 2rem; }
+.tp-pager-label { min-width: 5.5rem; text-align: center; font-size: var(--fs-xs); font-weight: 500; color: var(--color-fg-muted); }
+.tp-kudos, .tp-ideas { max-height: 38rem; overflow: auto; scrollbar-width: thin; list-style: none; margin: 0 calc(var(--panel-pad) * -1 + var(--panel-inset)) calc(var(--panel-pad) * -1 + var(--panel-inset)); padding: 0; display: flex; flex-direction: column; gap: 2px; min-height: 3rem; }
+.tp-kudos > li, .tp-ideas > li { padding: var(--sp-4) calc(var(--panel-pad) - var(--panel-inset)); border-radius: var(--panel-r-in); background-color: var(--tint); }
+.tp-kudos > li.tp-empty, .tp-ideas > li.tp-empty { background: none; }
+.tp-fy-head { display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-3); }
+.tp-fy-name { font-size: var(--fs-sm); font-weight: 500; }
+.tp-tag { display: inline-flex; padding: .3rem .5rem; border-radius: var(--r-tiny); background-color: var(--tint); font-size: .75rem; font-weight: 500; line-height: 1; color: var(--color-fg-muted); }
+.tp-fy-head .tp-fy-name + .tp-tag { margin-left: auto; }
+.tp-fy-title { margin: 0 0 var(--sp-1); font-size: var(--fs-md); font-weight: 500; line-height: 1.3; text-wrap: balance; }
+.tp-fy-detail { margin: 0; font-size: var(--fs-sm); line-height: 1.45; color: var(--color-fg-muted); max-width: 62ch; text-wrap: pretty; }
+.tp-say { display: flex; align-items: flex-start; gap: var(--sp-3); margin-top: var(--sp-3); padding: var(--sp-3); border-radius: calc(var(--panel-r-in) - .25rem); background-color: var(--color-panel); }
+.tp-say p { margin: 0; flex: 1; font-size: var(--fs-sm); line-height: 1.45; text-wrap: pretty; }
+.tp-copy { flex: none; padding: .4rem .6rem; border: 0; border-radius: var(--r-tiny); background-color: var(--mk-brand); color: #fff; font-size: .75rem; font-weight: 500; cursor: pointer; }
+.tp-try { display: flex; gap: var(--sp-2); margin: var(--sp-3) 0 0; font-size: var(--fs-sm); line-height: 1.45; text-wrap: pretty; }
+.tp-try span { flex: none; padding: .2rem .4rem; border-radius: var(--r-tiny); background-color: var(--mk-brand); color: #fff; font-size: .6875rem; font-weight: 500; line-height: 1.3; height: fit-content; }
+.tp-src { margin: var(--sp-2) 0 0; font-size: var(--fs-xs); font-style: italic; color: var(--color-fg-faint); }
+
 /* Data states */
 .tp [data-dash-source-state=empty] { color: transparent; }
 .tp [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
@@ -316,7 +339,7 @@ html:not(.is-locked) .btp-login { display: none; }
 /* Motion: staggered arrivals, once */
 @media (prefers-reduced-motion: no-preference) {
   .tp:not(.tp-settled) .tp-meter i { animation: tp-grow 1.1s var(--ease) .25s both; }
-  .tp:not(.tp-settled) #reminders, .tp:not(.tp-settled) #kpis > *, .tp:not(.tp-settled) .tp-people > *, .tp:not(.tp-settled) .tp-grid-2 > * { animation: tp-rise .8s var(--ease) both; }
+  .tp:not(.tp-settled) #reminders, .tp:not(.tp-settled) .tp-foryou > *, .tp:not(.tp-settled) #kpis > *, .tp:not(.tp-settled) .tp-people > *, .tp:not(.tp-settled) .tp-grid-2 > * { animation: tp-rise .8s var(--ease) both; }
   .tp:not(.tp-settled) #kpis > :nth-child(2), .tp:not(.tp-settled) .tp-people > :nth-child(2), .tp:not(.tp-settled) .tp-grid-2 > :nth-child(2) { animation-delay: .07s; }
   .tp:not(.tp-settled) #kpis > :nth-child(3), .tp:not(.tp-settled) .tp-people > :nth-child(3) { animation-delay: .14s; }
   .tp:not(.tp-settled) #kpis > :nth-child(4) { animation-delay: .21s; }
@@ -384,6 +407,23 @@ html:not(.is-locked) .btp-login { display: none; }
     <h3>Reminders</h3>
     <p class="tp-note">Things to come back to. Ask Claude to add, update or check one off.</p>
     <ul class="tp-reminders" data-source="reminders"></ul>
+  </section>
+
+  <section class="tp-grid-2 tp-foryou" id="for-you" aria-label="For you" hidden>
+    <div class="tp-card" id="kudos-card">
+      <div class="tp-card-head">
+        <div><h3>Worth recognizing</h3><p class="tp-note">Specific wins from the standups and Asana, with words you can use. New every weekday at 11 am.</p></div>
+        <div class="tp-pager" data-pager="kudos"><button type="button" class="tp-navbtn" data-dir="1" aria-label="Earlier">‹</button><span class="tp-pager-label"></span><button type="button" class="tp-navbtn" data-dir="-1" aria-label="Later">›</button></div>
+      </div>
+      <ul class="tp-kudos" data-source="kudos"></ul>
+    </div>
+    <div class="tp-card" id="ideas-card">
+      <div class="tp-card-head">
+        <div><h3>Leading the team</h3><p class="tp-note">Ideas for how you lead, run the work and celebrate launches, drawn from this week. New every Friday at 11 am.</p></div>
+        <div class="tp-pager" data-pager="ideas"><button type="button" class="tp-navbtn" data-dir="1" aria-label="Earlier">‹</button><span class="tp-pager-label"></span><button type="button" class="tp-navbtn" data-dir="-1" aria-label="Later">›</button></div>
+      </div>
+      <ul class="tp-ideas" data-source="ideas"></ul>
+    </div>
   </section>
 
   <section id="kpis" class="tp-grid" aria-label="Headline numbers">
@@ -1360,6 +1400,76 @@ function drawReminders() {
   more.textContent = remShowDone ? 'Hide completed' : `Show completed (${done.length})`;
 }
 
+// For you: recognition notes (weekdays) and leadership ideas (Fridays). Only the Vercel site carries these files.
+const fyPos = { kudos: 0, ideas: 0 };
+document.querySelectorAll('.tp-pager').forEach((pg) => pg.addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-dir]'); if (!b || b.disabled) return;
+  fyPos[pg.dataset.pager] += Number(b.dataset.dir);
+  drawForYou();
+}));
+function fyPager(key, keys, label) {
+  const pg = document.querySelector(`.tp-pager[data-pager="${key}"]`);
+  fyPos[key] = Math.max(0, Math.min(fyPos[key], keys.length - 1));
+  const [older, newer] = pg.querySelectorAll('button');
+  older.disabled = fyPos[key] >= keys.length - 1; newer.disabled = fyPos[key] <= 0;
+  pg.querySelector('.tp-pager-label').textContent = keys.length ? label(keys[fyPos[key]]) : '';
+  pg.hidden = keys.length < 2;
+  return keys[fyPos[key]];
+}
+function copyButton(text) {
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'tp-copy'; b.textContent = 'Copy';
+  b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(text); b.textContent = 'Copied'; setTimeout(() => (b.textContent = 'Copy'), 1600); } catch { b.textContent = 'Select and copy'; } });
+  return b;
+}
+function drawForYou() {
+  const sec = $('#for-you');
+  const k = dash.data('kudos'), id = dash.data('ideas');
+  const has = (d) => d.status === 'ok' || d.status === 'loading';
+  sec.hidden = !(has(k) || has(id));
+  if (sec.hidden) return;
+  const P = who();
+  const ku = $('.tp-kudos'); ku.replaceChildren(); ku.classList.toggle('dash-skeleton', k.status === 'loading');
+  if (k.status === 'ok') {
+    const dates = [...new Set(k.data.map((r) => r.date))].sort().reverse();
+    const day = fyPager('kudos', dates, (d) => dayLabel(d));
+    const rows = k.data.filter((r) => r.date === day && (!P || r.person === P)).sort((a, b) => PEOPLE.indexOf(a.person) - PEOPLE.indexOf(b.person));
+    for (const r of rows) {
+      const li = document.createElement('li');
+      const head = document.createElement('div'); head.className = 'tp-fy-head';
+      const name = document.createElement('span'); name.className = 'tp-fy-name'; name.textContent = r.person;
+      head.append(face(r.person), name);
+      if (r.where) { const w = document.createElement('span'); w.className = 'tp-tag'; w.textContent = r.where; head.appendChild(w); }
+      const h = document.createElement('p'); h.className = 'tp-fy-title'; h.textContent = r.headline;
+      const why = document.createElement('p'); why.className = 'tp-fy-detail'; why.textContent = r.why;
+      li.append(head, h, why);
+      if (r.say) {
+        const q = document.createElement('div'); q.className = 'tp-say';
+        const t = document.createElement('p'); t.textContent = '“' + r.say + '”';
+        q.append(t, copyButton(r.say)); li.appendChild(q);
+      }
+      ku.appendChild(li);
+    }
+    if (!rows.length) { const li = document.createElement('li'); li.className = 'tp-empty'; li.textContent = P ? `Nothing for ${P} on this day.` : 'Nothing logged for this day.'; ku.appendChild(li); }
+  }
+  const il = $('.tp-ideas'); il.replaceChildren(); il.classList.toggle('dash-skeleton', id.status === 'loading');
+  if (id.status === 'ok') {
+    const weeks = [...new Set(id.data.map((r) => r.week_of))].sort().reverse();
+    const wk = fyPager('ideas', weeks, (w) => 'Week of ' + shortDay(w));
+    for (const r of id.data.filter((x) => x.week_of === wk)) {
+      const li = document.createElement('li');
+      const head = document.createElement('div'); head.className = 'tp-fy-head';
+      const tag = document.createElement('span'); tag.className = 'tp-tag'; tag.textContent = r.category;
+      head.appendChild(tag);
+      const h = document.createElement('p'); h.className = 'tp-fy-title'; h.textContent = r.title;
+      const d = document.createElement('p'); d.className = 'tp-fy-detail'; d.textContent = r.detail;
+      li.append(head, h, d);
+      if (r.try) { const t = document.createElement('p'); t.className = 'tp-try'; const b = document.createElement('span'); b.textContent = 'Try'; t.append(b, r.try); li.appendChild(t); }
+      if (r.source) { const src = document.createElement('p'); src.className = 'tp-src'; src.textContent = r.source; li.appendChild(src); }
+      il.appendChild(li);
+    }
+  }
+}
+
 function personCard(p) {
   const card = document.createElement('div');
   card.className = 'tp-card tp-person';
@@ -1593,6 +1703,7 @@ dash.onData(() => {
   setText($('.tp-take-overdue2'), team ? num(team.overdue) : '—', !!team);
 
   drawReminders();
+  drawForYou();
   syncLegends();
   if (R) drawRangeView(c, d); else drawStandupView(d);
   drawHistory(c);

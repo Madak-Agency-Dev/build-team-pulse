@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { isAuthed, deny } from '../lib/auth.js';
 
-const FILES = { commitments: 'commitments.json', reminders: 'reminders.json' };
+const FILES = { commitments: 'commitments.json', reminders: 'reminders.json', kudos: 'kudos.json', ideas: 'ideas.json' };
 
 export default function handler(req, res) {
   if (!isAuthed(req)) return deny(res);
