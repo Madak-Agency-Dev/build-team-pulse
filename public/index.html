@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="en" class="is-locked" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark light">
+<title>Build Team Pulse · Madak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try { if (localStorage.getItem('btp-mode') === 'light') document.documentElement.dataset.mode = 'light'; } catch (e) {}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+/* Base tokens the page expects from its host, plus the sign-in screen. */
+:root { --cds-font-size-caption: .75rem; --cds-dur-slow: .3s; }
+html, body { margin: 0; min-height: 100%; }
+html { background: #141213; }
+html[data-mode="light"] { background: #f2f2f3; }
+body { font-family: 'Founders Grotesk', 'Inter Tight', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+#dash-root { position: relative; }
+.tp[data-mode] { min-height: 100vh; }
+html.is-locked #dash-root { display: none; }
+html:not(.is-locked) .btp-login { display: none; }
+.tp .dash-skeleton { color: transparent !important; position: relative; }
+.tp .dash-skeleton::after { content: ""; position: absolute; left: 0; top: 50%; width: min(100%, 4.5rem); height: .7em; transform: translateY(-50%); border-radius: .375rem;
+  background: linear-gradient(90deg, var(--color-raised) 0%, color-mix(in srgb, var(--color-raised) 40%, var(--color-panel)) 50%, var(--color-raised) 100%); background-size: 200% 100%; animation: btp-shimmer 1.4s linear infinite; }
+.tp b.dash-skeleton, .tp span.dash-skeleton { display: inline-block; min-width: 2.5ch; }
+@keyframes btp-shimmer { to { background-position: -200% 0; } }
+.tp-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; padding-top: 1.5rem; margin-top: .5rem;
+  border-top: 1px solid var(--color-border-line); font-size: .75rem; color: var(--color-fg-faint); }
+.tp-signout { border: 0; background: none; padding: 0; color: var(--color-fg-muted); font-size: .75rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.tp-signout:hover { color: var(--color-fg); }
+
+.btp-login { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; box-sizing: border-box; color: #f4f3f4;
+  background: radial-gradient(60rem 40rem at 50% -10%, rgba(0,34,252,.22), transparent 60%), #141213; }
+html[data-mode="light"] .btp-login { color: #1f1d1e; background: radial-gradient(60rem 40rem at 50% -10%, rgba(0,34,252,.10), transparent 60%), #f2f2f3; }
+.btp-login form { width: min(100%, 23rem); display: flex; flex-direction: column; gap: 1rem; }
+.btp-login .eb { margin: 0; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; opacity: .5; }
+.btp-login h1 { margin: 0 0 .5rem; font-weight: 500; font-size: 2.5rem; line-height: 1; letter-spacing: -0.045em; }
+.btp-login label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.btp-login input { height: 3rem; padding: 0 1.25rem; border-radius: 100vw; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); color: inherit; font: inherit; font-size: 1rem; outline: none; transition: border-color .2s; }
+html[data-mode="light"] .btp-login input { border-color: rgba(31,29,30,.14); background: #fff; }
+.btp-login input:focus { border-color: #6677ff; }
+.btp-login button { height: 3rem; border: 0; border-radius: 100vw; background: #0022fc; color: #fff; font: inherit; font-size: .9375rem; font-weight: 500; cursor: pointer;
+  box-shadow: 0 10px 24px -10px rgba(0,34,252,.8); transition: transform .2s cubic-bezier(.2,.8,.2,1), background-color .2s; }
+.btp-login button:hover { background: #1a39ff; } .btp-login button:active { transform: scale(.98); } .btp-login button:disabled { opacity: .6; cursor: default; }
+.btp-login-msg { min-height: 1.25rem; margin: 0; font-size: .8125rem; opacity: .7; }
+.btp-login-msg.is-bad { color: #ff7079; opacity: 1; }
+</style>
+</head>
+<body>
+
+<main class="btp-login">
+  <form autocomplete="on">
+    <p class="eb">Madak&ensp;/&ensp;Build team</p>
+    <h1>Build team pulse</h1>
+    <label for="btp-pw">Team password</label>
+    <input id="btp-pw" name="password" type="password" placeholder="Team password" autocomplete="current-password" required>
+    <button type="submit">Sign in</button>
+    <p class="btp-login-msg" role="status"></p>
+  </form>
+</main>
+<script>
+(function () {
+  const form = document.querySelector('.btp-login form');
+  const msg = document.querySelector('.btp-login-msg');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button'); btn.disabled = true; msg.className = 'btp-login-msg'; msg.textContent = '';
+    try {
+      const r = await fetch('/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: form.password.value }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok) { form.reset(); window.btpAuth.unlock(); return; }
+      msg.className = 'btp-login-msg is-bad'; msg.textContent = j.error || 'Sign-in failed.';
+    } catch { msg.className = 'btp-login-msg is-bad'; msg.textContent = 'Couldn’t reach the server.'; }
+    finally { btn.disabled = false; }
+  });
+  document.addEventListener('click', async (e) => {
+    if (!e.target.closest('.tp-signout')) return;
+    await fetch('/api/login', { method: 'DELETE' }).catch(() => {});
+    location.reload();
+  });
+})();
+</script>
+
+<style>
+/* Build team pulse: Madak theme, from madak.com's Lumos variables
+   (brand-500 #0022fc, dark-900 #1f1d1e, dark-800 #2f2b2d, light-200 #ececef, yellow #e5ff52). */
+#dash-root { --dash-gutter: 0; }
+
+.tp {
+  --mk-font: 'Founders Grotesk', 'Inter Tight', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mk-brand: #0022fc;
+  --r-lg: 1.25rem; --r-md: .875rem; --r-sm: .625rem; --r-pill: 100vw;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --sp-1: .25rem; --sp-2: .5rem; --sp-3: .75rem; --sp-4: 1rem; --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem;
+  --fs-xs: .75rem; --fs-sm: .8125rem; --fs-md: .9375rem; --fs-lg: 1.0625rem;
+}
+.tp[data-mode="dark"] {
+  --color-bg: #141213; --color-panel: #1f1d1e; --color-raised: #2a2729; --color-fg: #f4f3f4; --color-fg-muted: #9b9799; --color-fg-faint: #6c686a;
+  --color-border-line: rgba(255,255,255,.07); --color-border-strong: rgba(255,255,255,.14);
+  --color-ok: #5fe3a8; --color-warn: #e5ff52; --color-bad: #ff7079;
+  --cds-chart-grid: rgba(255,255,255,.06); --cds-chart-axis: rgba(255,255,255,.14); --cds-chart-status-critical: #ff7079; --cds-chart-muted: #4a4648;
+  --cds-surface-popover: #2a2729; --cds-border: rgba(255,255,255,.1); --cds-text-secondary: #9b9799; --cds-shadow-popover: 0 16px 40px -8px rgba(0,0,0,.6);
+  --mk-c0: #7887ff; --mk-c1: #e5ff52; --mk-c2: #d26bff;
+  --shadow-card: 0 1px 0 rgba(255,255,255,.03) inset;
+  --track: #2a2729; --knob: #f4f3f4; --knob-ink: #1f1d1e;
+  color-scheme: dark;
+}
+.tp[data-mode="light"] {
+  --color-bg: #f2f2f3; --color-panel: #ffffff; --color-raised: #f2f2f3; --color-fg: #1f1d1e; --color-fg-muted: #6a6668; --color-fg-faint: #9c989a;
+  --color-border-line: rgba(31,29,30,.08); --color-border-strong: rgba(31,29,30,.16);
+  --color-ok: #0b8457; --color-warn: #8f6a00; --color-bad: #d42a36;
+  --cds-chart-grid: rgba(31,29,30,.07); --cds-chart-axis: rgba(31,29,30,.18); --cds-chart-status-critical: #e5434e; --cds-chart-muted: #d0cdcf;
+  --cds-surface-popover: #ffffff; --cds-border: rgba(31,29,30,.1); --cds-text-secondary: #6a6668; --cds-shadow-popover: 0 16px 40px -12px rgba(31,29,30,.22);
+  --mk-c0: #0022fc; --mk-c1: #6b7d00; --mk-c2: #a42ed6;
+  --shadow-card: 0 1px 2px rgba(31,29,30,.04), 0 8px 24px -16px rgba(31,29,30,.12);
+  --track: #e3e2e4; --knob: #ffffff; --knob-ink: #1f1d1e;
+  color-scheme: light;
+}
+
+/* Canvas */
+.tp { min-height: 100vh; background: var(--color-bg); color: var(--color-fg); padding: clamp(1.25rem, 4vw, 3.5rem) clamp(1rem, 4vw, 3.5rem) var(--sp-7);
+  display: flex; flex-direction: column; gap: var(--sp-5); transition: background-color .4s var(--ease), color .4s var(--ease);
+  -webkit-font-smoothing: antialiased; }
+.tp > * { width: 100%; max-width: 82rem; margin-inline: auto; }
+.tp, .tp * { font-family: var(--mk-font); }
+.tp, .tp *, .tp *::before, .tp *::after { box-sizing: border-box; }
+.tp ::selection { background: var(--mk-brand); color: #fff; }
+.tp :focus-visible { outline: 2px solid var(--mk-c0); outline-offset: 2px; border-radius: var(--r-sm); }
+.tp button { font: inherit; color: inherit; }
+
+/* Header */
+.tp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-5); padding-bottom: var(--sp-2); }
+.tp-head-text { min-width: 0; max-width: 46rem; }
+.tp-eyebrow { margin: 0 0 var(--sp-3); font-size: var(--fs-xs); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--color-fg-faint); }
+.tp-title { margin: 0 0 var(--sp-4); font-weight: 500; font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: .95; letter-spacing: -0.045em; }
+.tp-take { margin: 0; font-size: var(--fs-lg); line-height: 1.5; color: var(--color-fg-muted); text-wrap: pretty; }
+.tp .tp-take b { font-weight: 500; color: var(--color-fg); }
+
+/* Theme switch */
+.tp-theme { position: relative; flex: none; width: 3.5rem; height: 2rem; padding: 0; border: 1px solid var(--color-border-line); border-radius: var(--r-pill);
+  background: var(--track); cursor: pointer; transition: background-color .4s var(--ease), border-color .2s; }
+.tp-theme:hover { border-color: var(--color-border-strong); }
+.tp-theme-knob { position: absolute; top: 3px; left: 3px; width: calc(2rem - 8px); height: calc(2rem - 8px); border-radius: 50%; background: var(--knob); color: var(--knob-ink);
+  box-shadow: 0 2px 6px rgba(0,0,0,.25); transition: transform .45s var(--ease), background-color .4s var(--ease); }
+.tp[data-mode="light"] .tp-theme-knob { transform: translateX(1.5rem); }
+.tp-theme svg { position: absolute; inset: 0; margin: auto; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .5s var(--ease), opacity .3s var(--ease); }
+.tp[data-mode="dark"] .i-sun, .tp[data-mode="light"] .i-moon { opacity: 0; transform: rotate(-90deg) scale(.4); }
+.tp[data-mode="dark"] .i-moon, .tp[data-mode="light"] .i-sun { opacity: 1; transform: none; }
+.tp .i-moon { fill: currentColor; stroke: none; }
+
+/* Toolbar */
+.tp-rangebar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); padding: var(--sp-2); background: var(--color-panel);
+  border: 1px solid var(--color-border-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); position: sticky; top: var(--sp-3); z-index: 5;
+  transition: background-color .4s var(--ease); }
+.tp-ctx { display: flex; align-items: center; gap: var(--sp-2); min-height: 2.25rem; }
+.tp-ctx:empty { display: none; }
+.tp-tb-spacer { flex: 1 1 0; }
+.tp-seg, .tp-pp { position: relative; display: inline-flex; max-width: 100%; overflow-x: auto; scrollbar-width: none; padding: 3px; border-radius: var(--r-pill); background: var(--color-raised); isolation: isolate; }
+.tp-seg button, .tp-pp button { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--sp-2); height: 2rem; padding: 0 var(--sp-4);
+  border: 0; border-radius: var(--r-pill); background: transparent; color: var(--color-fg-muted); font-size: var(--fs-sm); font-weight: 500; cursor: pointer; white-space: nowrap;
+  transition: color .25s var(--ease); }
+.tp-seg button:hover, .tp-pp button:hover { color: var(--color-fg); }
+.tp-seg button[aria-pressed="true"] { color: #fff; }
+.tp-pp button[aria-pressed="true"] { color: var(--color-fg); }
+.tp-seg-ind { position: absolute; z-index: 0; top: 3px; left: 0; height: calc(100% - 6px); width: 0; border-radius: var(--r-pill); background: var(--mk-brand); pointer-events: none;
+  box-shadow: 0 6px 16px -6px rgba(0,34,252,.6); }
+.tp-pp .tp-seg-ind { background: var(--color-panel); box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 0 1px var(--color-border-line); }
+.tp-seg-ind.is-live { transition: transform .4s var(--ease), width .4s var(--ease); }
+.tp-dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--pc, var(--color-fg-faint)); flex: none; }
+.tp-pp .tp-team-dot { background: conic-gradient(var(--mk-c0) 0 33%, var(--mk-c1) 0 66%, var(--mk-c2) 0); }
+.tp-select { position: relative; display: inline-flex; align-items: center; }
+.tp-select::after { content: ""; position: absolute; right: .9rem; width: .4rem; height: .4rem; border-right: 1.5px solid var(--color-fg-muted); border-bottom: 1.5px solid var(--color-fg-muted);
+  transform: translateY(-2px) rotate(45deg); pointer-events: none; }
+.tp-day, .tp-from, .tp-to { appearance: none; -webkit-appearance: none; height: 2.25rem; padding: 0 2.25rem 0 var(--sp-4); border: 1px solid var(--color-border-line); border-radius: var(--r-pill);
+  background: transparent; color: var(--color-fg); font: inherit; font-size: var(--fs-sm); font-weight: 500; cursor: pointer; transition: border-color .2s; }
+.tp-from, .tp-to { padding-right: var(--sp-3); }
+.tp-day:hover, .tp-from:hover, .tp-to:hover { border-color: var(--color-border-strong); }
+.tp-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.tp-nav { display: inline-flex; align-items: center; gap: var(--sp-1); }
+.tp-navbtn { width: 2.25rem; height: 2.25rem; display: inline-grid; place-items: center; border: 1px solid var(--color-border-line); border-radius: 50%; background: transparent;
+  color: var(--color-fg); font-size: 1.1rem; line-height: 1; cursor: pointer; transition: border-color .2s, background-color .2s; }
+.tp-navbtn:hover:not(:disabled) { border-color: var(--color-border-strong); background: var(--color-raised); }
+.tp-navbtn:disabled { opacity: .35; cursor: default; }
+.tp-navlabel { min-width: 9.5rem; text-align: center; font-size: var(--fs-sm); font-weight: 500; font-variant-numeric: tabular-nums; }
+.tp-custom { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); font-size: var(--fs-sm); color: var(--color-fg-faint); }
+
+/* View switches (kept from the page's logic) */
+.tp.is-range .tp-only-standup { display: none !important; }
+.tp:not(.is-range) .tp-only-range { display: none !important; }
+.tp:not(.is-period) .tp-only-period { display: none !important; }
+.tp:not(.is-custom) .tp-only-custom { display: none !important; }
+.tp:not(.is-range) .tp-range-col { display: none; }
+
+/* Layout */
+.tp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--sp-4); }
+.tp-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: var(--sp-4); }
+.tp-card { min-width: 0; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--r-lg); padding: var(--sp-5); box-shadow: var(--shadow-card);
+  transition: background-color .4s var(--ease), border-color .2s; }
+.tp-card h3 { margin: 0; font-size: var(--fs-md); font-weight: 500; letter-spacing: -0.01em; }
+.tp-note { margin: var(--sp-1) 0 var(--sp-5); font-size: var(--fs-sm); line-height: 1.45; color: var(--color-fg-muted); max-width: 62ch; }
+.tp-section-title { margin: var(--sp-4) 0 0; font-size: clamp(1.25rem, 2.2vw, 1.625rem); font-weight: 500; letter-spacing: -0.025em; }
+#people > .tp-note { margin-bottom: var(--sp-4); }
+
+/* Headline strip: one panel, four cells */
+#kpis { gap: 0; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); transition: background-color .4s var(--ease); }
+#kpis > .tp-card { background: none; border: 0; border-radius: 0; box-shadow: -1px -1px 0 var(--color-border-line); padding: var(--sp-5) var(--sp-5) var(--sp-5); }
+.tp-kpi-label { margin: 0 0 var(--sp-4); font-size: var(--fs-xs); font-weight: 500; color: var(--color-fg-muted); }
+.tp-kpi-value { font-weight: 500; font-size: clamp(2.25rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.045em; font-variant-numeric: tabular-nums; min-height: 1em; }
+.tp-kpi-sub { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.tp-up { color: var(--color-ok); } .tp-down { color: var(--color-bad); }
+
+/* People */
+.tp-person { display: flex; flex-direction: column; gap: var(--sp-3); }
+.tp-person-head { display: flex; align-items: center; gap: var(--sp-3); font-size: var(--fs-md); font-weight: 500; margin-bottom: var(--sp-2); }
+.tp-avatar { width: 2rem; height: 2rem; border-radius: 50%; display: inline-grid; place-items: center; font-size: var(--fs-sm); font-weight: 600;
+  color: var(--pc); background: color-mix(in srgb, var(--pc) 14%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--pc) 30%, transparent); }
+.tp-person .tp-kpi-value { font-size: clamp(2rem, 3.4vw, 2.5rem); }
+.tp-meter { height: 4px; border-radius: var(--r-pill); background: var(--color-raised); overflow: hidden; }
+.tp-meter i { display: block; height: 100%; width: calc(var(--rate, 0) * 100%); border-radius: inherit; background: var(--pc); transform-origin: left; }
+.tp-person .tp-kpi-sub { margin-top: 0; }
+
+/* Charts */
+.tp-swatch { width: .5rem; height: .5rem; border-radius: 50%; display: inline-block; flex: none; }
+.tp-chart { position: relative; min-height: 240px; }
+.tp-chart svg { display: block; overflow: visible; }
+.tp-legend { display: flex; flex-wrap: wrap; gap: var(--sp-4); margin: calc(var(--sp-2) * -1) 0 var(--sp-4); font-size: var(--fs-xs); color: var(--color-fg-muted); }
+.tp-legend span { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.tp-tip { position: absolute; z-index: 3; padding: var(--sp-2) var(--sp-3); background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--r-sm);
+  box-shadow: var(--cds-shadow-popover); font-size: var(--fs-xs); pointer-events: none; white-space: nowrap; }
+.tp-tip-head { color: var(--cds-text-secondary); margin-bottom: var(--sp-1); }
+.tp-tip-line { display: flex; align-items: center; gap: var(--sp-2); font-variant-numeric: tabular-nums; line-height: 1.6; }
+.tp .tp-tip-line b { font-weight: 500; }
+.tp-fail { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: var(--sp-2); min-height: inherit; font-size: var(--fs-xs); color: var(--color-fg-muted); }
+.tp-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.tp-empty { padding: var(--sp-3) 0; font-size: var(--fs-sm); color: var(--color-fg-faint); }
+
+/* Tables */
+.tp-tablewrap { container-type: inline-size; }
+.tp-tablebox { max-height: 26rem; overflow: auto; margin: 0 calc(var(--sp-5) * -1) calc(var(--sp-5) * -1); padding: 0 var(--sp-5) var(--sp-3); scrollbar-width: thin; }
+.tp-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.tp-table th { position: sticky; top: 0; z-index: 1; background: var(--color-panel); text-align: left; font-size: var(--fs-xs); font-weight: 500; color: var(--color-fg-faint);
+  padding: 0 var(--sp-3) var(--sp-3) 0; border-bottom: 1px solid var(--color-border-line); }
+.tp-table td { padding: var(--sp-3) var(--sp-3) var(--sp-3) 0; border-bottom: 1px solid var(--color-border-line); vertical-align: top; line-height: 1.45; }
+.tp-table td:first-child { color: var(--color-fg-muted); white-space: nowrap; }
+.tp-table tr:last-child td { border-bottom: none; }
+.tp-table tbody tr { transition: background-color .15s; }
+.tp-table tbody tr:hover td { color: var(--color-fg); }
+.tp-chip { display: inline-flex; align-items: center; gap: var(--sp-2); white-space: nowrap; color: var(--color-fg); font-size: var(--fs-sm); }
+.tp-chip::before { content: ""; width: .4375rem; height: .4375rem; border-radius: 50%; background: var(--st, var(--color-fg-faint)); }
+.tp-chip.s-done, .tp-chip.s-handoff { --st: var(--color-ok); }
+.tp-chip.s-progress { --st: var(--color-warn); }
+.tp-chip.s-missed { --st: var(--color-bad); }
+.tp-chip.s-waiting, .tp-chip.s-pending { --st: var(--color-fg-faint); color: var(--color-fg-muted); }
+.tp-search { width: min(100%, 20rem); height: 2.25rem; margin-bottom: var(--sp-4); padding: 0 var(--sp-4); border: 1px solid var(--color-border-line); border-radius: var(--r-pill);
+  background: var(--color-bg); color: var(--color-fg); font: inherit; font-size: var(--fs-sm); transition: border-color .2s; }
+.tp-search:focus { border-color: var(--color-border-strong); outline: none; }
+.tp-search::placeholder { color: var(--color-fg-faint); }
+.tp-hide-narrow { }
+@container (max-width: 34rem) { .tp-hide-narrow { display: none; } }
+
+/* Reminders */
+#reminders { padding-block: var(--sp-4); display: grid; grid-template-columns: minmax(7rem, max-content) 1fr; align-items: start; gap: var(--sp-2) var(--sp-5); }
+#reminders h3 { padding-top: .1rem; font-size: var(--fs-xs); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--color-fg-faint); }
+#reminders .tp-note { display: none; }
+.tp-reminders { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 1.5rem; }
+.tp-reminders li { display: grid; grid-template-columns: .75rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--sp-1) var(--sp-3); padding: var(--sp-2) 0; font-size: var(--fs-md); border-top: 1px solid var(--color-border-line); }
+.tp-reminders li:first-child { border-top: 0; padding-top: 0; }
+.tp-reminders li:last-child { padding-bottom: 0; }
+.tp-reminders li::before { content: ""; flex: none; width: .75rem; height: .75rem; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--color-fg-faint); transform: translateY(1px); }
+.tp-reminders li.is-done { color: var(--color-fg-faint); text-decoration: line-through; }
+.tp-reminders li.is-done::before { background: var(--color-ok); box-shadow: none; }
+.tp-rem-meta { font-size: var(--fs-xs); color: var(--color-fg-faint); text-align: right; max-width: 28rem; }
+@media (max-width: 40rem) { #reminders { grid-template-columns: 1fr; } .tp-reminders li { grid-template-columns: .75rem minmax(0, 1fr); } .tp-rem-meta { grid-column: 2; text-align: left; } }
+
+/* Data states */
+.tp [data-dash-source-state=empty] { color: transparent; }
+.tp [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+
+/* Motion */
+@media (prefers-reduced-motion: no-preference) {
+  .tp:not(.tp-settled) .tp-meter i { animation: tp-grow .9s var(--ease) both; }
+  .tp:not(.tp-settled) #kpis, .tp:not(.tp-settled) .tp-people > *, .tp:not(.tp-settled) .tp-grid-2 > * { animation: tp-rise .6s var(--ease) both; }
+  .tp:not(.tp-settled) .tp-people > :nth-child(2), .tp:not(.tp-settled) .tp-grid-2 > :nth-child(2) { animation-delay: .06s; }
+  .tp:not(.tp-settled) .tp-people > :nth-child(3) { animation-delay: .12s; }
+}
+@keyframes tp-grow { from { transform: scaleX(0); } }
+@keyframes tp-rise { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .tp, .tp * { transition: none !important; } }
+@media (max-width: 40rem) { .tp-tb-spacer { display: none; } .tp-rangebar { position: static; } }
+</style>
+<div id="dash-root">
+<div class="tp" data-mode="dark">
+  <header class="tp-head">
+    <div class="tp-head-text">
+      <p class="tp-eyebrow">Madak&ensp;/&ensp;Build team</p>
+      <h1 class="tp-title" id="top">Build team pulse</h1>
+      <p class="tp-take tp-only-standup" id="takeaway"><span class="tp-take-prev"></span> standup: <b data-source="day_summary" data-field="rate" class="tp-take-rate dash-skeleton">—</b> of commitments landed (<span data-source="day_summary" data-field="completed" class="tp-take-done">—</span> of <span data-source="day_summary" data-field="checked" class="tp-take-checked">—</span>). <b data-source="workload" data-field="overdue" data-where="person=Team" class="tp-take-overdue">—</b> Asana tasks are overdue <span class="tp-who-across">across the team</span>.</p>
+      <p class="tp-take tp-only-range" id="takeaway-range"><span class="tp-range-cap"></span>: <b class="tp-rt-rate dash-skeleton">—</b> of graded commitments landed (<span class="tp-rt-landed">—</span> of <span class="tp-rt-checked">—</span>) and <b class="tp-rt-closed">—</b> Asana tasks were closed. <b data-source="workload" data-field="overdue" data-where="person=Team" class="tp-take-overdue2">—</b> Asana tasks are overdue right now <span class="tp-who-across">across the team</span>.</p>
+    </div>
+    <button type="button" class="tp-theme" aria-label="Switch to light theme" title="Switch theme">
+      <span class="tp-theme-knob">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      </span>
+    </button>
+  </header>
+
+  <div class="tp-rangebar" id="range">
+    <div class="tp-seg" role="group" aria-label="View">
+      <span class="tp-seg-ind" aria-hidden="true"></span>
+      <button type="button" data-view="standup" aria-pressed="true">Standup</button>
+      <button type="button" data-view="week" aria-pressed="false">Week</button>
+      <button type="button" data-view="month" aria-pressed="false">Month</button>
+      <button type="button" data-view="year" aria-pressed="false">Year</button>
+      <button type="button" data-view="custom" aria-pressed="false">Custom</button>
+    </div>
+    <div class="tp-ctx">
+    <label class="tp-select tp-only-standup"><span class="tp-vh">Standup</span>
+      <select class="tp-day" aria-label="Standup date" data-source="commitments"></select>
+    </label>
+    <div class="tp-nav tp-only-period">
+      <button type="button" class="tp-navbtn tp-prev" aria-label="Previous period">‹</button>
+      <span class="tp-navlabel tp-range-cap"></span>
+      <button type="button" class="tp-navbtn tp-next" aria-label="Next period">›</button>
+    </div>
+    <div class="tp-custom tp-only-custom">
+      <input class="tp-from" type="date" min="2020-01-01" max="2099-12-31" aria-label="From">
+      <span>to</span>
+      <input class="tp-to" type="date" min="2020-01-01" max="2099-12-31" aria-label="To">
+    </div>
+    </div>
+    <div class="tp-tb-spacer"></div>
+    <div class="tp-pp" role="group" aria-label="Person">
+      <span class="tp-seg-ind" aria-hidden="true"></span>
+      <button type="button" data-person="" aria-pressed="true"><i class="tp-dot tp-team-dot"></i>Team</button>
+      <button type="button" data-person="Blair" aria-pressed="false"><i class="tp-dot" style="--pc: var(--mk-c0)"></i>Blair</button>
+      <button type="button" data-person="David" aria-pressed="false"><i class="tp-dot" style="--pc: var(--mk-c1)"></i>David</button>
+      <button type="button" data-person="Jamie" aria-pressed="false"><i class="tp-dot" style="--pc: var(--mk-c2)"></i>Jamie</button>
+    </div>
+    <select class="tp-person-sel" aria-hidden="true" tabindex="-1" hidden>
+      <option value="">Whole team</option><option>Blair</option><option>David</option><option>Jamie</option>
+    </select>
+  </div>
+
+  <section class="tp-card" id="reminders">
+    <h3>Reminders</h3>
+    <p class="tp-note">Things to come back to. Ask Claude to add, update or check one off.</p>
+    <ul class="tp-reminders" data-source="reminders"></ul>
+  </section>
+
+  <section id="kpis" class="tp-grid" aria-label="Headline numbers">
+    <div class="tp-card" id="kpi-followthrough">
+      <p class="tp-kpi-label">Follow-through, <span class="tp-only-standup tp-prev-label">previous standup</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-value dash-skeleton tp-k1" data-source="day_summary" data-field="rate">—</div>
+      <div class="tp-kpi-sub"><span class="tp-k1-done" data-source="day_summary" data-field="completed">—</span> of <span class="tp-k1-checked" data-source="day_summary" data-field="checked">—</span> done or handed off</div>
+    </div>
+    <div class="tp-card" id="kpi-committed">
+      <p class="tp-kpi-label">Committed, <span class="tp-only-standup tp-sel-label">this standup</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-value dash-skeleton tp-k2" data-source="day_summary" data-field="total">—</div>
+      <div class="tp-kpi-sub"><span class="tp-only-standup">to report on at the next standup</span><span class="tp-only-range">across <span class="tp-k2-standups">—</span> <span class="tp-k2-word">standups</span></span></div>
+    </div>
+    <div class="tp-card" id="kpi-closed">
+      <p class="tp-kpi-label">Asana tasks closed, <span class="tp-only-standup tp-week-label">this week</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-value dash-skeleton tp-k3" data-source="weekly_done" data-field="n">—</div>
+      <div class="tp-kpi-sub"><span class="tp-k3-change" data-source="weekly_done" data-field="change">—</span> <span class="tp-only-standup">vs the week before</span><span class="tp-only-range tp-k3-vs"></span></div>
+    </div>
+    <div class="tp-card" id="kpi-overdue">
+      <p class="tp-kpi-label">Overdue in Asana, <span class="tp-who-label">team</span><span class="tp-only-range">, right now</span></p>
+      <div class="tp-kpi-value dash-skeleton tp-k4" data-source="workload" data-field="overdue" data-where="person=Team">—</div>
+      <div class="tp-kpi-sub"><span class="tp-k4-week" data-source="workload" data-field="this_week" data-where="person=Team">—</span> more due in the next 7 days</div>
+    </div>
+  </section>
+
+  <section id="people" aria-labelledby="people-title">
+    <h2 class="tp-section-title" id="people-title">How each person landed, <span class="tp-only-standup tp-prev-label">previous standup</span><span class="tp-only-range tp-range-label"></span></h2>
+    <p class="tp-note"><span class="tp-only-standup">Done or handed off, out of the commitments they named. Progress and waiting items don't count yet.</span><span class="tp-only-range">Done or handed off, out of their graded commitments in this range, plus the Asana tasks closed that they worked on.</span></p>
+    <div class="tp-grid tp-people"></div>
+  </section>
+
+  <section class="tp-grid-2" aria-label="Standup detail">
+    <div class="tp-card" id="committed-card">
+      <h3><span class="tp-only-standup">Committed at <span class="tp-sel-label">this standup</span></span><span class="tp-only-range">Committed in <span class="tp-range-label"></span></span></h3>
+      <p class="tp-note"><span class="tp-only-standup">What each person said they'd get done. Graded at the next standup.</span><span class="tp-only-range">Every commitment made at a standup in this range, newest first.</span></p>
+      <div class="tp-tablewrap tp-tablebox">
+        <table class="tp-table tp-committed" data-source="commitments" data-row-key="id">
+          <thead><tr><th data-field="standup_date" class="tp-range-col">Standup</th><th data-field="person">Person</th><th data-field="commitment">Commitment</th><th data-field="project" class="tp-hide-narrow">Project</th><th data-field="status">Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tp-card" id="landed-card">
+      <h3><span class="tp-only-standup">How <span class="tp-prev-label">the previous standup</span> landed</span><span class="tp-only-range">Didn’t land in <span class="tp-range-label"></span></span></h3>
+      <p class="tp-note"><span class="tp-only-standup">Graded from the next day's standup and Asana activity.</span><span class="tp-only-range">Commitments from this range still in progress, waiting or missed.</span></p>
+      <div class="tp-tablewrap tp-tablebox">
+        <table class="tp-table tp-landed" data-source="commitments" data-row-key="id">
+          <thead><tr><th data-field="standup_date" class="tp-range-col">Standup</th><th data-field="person">Person</th><th data-field="commitment">Commitment</th><th data-field="status">Status</th><th data-field="evidence" class="tp-hide-narrow">Evidence</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-grid-2" aria-label="Trends">
+    <div class="tp-card" id="followthrough-chart-card">
+      <h3><span class="tp-only-standup">Follow-through by standup</span><span class="tp-only-range">Follow-through by <span class="tp-grain"></span></span></h3>
+      <p class="tp-note"><span class="tp-only-standup">Share of each person's commitments done or handed off, per standup.</span><span class="tp-only-range">Share of each person's graded commitments done or handed off, per <span class="tp-grain"></span>, <span class="tp-range-label"></span>.</span></p>
+      <div class="tp-legend tp-people-legend"></div>
+      <div class="tp-chart" id="followthrough-chart" data-source="followthrough"></div>
+    </div>
+    <div class="tp-card" id="closed-chart-card">
+      <h3>Asana tasks closed per <span class="tp-only-standup">day</span><span class="tp-only-range tp-grain"></span></h3>
+      <p class="tp-note"><span class="tp-only-standup">Last 30 days</span><span class="tp-only-range tp-range-cap"></span>, by the day a task was marked complete (Eastern time). Each person gets credit for tasks they’re assigned, commented on, or are a collaborator on, whoever checked it off. A shared task counts once in the total.</p>
+      <div class="tp-legend tp-people-legend"></div>
+      <div class="tp-chart" id="closed-chart" data-source="completions_daily"></div>
+    </div>
+  </section>
+
+  <section class="tp-grid-2" aria-label="Load and activity">
+    <div class="tp-card" id="load-card">
+      <h3>Open load in Asana</h3>
+      <p class="tp-note">Incomplete tasks with a due date: overdue, and due in the next 7 days. A snapshot of right now, whatever range is picked.</p>
+      <div class="tp-legend"><span><i class="tp-swatch" style="background: var(--cds-chart-status-critical)"></i>Overdue</span><span><i class="tp-swatch tp-week-swatch"></i>Due next 7 days</span></div>
+      <div class="tp-chart" id="load-chart" data-source="workload"></div>
+    </div>
+    <div class="tp-card" id="closed-since-card">
+      <h3><span class="tp-only-standup">Closed in Asana since <span class="tp-prev-label">the previous standup</span></span><span class="tp-only-range">Closed in Asana, <span class="tp-range-label"></span></span></h3>
+      <p class="tp-note"><span class="tp-only-standup">Tasks marked complete from that standup's day onward that each person was assigned, commented on or collaborating on.</span><span class="tp-only-range">Tasks marked complete in this range that each person was assigned, commented on or collaborating on.</span></p>
+      <div class="tp-tablewrap tp-tablebox">
+        <table class="tp-table tp-closed" data-source="credited_done" data-row-key="gid,person">
+          <thead><tr><th data-field="person">Person</th><th data-field="task">Task</th><th data-field="completed_by" class="tp-hide-narrow">Closed by</th><th data-field="completed_at">Closed</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-card" id="history">
+    <h3>Commitment history</h3>
+    <p class="tp-note"><span class="tp-only-standup">Every standup commitment so far, newest first.</span><span class="tp-only-range">Every commitment in <span class="tp-range-label"></span>, newest first.</span></p>
+    <input class="tp-search" type="search" placeholder="Search commitments" aria-label="Search commitments">
+    <div class="tp-tablewrap tp-tablebox">
+      <table class="tp-table tp-history" data-source="commitments" data-row-key="id">
+        <thead><tr><th data-field="standup_date">Standup</th><th data-field="person">Person</th><th data-field="commitment">Commitment</th><th data-field="project" class="tp-hide-narrow">Project</th><th data-field="status">Status</th><th data-field="evidence" class="tp-hide-narrow">Evidence</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+  <footer class="tp-foot">
+    <span>Asana updates live. Standup commitments update after each standup.</span>
+    <button type="button" class="tp-signout">Sign out</button>
+  </footer>
+</div>
+</div>
+<script src="/dash-shim.js"></script>
+<script>
+// Asana answers arrive as {data: [task, …]} with nested assignee/project objects; these unwrap them into flat rows.
+// One query per person: completed tasks they follow in Asana (assignees, commenters and collaborators are all followers).
+// Asana returns at most 100 a call, so the loader asks again for older ones: up to 4 pages for a month or less, more for longer ranges (15 at most).
+const asanaCreditLoader = {
+  description: 'Asana’s task list as rows (task, assignee, who marked it complete, projects), asking again for older tasks while a page comes back full: up to 4 pages, or about one page per 25 days for longer ranges, 15 at most',
+  fn: async ({ answer, call, args }) => {
+    const parse = (x) => {
+      const a = typeof x === 'string' ? JSON.parse(x) : x;
+      if (a && a.errors) throw new Error(a.errors.map((e) => e.message).join('; '));
+      return Array.isArray(a) ? a : (a && a.data) || [];
+    };
+    const span = args.completed_on_after && args.completed_on_before ? Math.round((Date.parse(args.completed_on_before) - Date.parse(args.completed_on_after)) / 864e5) + 1 : 30;
+    const maxPages = Math.min(15, Math.max(4, Math.ceil(span / 25) + 1));
+    let page = parse(answer);
+    const list = [...page];
+    let pages = 1;
+    while (page.length >= 100 && pages < maxPages) {
+      const last = page[page.length - 1].completed_at;
+      if (!last) break;
+      // Asana won't mix date and datetime filters, so older pages use the datetime form of the same start, and the last task's time as the end.
+      const { completed_on_after, completed_on_before, ...rest } = args;
+      page = parse(await call('asana_search_tasks', { ...rest, completed_at_after: completed_on_after + 'T00:00:00Z', completed_at_before: last }));
+      list.push(...page);
+      pages += 1;
+    }
+    const seen = new Set();
+    const rows = [];
+    for (const t of list) {
+      if (seen.has(String(t.gid))) continue;
+      seen.add(String(t.gid));
+      rows.push({ gid: String(t.gid), task: t.name || '', assignee: t.assignee ? t.assignee.name : '', completed_by: t.completed_by ? t.completed_by.name : '', project: (t.projects || []).map((p) => p.name).join(', '), completed_at: t.completed_at || '' });
+    }
+    return { columns: ['gid', 'task', 'assignee', 'completed_by', 'project', 'completed_at'], rows, cut: page.length >= 100 };
+  },
+};
+dash.loader('asana_credit_blair', asanaCreditLoader);
+dash.loader('asana_credit_david', asanaCreditLoader);
+dash.loader('asana_credit_jamie', asanaCreditLoader);
+dash.loader('asana_overdue', {
+  description: 'Asana’s task list as rows: task name, assignee name and project names unwrapped',
+  fn: ({ answer }) => {
+    const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
+    if (a && a.errors) throw new Error(a.errors.map((e) => e.message).join('; '));
+    const list = Array.isArray(a) ? a : (a && a.data) || [];
+    const rows = list.map((t) => ({ gid: String(t.gid), task: t.name || '', assignee: t.assignee ? t.assignee.name : '', project: (t.projects || []).map((p) => p.name).join(', '), due_on: t.due_on || '' }));
+    return { columns: ['gid', 'task', 'assignee', 'project', 'due_on'], rows, cut: list.length >= 100 };
+  },
+});
+dash.loader('asana_week', {
+  description: 'Asana’s task list as rows: task name, assignee name and project names unwrapped',
+  fn: ({ answer }) => {
+    const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
+    if (a && a.errors) throw new Error(a.errors.map((e) => e.message).join('; '));
+    const list = Array.isArray(a) ? a : (a && a.data) || [];
+    const rows = list.map((t) => ({ gid: String(t.gid), task: t.name || '', assignee: t.assignee ? t.assignee.name : '', project: (t.projects || []).map((p) => p.name).join(', '), due_on: t.due_on || '' }));
+    return { columns: ['gid', 'task', 'assignee', 'project', 'due_on'], rows, cut: list.length >= 100 };
+  },
+});
+
+dash.calc('followthrough', {
+  title: 'Follow-through by person',
+  description: 'Per standup and person: commitments named, checked, landed (done or handed off), in progress, waiting and missed.',
+  inputs: ['commitments'],
+  fn: (commitments) => {
+    const groups = new Map();
+    for (const c of commitments) {
+      const key = c.standup_date + '|' + c.person;
+      if (!groups.has(key)) groups.set(key, { standup_date: c.standup_date, person: c.person, total: 0, checked: 0, completed: 0, progress: 0, waiting: 0, missed: 0 });
+      const r = groups.get(key);
+      r.total += 1;
+      if (c.status !== 'pending') r.checked += 1;
+      if (c.status === 'done' || c.status === 'handoff') r.completed += 1;
+      if (c.status === 'progress') r.progress += 1;
+      if (c.status === 'waiting') r.waiting += 1;
+      if (c.status === 'missed') r.missed += 1;
+    }
+    return [...groups.values()].map((r) => ({ ...r, rate: r.checked ? r.completed / r.checked : null }));
+  },
+});
+
+dash.calc('day_summary', {
+  title: 'Follow-through by standup',
+  description: 'The team’s totals per standup: commitments named, checked and landed, and the share landed.',
+  inputs: ['followthrough'],
+  fn: (followthrough) => {
+    const days = new Map();
+    for (const r of followthrough) {
+      if (!days.has(r.standup_date)) days.set(r.standup_date, { standup_date: r.standup_date, total: 0, checked: 0, completed: 0, progress: 0, waiting: 0, missed: 0 });
+      const d = days.get(r.standup_date);
+      for (const k of ['total', 'checked', 'completed', 'progress', 'waiting', 'missed']) d[k] += r[k];
+    }
+    return [...days.values()].sort((a, b) => a.standup_date.localeCompare(b.standup_date)).map((d) => ({ ...d, rate: d.checked ? d.completed / d.checked : null }));
+  },
+});
+
+dash.calc('credited_done', {
+  title: 'Tasks closed, credited per person',
+  description: 'Each completed Asana task once per team member who was assigned, commented on or collaborating on it, whoever marked it complete.',
+  inputs: ['asana_credit_blair', 'asana_credit_david', 'asana_credit_jamie'],
+  fn: (asana_credit_blair, asana_credit_david, asana_credit_jamie) => {
+    const out = [];
+    for (const [person, rows] of [['Blair', asana_credit_blair], ['David', asana_credit_david], ['Jamie', asana_credit_jamie]]) {
+      for (const t of rows) if (t.completed_at) out.push({ ...t, person });
+    }
+    return out.sort((a, b) => b.completed_at.localeCompare(a.completed_at));
+  },
+});
+
+dash.calc('completions_daily', {
+  title: 'Tasks closed per day',
+  description: 'Asana tasks closed per day (Eastern time) credited to each person, plus the team’s count of distinct tasks.',
+  inputs: ['credited_done'],
+  fn: (credited_done) => {
+    const counts = new Map();
+    const teamTasks = new Map();
+    for (const t of credited_done) {
+      const day = new Date(t.completed_at).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+      const key = day + '|' + t.person;
+      counts.set(key, { day, person: t.person, n: (counts.has(key) ? counts.get(key).n : 0) + 1 });
+      if (!teamTasks.has(day)) teamTasks.set(day, new Set());
+      teamTasks.get(day).add(t.gid);
+    }
+    for (const [day, set] of teamTasks) counts.set(day + '|Team', { day, person: 'Team', n: set.size });
+    return [...counts.values()].sort((a, b) => a.day.localeCompare(b.day));
+  },
+});
+
+dash.calc('weekly_done', {
+  title: 'Tasks closed per week',
+  description: 'Asana tasks closed per week (Monday start, Eastern time) credited to each person, and distinct tasks for the team, with the change from the week before.',
+  inputs: ['credited_done'],
+  fn: (credited_done) => {
+    const weekOf = (iso) => {
+      const d = new Date(new Date(iso).toLocaleDateString('en-CA', { timeZone: 'America/New_York' }) + 'T00:00:00Z');
+      d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+      return d.toISOString().slice(0, 10);
+    };
+    const sets = new Map();
+    const weeksSeen = new Set();
+    for (const t of credited_done) {
+      const w = weekOf(t.completed_at);
+      weeksSeen.add(w);
+      for (const p of ['Team', t.person]) {
+        if (!sets.has(w + '|' + p)) sets.set(w + '|' + p, new Set());
+        sets.get(w + '|' + p).add(t.gid);
+      }
+    }
+    const weeks = [...weeksSeen].sort();
+    if (!weeks.length) return [];
+    const out = [];
+    for (const person of ['Team', 'Blair', 'David', 'Jamie']) {
+      let prev = null;
+      for (let d = new Date(weeks[0] + 'T00:00:00Z'); d.toISOString().slice(0, 10) <= weeks[weeks.length - 1]; d.setUTCDate(d.getUTCDate() + 7)) {
+        const week = d.toISOString().slice(0, 10);
+        const n = sets.has(week + '|' + person) ? sets.get(week + '|' + person).size : 0;
+        out.push({ week, person, n, prev, change: prev === null ? null : n - prev });
+        prev = n;
+      }
+    }
+    return out;
+  },
+});
+
+dash.calc('workload', {
+  title: 'Open load per person',
+  description: 'Incomplete Asana tasks per person: overdue, and due in the next 7 days, plus a team total.',
+  inputs: ['asana_overdue', 'asana_week'],
+  fn: (asana_overdue, asana_week) => {
+    const people = ['Blair', 'David', 'Jamie'];
+    const count = (rows, p) => rows.filter((t) => (t.assignee || '').split(' ')[0] === p).length;
+    const rows = people.map((p) => ({ person: p, overdue: count(asana_overdue, p), this_week: count(asana_week, p) }));
+    rows.push({ person: 'Team', overdue: rows.reduce((s, r) => s + r.overdue, 0), this_week: rows.reduce((s, r) => s + r.this_week, 0) });
+    return rows;
+  },
+});
+
+dash.calc('daily_totals', {
+  title: 'Daily totals per person',
+  description: 'Per day (Eastern time) and person, plus the team: commitments made at that day’s standup, how many are graded, landed (done or handed off), in progress, waiting or missed, and Asana tasks closed (distinct tasks for the team).',
+  inputs: ['commitments', 'credited_done'],
+  fn: (commitments, credited_done) => {
+    const m = new Map();
+    const row = (day, person) => {
+      const k = day + '|' + person;
+      if (!m.has(k)) m.set(k, { day, person, committed: 0, checked: 0, landed: 0, progress: 0, waiting: 0, missed: 0, closed: 0 });
+      return m.get(k);
+    };
+    for (const c of commitments) {
+      for (const p of [c.person, 'Team']) {
+        const r = row(c.standup_date, p);
+        r.committed += 1;
+        if (c.status !== 'pending') r.checked += 1;
+        if (c.status === 'done' || c.status === 'handoff') r.landed += 1;
+        if (c.status === 'progress') r.progress += 1;
+        if (c.status === 'waiting') r.waiting += 1;
+        if (c.status === 'missed') r.missed += 1;
+      }
+    }
+    const team = new Map();
+    for (const t of credited_done) {
+      const day = new Date(t.completed_at).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+      row(day, t.person).closed += 1;
+      if (!team.has(day)) team.set(day, new Set());
+      team.get(day).add(t.gid);
+    }
+    for (const [day, set] of team) row(day, 'Team').closed = set.size;
+    return [...m.values()].sort((a, b) => a.day.localeCompare(b.day) || a.person.localeCompare(b.person));
+  },
+});
+
+dash.calc('period_totals', {
+  title: 'Totals per week, month and year',
+  description: 'The daily totals added up per calendar week (Monday start), month and year, per person and team, with the share of graded commitments that landed, the number of standups, and Asana tasks closed compared with the period before.',
+  inputs: ['daily_totals'],
+  fn: (daily_totals) => {
+    const keyOf = (day, grain) => {
+      if (grain === 'month') return day.slice(0, 7);
+      if (grain === 'year') return day.slice(0, 4);
+      const d = new Date(day + 'T00:00:00Z');
+      d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+      return d.toISOString().slice(0, 10);
+    };
+    const prevOf = (period, grain) => {
+      if (grain === 'year') return String(Number(period) - 1);
+      if (grain === 'month') {
+        const [y, mo] = period.split('-').map(Number);
+        return mo === 1 ? (y - 1) + '-12' : y + '-' + String(mo - 1).padStart(2, '0');
+      }
+      const d = new Date(period + 'T00:00:00Z');
+      d.setUTCDate(d.getUTCDate() - 7);
+      return d.toISOString().slice(0, 10);
+    };
+    const fields = ['committed', 'checked', 'landed', 'progress', 'waiting', 'missed', 'closed'];
+    const m = new Map();
+    for (const r of daily_totals) {
+      for (const grain of ['week', 'month', 'year']) {
+        const period = keyOf(r.day, grain);
+        const k = grain + '|' + period + '|' + r.person;
+        if (!m.has(k)) m.set(k, { grain, period, person: r.person, standups: 0, committed: 0, checked: 0, landed: 0, progress: 0, waiting: 0, missed: 0, closed: 0 });
+        const o = m.get(k);
+        for (const f of fields) o[f] += r[f];
+        if (r.committed > 0) o.standups += 1;
+      }
+    }
+    const rows = [...m.values()].map((o) => ({ ...o, rate: o.checked ? o.landed / o.checked : null }));
+    const byKey = new Map(rows.map((o) => [o.grain + '|' + o.period + '|' + o.person, o]));
+    return rows.map((o) => {
+      const p = byKey.get(o.grain + '|' + prevOf(o.period, o.grain) + '|' + o.person);
+      const prev_closed = p ? p.closed : 0;
+      return { ...o, prev_closed, closed_change: o.closed - prev_closed };
+    }).sort((a, b) => a.grain.localeCompare(b.grain) || a.period.localeCompare(b.period) || a.person.localeCompare(b.person));
+  },
+});
+</script>
+
+<script>
+const PEOPLE = ['Blair', 'David', 'Jamie'];
+const VIEWS = ['standup', 'week', 'month', 'year', 'custom'];
+const who = () => (PEOPLE.includes(dash.params().person) ? dash.params().person : null);
+const shownPeople = () => (who() ? [who()] : PEOPLE);
+const STATUS = { done: 'Done', handoff: 'Handed off', progress: 'In progress', waiting: 'Waiting', missed: 'Missed', pending: 'Pending' };
+const pct = d3.format('.0%');
+const num = d3.format(',');
+const signed = (n) => (n > 0 ? '+' : '') + num(n);
+const D = (s) => new Date(s + 'T00:00:00Z');
+const dayLabel = (s) => d3.utcFormat('%a, %b %-d')(D(s));
+const shortDay = (s) => d3.utcFormat('%b %-d')(D(s));
+const MK_COLORS = ['var(--mk-c0)', 'var(--mk-c1)', 'var(--mk-c2)'];
+const personColor = (p) => MK_COLORS[Math.max(0, PEOPLE.indexOf(p))];
+const etDay = (d) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+const shiftDay = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return etDay(d); };
+const isDay = (s) => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
+const addDays = (s, n) => { const d = D(s); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const weekStart = (s) => addDays(s, -((D(s).getUTCDay() + 6) % 7));
+const monthStart = (s) => s.slice(0, 7) + '-01';
+const monthEnd = (s) => { const d = D(monthStart(s)); d.setUTCMonth(d.getUTCMonth() + 1); d.setUTCDate(0); return d.toISOString().slice(0, 10); };
+const spanDays = (a, b) => Math.round((D(b) - D(a)) / 864e5) + 1;
+
+// ---- Date ranges -------------------------------------------------------
+const compares = (v, span) => v === 'week' || v === 'month' || (v === 'custom' && span <= 92);
+function windowFor(v, anchor) {
+  if (v === 'week') { const f = weekStart(anchor); return { from: f, to: addDays(f, 6) }; }
+  if (v === 'month') return { from: monthStart(anchor), to: monthEnd(anchor) };
+  const y = anchor.slice(0, 4);
+  return { from: y + '-01-01', to: y + '-12-31' };
+}
+function prevWindow(v, from, to) {
+  if (v === 'week') return { from: addDays(from, -7), to: addDays(from, -1) };
+  if (v === 'month') { const e = addDays(from, -1); return { from: monthStart(e), to: e }; }
+  if (v === 'year') { const y = Number(from.slice(0, 4)) - 1; return { from: y + '-01-01', to: y + '-12-31' }; }
+  const n = spanDays(from, to);
+  return { from: addDays(from, -n), to: addDays(from, -1) };
+}
+// The Asana queries read `since` and `until`: the range itself, plus the period before it where the page compares the two.
+function viewParams(v, from, to) {
+  if (v === 'standup') return { view: 'standup', from: null, to: null, since: shiftDay(-30), until: shiftDay(0) };
+  const cmp = compares(v, spanDays(from, to));
+  return { view: v, from, to, since: cmp ? prevWindow(v, from, to).from : from, until: to };
+}
+function rangeLabel(v, from, to) {
+  const thisYear = shiftDay(0).slice(0, 4);
+  if (v === 'week') return 'week of ' + d3.utcFormat(from.slice(0, 4) === thisYear ? '%b %-d' : '%b %-d, %Y')(D(from));
+  if (v === 'month') return d3.utcFormat('%B %Y')(D(from));
+  if (v === 'year') return from.slice(0, 4);
+  const sameYear = from.slice(0, 4) === to.slice(0, 4);
+  return d3.utcFormat(sameYear ? '%b %-d' : '%b %-d, %Y')(D(from)) + ' – ' + d3.utcFormat('%b %-d, %Y')(D(to));
+}
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+function ctx() {
+  const p = dash.params();
+  const v = VIEWS.includes(p.view) ? p.view : 'standup';
+  if (v === 'standup' || !isDay(p.from) || !isDay(p.to)) return { v: 'standup' };
+  const from = p.from, to = p.to;
+  const span = spanDays(from, to);
+  const prev = prevWindow(v, from, to);
+  const grain = v === 'year' ? 'month' : v === 'custom' ? (span <= 45 ? 'day' : span <= 200 ? 'week' : 'month') : 'day';
+  const periodKey = v === 'week' ? from : v === 'month' ? from.slice(0, 7) : v === 'year' ? from.slice(0, 4) : null;
+  return { v, from, to, span, cmp: compares(v, span), prev, grain, periodKey, label: rangeLabel(v, from, to), prevLabel: rangeLabel(v, prev.from, prev.to) };
+}
+
+const setDefaults = () => {
+  const p = dash.params();
+  const v = VIEWS.includes(p.view) ? p.view : 'standup';
+  const keep = v !== 'standup' && isDay(p.from) && isDay(p.to);
+  dash.setParams({ today: shiftDay(0), yesterday: shiftDay(-1), horizon: shiftDay(7), ...(keep ? viewParams(v, p.from, p.to) : viewParams('standup')) });
+};
+setDefaults();
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+const root = $('.tp');
+const daySel = $('.tp-day');
+daySel.addEventListener('change', () => dash.setParams({ day: daySel.value || null }));
+const personSel = $('.tp-person-sel');
+personSel.addEventListener('change', () => dash.setParams({ person: personSel.value || null }));
+$$('.tp-pp button').forEach((b) => b.addEventListener('click', () => dash.setParams({ person: b.dataset.person || null })));
+const syncInd = () => $$('.tp-seg, .tp-pp').forEach((g) => {
+  const on = g.querySelector('button[aria-pressed="true"]');
+  const ind = g.querySelector('.tp-seg-ind');
+  if (!ind) return;
+  if (!on || !on.offsetWidth) { ind.style.width = '0'; return; }
+  ind.style.width = on.offsetWidth + 'px';
+  ind.style.transform = `translateX(${on.offsetLeft}px)`;
+  requestAnimationFrame(() => ind.classList.add('is-live'));
+});
+const search = $('.tp-search');
+let query = '';
+search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); drawHistory(ctx()); });
+
+$$('.tp-seg button').forEach((b) => b.addEventListener('click', () => {
+  const v = b.dataset.view;
+  const c = ctx();
+  const today = shiftDay(0);
+  if (v === 'standup') { dash.setParams(viewParams('standup')); return; }
+  if (v === 'custom') {
+    const from = c.v !== 'standup' ? c.from : shiftDay(-29);
+    const to = c.v !== 'standup' ? c.to : today;
+    dash.setParams(viewParams('custom', from, to));
+    return;
+  }
+  const anchor = c.v !== 'standup' && !(today >= c.from && today <= c.to) ? c.from : today;
+  const w = windowFor(v, anchor);
+  dash.setParams(viewParams(v, w.from, w.to));
+}));
+const step = (dir) => {
+  const c = ctx();
+  if (c.v === 'standup' || c.v === 'custom') return;
+  const w = windowFor(c.v, dir < 0 ? addDays(c.from, -1) : addDays(c.to, 1));
+  dash.setParams(viewParams(c.v, w.from, w.to));
+};
+const prevBtn = $('.tp-prev'), nextBtn = $('.tp-next');
+prevBtn.addEventListener('click', () => step(-1));
+nextBtn.addEventListener('click', () => step(1));
+const fromIn = $('.tp-from'), toIn = $('.tp-to');
+const showCustom = () => {
+  const c = ctx();
+  if (c.v !== 'custom') return;
+  if (fromIn !== document.activeElement) fromIn.value = c.from;
+  if (toIn !== document.activeElement) toIn.value = c.to;
+};
+const onCustom = () => {
+  const a = fromIn.value, b = toIn.value;
+  if (!a || !b || !fromIn.validity.valid || !toIn.validity.valid) return;
+  const [f, t] = a <= b ? [a, b] : [b, a];
+  dash.setParams(viewParams('custom', f, t));
+};
+fromIn.addEventListener('change', onCustom);
+toIn.addEventListener('change', onCustom);
+fromIn.addEventListener('blur', () => { fromIn.value = ctx().from || ''; });
+toIn.addEventListener('blur', () => { toIn.value = ctx().to || ''; });
+
+$$('.tp-people-legend').forEach((el) => {
+  el.replaceChildren(...PEOPLE.map((p, i) => {
+    const s = document.createElement('span');
+    const sw = document.createElement('i');
+    sw.className = 'tp-swatch';
+    sw.style.background = MK_COLORS[i];
+    s.append(sw, p);
+    return s;
+  }));
+});
+$('.tp-week-swatch').style.background = MK_COLORS[0];
+const tpRoot = document.querySelector('.tp');
+const modeBtn = $('.tp-theme');
+const applyMode = () => {
+  const m = dash.params().mode === 'light' ? 'light' : 'dark';
+  tpRoot.dataset.mode = m;
+  modeBtn.setAttribute('aria-label', m === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  modeBtn.setAttribute('aria-pressed', String(m === 'light'));
+};
+modeBtn.addEventListener('click', () => dash.setParams({ mode: dash.params().mode === 'light' ? 'dark' : 'light' }));
+applyMode();
+const syncLegends = () => $$('.tp-people-legend span').forEach((s, i) => { s.hidden = !shownPeople().includes(PEOPLE[i]); });
+
+function setText(el, text, ok) {
+  el.textContent = ok ? text : '—';
+  el.classList.toggle('dash-skeleton', !ok);
+}
+// Points an element at its source: a cell when `field` and `where` are given, else just the source.
+function mark(el, src, field, where) {
+  if (src) el.dataset.source = src; else delete el.dataset.source;
+  if (src && field && where) { el.dataset.field = field; el.dataset.where = where; } else { delete el.dataset.field; delete el.dataset.where; }
+}
+
+function tip(box) {
+  let t = box.querySelector('.tp-tip');
+  if (!t) { t = document.createElement('div'); t.className = 'tp-tip'; t.hidden = true; box.appendChild(t); }
+  return t;
+}
+function showTip(box, event, head, lines) {
+  const t = tip(box);
+  t.replaceChildren();
+  const h = document.createElement('div'); h.className = 'tp-tip-head'; h.textContent = head; t.appendChild(h);
+  for (const [label, value, color] of lines) {
+    const l = document.createElement('div'); l.className = 'tp-tip-line';
+    if (color) { const sw = document.createElement('i'); sw.className = 'tp-swatch'; sw.style.background = color; l.appendChild(sw); }
+    l.append(label + (value !== undefined ? ' ' : ''));
+    if (value !== undefined) { const b = document.createElement('b'); b.textContent = value; l.appendChild(b); }
+    t.appendChild(l);
+  }
+  t.hidden = false;
+  const r = box.getBoundingClientRect();
+  const x = event.clientX - r.left, y = event.clientY - r.top;
+  const tw = t.offsetWidth, th = t.offsetHeight;
+  t.style.left = Math.max(0, Math.min(r.width - tw, x + 12)) + 'px';
+  t.style.top = Math.max(0, Math.min(r.height - th, y - th - 8)) + 'px';
+}
+function hideTip(box) { tip(box).hidden = true; }
+
+function clearChart(box, h) {
+  box.querySelectorAll('svg, .tp-fail, .tp-empty').forEach((n) => n.remove());
+  box.style.minHeight = h + 'px';
+}
+function resetChart(box, h) {
+  clearChart(box, h);
+  const w = Math.max(260, box.clientWidth);
+  const svg = d3.select(box).insert('svg', ':first-child').attr('width', '100%').attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
+  return { svg, w };
+}
+function failChart(box, h) {
+  clearChart(box, h);
+  const f = document.createElement('div'); f.className = 'tp-fail'; f.textContent = 'Failed to load';
+  box.appendChild(f);
+}
+function emptyChart(box, h, text) {
+  clearChart(box, h);
+  const e = document.createElement('div'); e.className = 'tp-empty'; e.textContent = text;
+  box.appendChild(e);
+}
+function textWidth(svg, strings) {
+  const g = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+  let w = 0;
+  for (const s of strings) { const t = g.append('text').text(s); w = Math.max(w, t.node().getComputedTextLength()); }
+  g.remove();
+  return w;
+}
+function axisStyle(g) {
+  g.attr('font-size', null).attr('font-family', null);
+  g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  g.selectAll('.domain').attr('stroke', 'var(--cds-chart-axis)');
+  g.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)');
+}
+// Every nth tick, n chosen from the widest label as drawn so neighbours never meet.
+function tickEvery(svg, labels, width) {
+  const each = textWidth(svg, labels) + 16;
+  return Math.max(1, Math.ceil(labels.length / Math.max(1, Math.floor(width / each))));
+}
+
+function chip(status) {
+  const c = document.createElement('span');
+  c.className = 'tp-chip s-' + status;
+  c.textContent = STATUS[status] || status;
+  return c;
+}
+function fillTable(tbody, rows, cols, status) {
+  tbody.replaceChildren();
+  if (status !== 'ok') return;
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    tr.dataset.key = r.person && r.gid && !r.id ? encodeURIComponent(r.gid) + ',' + encodeURIComponent(r.person) : (r.id || r.gid);
+    for (const c of cols) {
+      const td = document.createElement('td');
+      if (c.cls) td.className = c.cls;
+      if (c.key === 'status') td.appendChild(chip(r.status));
+      else td.textContent = c.fmt ? c.fmt(r[c.key], r) : (r[c.key] ?? '');
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+  if (!rows.length) {
+    const tr = document.createElement('tr'); const td = document.createElement('td');
+    td.colSpan = cols.length; td.className = 'tp-empty'; td.textContent = 'Nothing here yet.';
+    tr.appendChild(td); tbody.appendChild(tr);
+  }
+}
+const COMMITTED_COLS = [{ key: 'standup_date', cls: 'tp-range-col', fmt: shortDay }, { key: 'person' }, { key: 'commitment' }, { key: 'project', cls: 'tp-hide-narrow' }, { key: 'status' }];
+const LANDED_COLS = [{ key: 'standup_date', cls: 'tp-range-col', fmt: shortDay }, { key: 'person' }, { key: 'commitment' }, { key: 'status' }, { key: 'evidence', cls: 'tp-hide-narrow' }];
+const CLOSED_COLS = [
+  { key: 'person' }, { key: 'task' }, { key: 'completed_by', cls: 'tp-hide-narrow' },
+  { key: 'completed_at', fmt: (v) => new Date(v).toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) },
+];
+const order = (a, b) => PEOPLE.indexOf(a.person) - PEOPLE.indexOf(b.person) || a.id.localeCompare(b.id);
+const newestFirst = (a, b) => b.standup_date.localeCompare(a.standup_date) || order(a, b);
+
+let state = { sel: null, prev: null };
+
+function drawHistory(c) {
+  const d = dash.data('commitments');
+  const rows = d.status === 'ok' ? [...d.data].sort(newestFirst) : [];
+  const scoped = rows.filter((r) => (!who() || r.person === who()) && (c.v === 'standup' || (r.standup_date >= c.from && r.standup_date <= c.to)));
+  const shown = query ? scoped.filter((r) => [r.commitment, r.project, r.person, r.evidence, STATUS[r.status]].join(' ').toLowerCase().includes(query)) : scoped;
+  fillTable($('.tp-history tbody'), shown, [
+    { key: 'standup_date', fmt: (v) => shortDay(String(v).slice(0, 10)) },
+    { key: 'person' }, { key: 'commitment' }, { key: 'project', cls: 'tp-hide-narrow' }, { key: 'status' }, { key: 'evidence', cls: 'tp-hide-narrow' },
+  ], d.status);
+}
+
+// ---- Standup view charts (unchanged behaviour) -------------------------
+function drawFollowthroughChart() {
+  const box = $('#followthrough-chart');
+  box.dataset.source = 'followthrough';
+  const h = 240;
+  const ft = dash.data('followthrough');
+  if (ft.status === 'error' || ft.status === 'connect') { failChart(box, h); return; }
+  if (ft.status !== 'ok') { clearChart(box, h); return; }
+  const rows = ft.data.filter((r) => r.checked > 0 && shownPeople().includes(r.person));
+  if (!rows.length) { emptyChart(box, h, 'No graded standups yet: the first one is graded at the next standup.'); return; }
+  const dates = [...new Set(rows.map((r) => r.standup_date))].sort().slice(-14);
+  const { svg, w } = resetChart(box, h);
+  const yTicks = [0, 0.5, 1];
+  const ml = textWidth(svg, yTicks.map(pct)) + 10, mr = Math.max(8, textWidth(svg, dates.map(shortDay)) / 2 + 4), mt = 10, mb = 26;
+  const x0 = d3.scaleBand(dates, [ml, w - mr]).paddingInner(0.3).paddingOuter(0.1);
+  const x1 = d3.scaleBand(shownPeople(), [0, x0.bandwidth()]).padding(0.15);
+  const y = d3.scaleLinear([0, 1], [h - mb, mt]);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yTicks).tickFormat(pct).tickSize(-(w - ml - mr)));
+  axisStyle(gy); gy.select('.domain').remove();
+  const step = tickEvery(svg, dates.map(shortDay), w - ml - mr);
+  const gx = svg.append('g').attr('transform', `translate(0,${h - mb})`).call(d3.axisBottom(x0).tickValues(dates.filter((d, i) => i % step === 0)).tickFormat(shortDay).tickSize(0).tickPadding(8));
+  axisStyle(gx);
+  const bw = Math.min(32, x1.bandwidth());
+  svg.append('g').selectAll('rect').data(rows.filter((r) => dates.includes(r.standup_date))).join('rect')
+    .attr('x', (r) => x0(r.standup_date) + x1(r.person) + (x1.bandwidth() - bw) / 2)
+    .attr('width', bw)
+    .attr('y', (r) => y(r.rate))
+    .attr('height', (r) => Math.max(0, y(0) - y(r.rate)))
+    .attr('rx', 4)
+    .style('fill', (r) => personColor(r.person))
+    .on('mousemove', (event, r) => showTip(box, event, dayLabel(r.standup_date), [[r.person + ':', `${r.completed} of ${r.checked} (${pct(r.rate)})`, personColor(r.person)]]))
+    .on('mouseleave', () => hideTip(box));
+}
+
+function drawClosedChart() {
+  const box = $('#closed-chart');
+  box.dataset.source = 'completions_daily';
+  const h = 240;
+  const cd = dash.data('completions_daily');
+  if (cd.status === 'error' || cd.status === 'connect') { failChart(box, h); return; }
+  if (cd.status !== 'ok') { clearChart(box, h); return; }
+  const p = dash.params();
+  const days = [];
+  for (let d = p.since || shiftDay(-30); d <= (p.today || shiftDay(0)); d = addDays(d, 1)) days.push(d);
+  const byDay = new Map(days.map((d) => [d, Object.fromEntries([['day', d], ['Team', 0], ...PEOPLE.map((x) => [x, 0])])]));
+  for (const r of cd.data) if (byDay.has(r.day) && (PEOPLE.includes(r.person) || r.person === 'Team')) byDay.get(r.day)[r.person] = r.n;
+  const series = d3.stack().keys(shownPeople())([...byDay.values()]);
+  const max = d3.max([...byDay.values()], (d) => shownPeople().reduce((s, x) => s + d[x], 0)) || 1;
+  const { svg, w } = resetChart(box, h);
+  const y = d3.scaleLinear([0, max], [h - 26, 10]).nice();
+  const yTicks = y.ticks(4).filter(Number.isInteger);
+  const ml = textWidth(svg, yTicks.map(num)) + 10, mr = Math.max(8, textWidth(svg, days.map(shortDay)) / 2 + 4), mb = 26;
+  const x = d3.scaleBand(days, [ml, w - mr]).padding(0.2);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yTicks).tickFormat(num).tickSize(-(w - ml - mr)));
+  axisStyle(gy); gy.select('.domain').remove();
+  const step = tickEvery(svg, days.map(shortDay), w - ml - mr);
+  const gx = svg.append('g').attr('transform', `translate(0,${h - mb})`).call(d3.axisBottom(x).tickValues(days.filter((d, i) => (days.length - 1 - i) % step === 0)).tickFormat(shortDay).tickSize(0).tickPadding(8));
+  axisStyle(gx);
+  const bw = Math.min(32, x.bandwidth());
+  svg.append('g').selectAll('g').data(series).join('g').style('fill', (s) => personColor(s.key))
+    .selectAll('rect').data((s) => s.map((d) => ({ ...d, key: s.key }))).join('rect')
+    .attr('x', (d) => x(d.data.day) + (x.bandwidth() - bw) / 2)
+    .attr('width', bw)
+    .attr('y', (d) => y(d[1]))
+    .attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+  svg.append('g').selectAll('rect').data([...byDay.values()]).join('rect')
+    .attr('x', (d) => x(d.day)).attr('width', x.bandwidth()).attr('y', 10).attr('height', h - mb - 10).attr('fill', 'transparent')
+    .on('mousemove', (event, d) => showTip(box, event, dayLabel(d.day), [...shownPeople().map((p2) => [p2 + ':', num(d[p2]), personColor(p2)]), ...(who() ? [] : [['Team (distinct tasks):', num(d.Team)]])]))
+    .on('mouseleave', () => hideTip(box));
+}
+
+// ---- Range view charts: daily totals bucketed by day, week or month ----
+function rangeBuckets(c, daily) {
+  const list = [];
+  if (c.grain === 'day') {
+    for (let d = c.from; d <= c.to; d = addDays(d, 1)) list.push({ key: d, from: d, to: d });
+  } else if (c.grain === 'week') {
+    for (let s = weekStart(c.from); s <= c.to; s = addDays(s, 7)) { const e = addDays(s, 6); list.push({ key: s, from: s < c.from ? c.from : s, to: e > c.to ? c.to : e }); }
+  } else {
+    for (let s = monthStart(c.from); s <= c.to; s = addDays(monthEnd(s), 1)) { const e = monthEnd(s); list.push({ key: s, from: s < c.from ? c.from : s, to: e > c.to ? c.to : e }); }
+  }
+  for (const b of list) b.by = Object.fromEntries([...PEOPLE, 'Team'].map((p) => [p, { checked: 0, landed: 0, closed: 0 }]));
+  for (const r of daily) {
+    if (r.day < c.from || r.day > c.to || !list[0] || !list[0].by[r.person]) continue;
+    const b = list.find((x) => r.day >= x.from && r.day <= x.to);
+    if (!b) continue;
+    b.by[r.person].checked += r.checked;
+    b.by[r.person].landed += r.landed;
+    b.by[r.person].closed += r.closed;
+  }
+  return list;
+}
+function bucketText(c, b) {
+  if (c.grain === 'day') return { tick: shortDay(b.from), head: dayLabel(b.from) };
+  if (c.grain === 'week') return { tick: shortDay(b.from), head: b.from === b.to ? dayLabel(b.from) : shortDay(b.from) + ' – ' + shortDay(b.to) };
+  const multiYear = c.from.slice(0, 4) !== c.to.slice(0, 4);
+  return { tick: d3.utcFormat(multiYear ? "%b '%y" : '%b')(D(b.key)), head: d3.utcFormat('%B %Y')(D(b.key)) };
+}
+
+function drawRangeFollowthrough(c) {
+  const box = $('#followthrough-chart');
+  box.dataset.source = 'daily_totals';
+  const h = 240;
+  const dt = dash.data('daily_totals');
+  if (dt.status === 'error' || dt.status === 'connect') { failChart(box, h); return; }
+  if (dt.status !== 'ok') { clearChart(box, h); return; }
+  const people = shownPeople();
+  let bks = rangeBuckets(c, dt.data);
+  if (c.grain === 'day') bks = bks.filter((b) => people.some((p) => b.by[p].checked > 0));
+  const bars = [];
+  for (const b of bks) for (const p of people) if (b.by[p].checked > 0) bars.push({ b, p, landed: b.by[p].landed, checked: b.by[p].checked, rate: b.by[p].landed / b.by[p].checked });
+  if (!bars.length) { emptyChart(box, h, 'No graded commitments in this range yet.'); return; }
+  const keys = bks.map((b) => b.key);
+  const tickOf = new Map(bks.map((b) => [b.key, bucketText(c, b).tick]));
+  const { svg, w } = resetChart(box, h);
+  const yTicks = [0, 0.5, 1];
+  const ml = textWidth(svg, yTicks.map(pct)) + 10, mr = Math.max(8, textWidth(svg, [...tickOf.values()]) / 2 + 4), mt = 10, mb = 26;
+  const x0 = d3.scaleBand(keys, [ml, w - mr]).paddingInner(0.3).paddingOuter(0.1);
+  const x1 = d3.scaleBand(people, [0, x0.bandwidth()]).padding(0.15);
+  const y = d3.scaleLinear([0, 1], [h - mb, mt]);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yTicks).tickFormat(pct).tickSize(-(w - ml - mr)));
+  axisStyle(gy); gy.select('.domain').remove();
+  const step = tickEvery(svg, [...tickOf.values()], w - ml - mr);
+  const gx = svg.append('g').attr('transform', `translate(0,${h - mb})`).call(d3.axisBottom(x0).tickValues(keys.filter((k, i) => i % step === 0)).tickFormat((k) => tickOf.get(k)).tickSize(0).tickPadding(8));
+  axisStyle(gx);
+  const bw = Math.min(32, x1.bandwidth());
+  svg.append('g').selectAll('rect').data(bars).join('rect')
+    .attr('x', (d) => x0(d.b.key) + x1(d.p) + (x1.bandwidth() - bw) / 2)
+    .attr('width', bw)
+    .attr('y', (d) => y(d.rate))
+    .attr('height', (d) => Math.max(0, y(0) - y(d.rate)))
+    .attr('rx', 4)
+    .style('fill', (d) => personColor(d.p))
+    .on('mousemove', (event, d) => showTip(box, event, bucketText(c, d.b).head, [[d.p + ':', `${num(d.landed)} of ${num(d.checked)} (${pct(d.rate)})`, personColor(d.p)]]))
+    .on('mouseleave', () => hideTip(box));
+}
+
+function drawRangeClosed(c) {
+  const box = $('#closed-chart');
+  box.dataset.source = 'daily_totals';
+  const h = 240;
+  const dt = dash.data('daily_totals');
+  if (dt.status === 'error' || dt.status === 'connect') { failChart(box, h); return; }
+  if (dt.status !== 'ok') { clearChart(box, h); return; }
+  const people = shownPeople();
+  const bks = rangeBuckets(c, dt.data);
+  const flat = bks.map((b) => ({ key: b.key, b, ...Object.fromEntries(people.map((p) => [p, b.by[p].closed])), Team: b.by.Team.closed }));
+  const series = d3.stack().keys(people)(flat);
+  const max = d3.max(flat, (d) => people.reduce((s, p) => s + d[p], 0)) || 1;
+  const keys = bks.map((b) => b.key);
+  const tickOf = new Map(bks.map((b) => [b.key, bucketText(c, b).tick]));
+  const { svg, w } = resetChart(box, h);
+  const mb = 26, mt = 10;
+  const y = d3.scaleLinear([0, max], [h - mb, mt]).nice();
+  const yTicks = y.ticks(4).filter(Number.isInteger);
+  const ml = textWidth(svg, yTicks.map(num)) + 10, mr = Math.max(8, textWidth(svg, [...tickOf.values()]) / 2 + 4);
+  const x = d3.scaleBand(keys, [ml, w - mr]).padding(0.2);
+  const gy = svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(yTicks).tickFormat(num).tickSize(-(w - ml - mr)));
+  axisStyle(gy); gy.select('.domain').remove();
+  const step = tickEvery(svg, [...tickOf.values()], w - ml - mr);
+  const gx = svg.append('g').attr('transform', `translate(0,${h - mb})`).call(d3.axisBottom(x).tickValues(keys.filter((k, i) => (keys.length - 1 - i) % step === 0)).tickFormat((k) => tickOf.get(k)).tickSize(0).tickPadding(8));
+  axisStyle(gx);
+  const bw = Math.min(32, x.bandwidth());
+  svg.append('g').selectAll('g').data(series).join('g').style('fill', (s) => personColor(s.key))
+    .selectAll('rect').data((s) => s.map((d) => ({ ...d, key: s.key }))).join('rect')
+    .attr('x', (d) => x(d.data.key) + (x.bandwidth() - bw) / 2)
+    .attr('width', bw)
+    .attr('y', (d) => y(d[1]))
+    .attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])))
+    .attr('rx', 2);
+  svg.append('g').selectAll('rect').data(flat).join('rect')
+    .attr('x', (d) => x(d.key)).attr('width', x.bandwidth()).attr('y', mt).attr('height', h - mb - mt).attr('fill', 'transparent')
+    .on('mousemove', (event, d) => showTip(box, event, bucketText(c, d.b).head, [...people.map((p) => [p + ':', num(d[p]), personColor(p)]), ...(who() ? [] : [['Team (distinct tasks):', num(d.Team)]])]))
+    .on('mouseleave', () => hideTip(box));
+}
+
+function drawLoadChart() {
+  const box = $('#load-chart');
+  const h = who() ? 90 : 200;
+  const wl = dash.data('workload');
+  if (wl.status === 'error' || wl.status === 'connect') { failChart(box, h); return; }
+  if (wl.status !== 'ok') { clearChart(box, h); return; }
+  const rows = wl.data.filter((r) => r.person !== 'Team' && shownPeople().includes(r.person));
+  const { svg, w } = resetChart(box, h);
+  const ml = textWidth(svg, rows.map((r) => r.person)) + 12;
+  const endW = textWidth(svg, rows.map((r) => num(r.overdue + r.this_week))) + 10;
+  const y = d3.scaleBand(rows.map((r) => r.person), [10, h - 10]).padding(0.3);
+  const x = d3.scaleLinear([0, d3.max(rows, (r) => r.overdue + r.this_week) || 1], [ml, w - endW - 4]);
+  const bh = Math.min(32, y.bandwidth());
+  const g = svg.append('g');
+  g.selectAll('text.lbl').data(rows).join('text').attr('class', 'lbl')
+    .attr('x', ml - 10).attr('y', (r) => y(r.person) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
+    .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.person);
+  const yy = (r) => y(r.person) + (y.bandwidth() - bh) / 2;
+  g.selectAll('rect.od').data(rows).join('rect').attr('class', 'od')
+    .attr('x', x(0)).attr('y', yy).attr('height', bh).attr('width', (r) => Math.max(0, x(r.overdue) - x(0))).attr('rx', 4)
+    .style('fill', 'var(--cds-chart-status-critical)');
+  g.selectAll('rect.wk').data(rows).join('rect').attr('class', 'wk')
+    .attr('x', (r) => x(r.overdue)).attr('y', yy).attr('height', bh).attr('width', (r) => Math.max(0, x(r.overdue + r.this_week) - x(r.overdue))).attr('rx', 4)
+    .style('fill', MK_COLORS[0]);
+  g.selectAll('text.end').data(rows).join('text').attr('class', 'end')
+    .attr('x', (r) => x(r.overdue + r.this_week) + 6).attr('y', (r) => y(r.person) + y.bandwidth() / 2).attr('dy', '0.35em')
+    .attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').style('font-variant-numeric', 'tabular-nums')
+    .text((r) => num(r.overdue + r.this_week));
+  g.selectAll('rect.hit').data(rows).join('rect').attr('class', 'hit')
+    .attr('x', 0).attr('width', w).attr('y', (r) => y(r.person)).attr('height', y.bandwidth()).attr('fill', 'transparent')
+    .on('mousemove', (event, r) => showTip(box, event, r.person, [['Overdue:', num(r.overdue), 'var(--cds-chart-status-critical)'], ['Due next 7 days:', num(r.this_week), MK_COLORS[0]]]))
+    .on('mouseleave', () => hideTip(box));
+}
+
+function drawReminders() {
+  const ul = $('.tp-reminders');
+  const r = dash.data('reminders');
+  ul.classList.toggle('dash-skeleton', r.status === 'loading');
+  ul.replaceChildren();
+  if (r.status !== 'ok') return;
+  const rows = [...r.data].sort((a, b) => (a.status === 'done') - (b.status === 'done') || String(b.added).localeCompare(String(a.added)));
+  for (const x of rows) {
+    const li = document.createElement('li');
+    if (x.status === 'done') li.classList.add('is-done');
+    const t = document.createElement('span'); t.textContent = x.reminder;
+    t.dataset.source = 'reminders'; t.dataset.field = 'reminder'; t.dataset.where = 'id=' + encodeURIComponent(x.id);
+    const m = document.createElement('span'); m.className = 'tp-rem-meta';
+    m.textContent = 'added ' + shortDay(String(x.added).slice(0, 10)) + (x.note ? ' · ' + x.note : '');
+    li.append(t, m);
+    ul.appendChild(li);
+  }
+  if (!rows.length) { const li = document.createElement('li'); li.className = 'tp-empty'; li.textContent = 'No reminders.'; ul.appendChild(li); }
+}
+
+function personCard(p) {
+  const card = document.createElement('div');
+  card.className = 'tp-card tp-person';
+  card.id = 'person-' + p.toLowerCase();
+  const head = document.createElement('div'); head.className = 'tp-person-head';
+  card.style.setProperty('--pc', personColor(p));
+  const av = document.createElement('span'); av.className = 'tp-avatar'; av.textContent = p.charAt(0); av.setAttribute('aria-hidden', 'true');
+  const name = document.createElement('span'); name.textContent = p;
+  head.append(av, name);
+  const big = document.createElement('div'); big.className = 'tp-kpi-value';
+  const meter = document.createElement('div'); meter.className = 'tp-meter'; meter.setAttribute('aria-hidden', 'true'); meter.appendChild(document.createElement('i'));
+  const sub = document.createElement('div'); sub.className = 'tp-kpi-sub';
+  card.append(head, big, meter, sub);
+  return { card, big, sub };
+}
+const cell = (src, field, where, text) => {
+  const s = document.createElement('span');
+  mark(s, src, field, where);
+  s.textContent = text;
+  return s;
+};
+
+function drawPeople() {
+  const wrap = $('.tp-people');
+  const ft = dash.data('followthrough');
+  wrap.replaceChildren(...shownPeople().map((p) => {
+    const { card, big, sub } = personCard(p);
+    const where = `standup_date=${encodeURIComponent(state.prev || '')}&person=${encodeURIComponent(p)}`;
+    const r = ft.status === 'ok' && state.prev ? ft.data.find((x) => x.standup_date === state.prev && x.person === p) : null;
+    if (r) {
+      mark(big, 'followthrough', 'rate', where);
+      big.textContent = r.rate === null ? '—' : pct(r.rate);
+      card.style.setProperty('--rate', r.rate || 0);
+      sub.append(cell('followthrough', 'completed', where, num(r.completed)), ' of ', cell('followthrough', 'checked', where, num(r.checked)), ' landed · ', cell('followthrough', 'progress', where, num(r.progress)), ' in progress');
+    } else {
+      big.textContent = '—';
+      if (ft.status !== 'ok') big.classList.add('dash-skeleton');
+      sub.textContent = ft.status === 'ok' ? 'No commitments at that standup' : '';
+    }
+    return card;
+  }));
+}
+
+// Totals for one person (or the team) over the picked range. Week, month and year read a row of period_totals;
+// a custom range adds up its days from daily_totals.
+const ZERO = { committed: 0, checked: 0, landed: 0, progress: 0, waiting: 0, missed: 0, closed: 0, standups: 0, rate: null, closed_change: null };
+function rangeRow(c, person) {
+  if (c.periodKey) {
+    const pt = dash.data('period_totals');
+    if (pt.status !== 'ok') return { status: pt.status };
+    const r = pt.data.find((x) => x.grain === c.v && x.period === c.periodKey && x.person === person);
+    return { status: 'ok', src: 'period_totals', where: r ? `grain=${c.v}&period=${encodeURIComponent(c.periodKey)}&person=${encodeURIComponent(person)}` : null, row: r || ZERO };
+  }
+  const dt = dash.data('daily_totals');
+  if (dt.status !== 'ok') return { status: dt.status };
+  const sum = (a, b) => {
+    const o = { ...ZERO };
+    for (const r of dt.data) {
+      if (r.person !== person || r.day < a || r.day > b) continue;
+      for (const f of ['committed', 'checked', 'landed', 'progress', 'waiting', 'missed', 'closed']) o[f] += r[f];
+      if (r.committed > 0) o.standups += 1;
+    }
+    o.rate = o.checked ? o.landed / o.checked : null;
+    return o;
+  };
+  const row = sum(c.from, c.to);
+  row.closed_change = c.cmp ? row.closed - sum(c.prev.from, c.prev.to).closed : null;
+  return { status: 'ok', src: 'daily_totals', where: null, row };
+}
+
+function drawRangeHead(c) {
+  const P = who();
+  const rr = rangeRow(c, P || 'Team');
+  const ok = rr.status === 'ok';
+  const r = ok ? rr.row : ZERO;
+  const put = (el, field, text) => { mark(el, ok ? rr.src : null, field, rr.where); setText(el, text, ok); };
+  const rate = r.rate === null ? '—' : pct(r.rate);
+  put($('.tp-k1'), 'rate', rate);
+  put($('.tp-k1-done'), 'landed', num(r.landed));
+  put($('.tp-k1-checked'), 'checked', num(r.checked));
+  put($('.tp-rt-rate'), 'rate', rate);
+  put($('.tp-rt-landed'), 'landed', num(r.landed));
+  put($('.tp-rt-checked'), 'checked', num(r.checked));
+  put($('.tp-rt-closed'), 'closed', num(r.closed));
+  put($('.tp-k2'), 'committed', num(r.committed));
+  put($('.tp-k2-standups'), 'standups', num(r.standups));
+  $('.tp-k2-word').textContent = r.standups === 1 ? 'standup' : 'standups';
+  put($('.tp-k3'), 'closed', num(r.closed));
+  const k3c = $('.tp-k3-change');
+  k3c.classList.remove('tp-up', 'tp-down', 'dash-skeleton');
+  if (c.cmp && ok && r.closed_change !== null) {
+    mark(k3c, rr.src, 'closed_change', rr.where);
+    k3c.textContent = signed(r.closed_change);
+    k3c.classList.add(r.closed_change >= 0 ? 'tp-up' : 'tp-down');
+    $('.tp-k3-vs').textContent = 'vs ' + c.prevLabel;
+  } else {
+    mark(k3c, null);
+    k3c.textContent = c.cmp ? '—' : '';
+    $('.tp-k3-vs').textContent = c.cmp ? 'vs ' + c.prevLabel : 'No comparison for ranges over 3 months';
+  }
+}
+
+function drawPeopleRange(c) {
+  const wrap = $('.tp-people');
+  wrap.replaceChildren(...shownPeople().map((p) => {
+    const { card, big, sub } = personCard(p);
+    const rr = rangeRow(c, p);
+    if (rr.status !== 'ok') { big.textContent = '—'; big.classList.add('dash-skeleton'); return card; }
+    const r = rr.row;
+    mark(big, rr.src, 'rate', rr.where);
+    big.textContent = r.rate === null ? '—' : pct(r.rate);
+    card.style.setProperty('--rate', r.rate || 0);
+    sub.append(cell(rr.src, 'landed', rr.where, num(r.landed)), ' of ', cell(rr.src, 'checked', rr.where, num(r.checked)), ' landed · ', cell(rr.src, 'progress', rr.where, num(r.progress)), ' in progress · ', cell(rr.src, 'closed', rr.where, num(r.closed)), ' Asana tasks closed');
+    return card;
+  }));
+}
+
+function drawStandupView(d) {
+  const P = who();
+  const ok = d.status === 'ok';
+  // The range view's own figures are hidden here: they cite nothing until it is shown again.
+  for (const el of $$('.tp-rt-rate, .tp-rt-landed, .tp-rt-checked, .tp-rt-closed, .tp-k2-standups')) mark(el, null);
+  $$('.tp-sel-label').forEach((el) => { el.textContent = state.sel ? dayLabel(state.sel) : 'this standup'; });
+  $$('.tp-prev-label').forEach((el) => { el.textContent = state.prev ? dayLabel(state.prev) : 'previous standup'; });
+  $('.tp-take-prev').textContent = state.prev ? dayLabel(state.prev) + '’s' : 'Last';
+
+  // Headline: follow-through of the previous standup, and what was committed at the selected one.
+  const headSrc = P ? 'followthrough' : 'day_summary';
+  const ds = dash.data(headSrc);
+  const dsOk = ds.status === 'ok';
+  const match = (r, day) => r.standup_date === day && (!P || r.person === P);
+  const prevRow = dsOk && state.prev ? ds.data.find((r) => match(r, state.prev)) : null;
+  const selRow = dsOk && state.sel ? ds.data.find((r) => match(r, state.sel)) : null;
+  const personPart = P ? '&person=' + encodeURIComponent(P) : '';
+  const wherePrev = state.prev ? 'standup_date=' + encodeURIComponent(state.prev) + personPart : null;
+  const whereSel = state.sel ? 'standup_date=' + encodeURIComponent(state.sel) + personPart : null;
+  for (const [sel, field] of [['.tp-k1', 'rate'], ['.tp-take-rate', 'rate'], ['.tp-k1-done', 'completed'], ['.tp-take-done', 'completed'], ['.tp-k1-checked', 'checked'], ['.tp-take-checked', 'checked']]) {
+    mark($(sel), state.prev ? headSrc : null, field, wherePrev);
+  }
+  mark($('.tp-k2'), headSrc, 'total', whereSel);
+  setText($('.tp-k1'), prevRow && prevRow.rate !== null ? pct(prevRow.rate) : '—', !!prevRow);
+  setText($('.tp-k1-done'), prevRow ? num(prevRow.completed) : '—', !!prevRow);
+  setText($('.tp-k1-checked'), prevRow ? num(prevRow.checked) : '—', !!prevRow);
+  setText($('.tp-take-rate'), prevRow && prevRow.rate !== null ? pct(prevRow.rate) : '—', !!prevRow);
+  setText($('.tp-take-done'), prevRow ? num(prevRow.completed) : '—', !!prevRow);
+  setText($('.tp-take-checked'), prevRow ? num(prevRow.checked) : '—', !!prevRow);
+  setText($('.tp-k2'), selRow ? num(selRow.total) : '—', !!selRow);
+  if (dsOk && !state.prev) $$('.tp-k1, .tp-take-rate').forEach((el) => el.classList.remove('dash-skeleton'));
+
+  const wd = dash.data('weekly_done');
+  const wdRows = wd.status === 'ok' ? wd.data.filter((r) => r.person === (P || 'Team')) : [];
+  const last = wdRows.length ? wdRows[wdRows.length - 1] : null;
+  const k3 = $('.tp-k3'), k3c = $('.tp-k3-change');
+  const ww = last ? 'week=' + last.week + '&person=' + encodeURIComponent(last.person) : null;
+  mark(k3, 'weekly_done', 'n', ww);
+  mark(k3c, 'weekly_done', 'change', ww);
+  if (last) $('.tp-week-label').textContent = 'week of ' + shortDay(last.week);
+  setText(k3, last ? num(last.n) : '—', !!last);
+  k3c.classList.remove('tp-up', 'tp-down', 'dash-skeleton');
+  if (last && last.change !== null) { k3c.textContent = signed(last.change); k3c.classList.add(last.change >= 0 ? 'tp-up' : 'tp-down'); } else k3c.textContent = '—';
+  if (wd.status === 'ok' && !last) k3.classList.remove('dash-skeleton');
+
+  drawPeople();
+  fillTable($('.tp-committed tbody'), ok ? d.data.filter((r) => r.standup_date === state.sel && (!P || r.person === P)).sort(order) : [], COMMITTED_COLS, d.status);
+  fillTable($('.tp-landed tbody'), ok && state.prev ? d.data.filter((r) => r.standup_date === state.prev && (!P || r.person === P)).sort(order) : [], LANDED_COLS, d.status);
+
+  const ad = dash.data('credited_done');
+  const from = state.prev || state.sel || '';
+  const closed = ad.status === 'ok' ? ad.data.filter((t) => etDay(new Date(t.completed_at)) >= from && (!P || t.person === P)) : [];
+  fillTable($('.tp-closed tbody'), closed, CLOSED_COLS, ad.status);
+
+  drawFollowthroughChart();
+  drawClosedChart();
+}
+
+function drawRangeView(c, d) {
+  const P = who();
+  const ok = d.status === 'ok';
+  $$('.tp-range-label').forEach((el) => { el.textContent = c.label; });
+  $$('.tp-range-cap').forEach((el) => { el.textContent = cap(c.label); });
+  $$('.tp-grain').forEach((el) => { el.textContent = c.grain; });
+  nextBtn.disabled = addDays(c.to, 1) > shiftDay(0);
+  showCustom();
+  // The standup takeaway is hidden here: it cites nothing until the standup view comes back.
+  for (const el of $$('.tp-take-rate, .tp-take-done, .tp-take-checked')) mark(el, null);
+
+  drawRangeHead(c);
+  drawPeopleRange(c);
+
+  const inRange = ok ? d.data.filter((r) => r.standup_date >= c.from && r.standup_date <= c.to && (!P || r.person === P)).sort(newestFirst) : [];
+  fillTable($('.tp-committed tbody'), inRange, COMMITTED_COLS, d.status);
+  fillTable($('.tp-landed tbody'), inRange.filter((r) => r.status === 'progress' || r.status === 'waiting' || r.status === 'missed'), LANDED_COLS, d.status);
+
+  const ad = dash.data('credited_done');
+  const closed = ad.status === 'ok' ? ad.data.filter((t) => { const day = etDay(new Date(t.completed_at)); return day >= c.from && day <= c.to && (!P || t.person === P); }) : [];
+  fillTable($('.tp-closed tbody'), closed, CLOSED_COLS, ad.status);
+
+  drawRangeFollowthrough(c);
+  drawRangeClosed(c);
+}
+
+dash.onData(() => {
+  applyMode();
+  const c = ctx();
+  const R = c.v !== 'standup';
+  root.classList.toggle('is-range', R);
+  root.classList.toggle('is-period', R && c.v !== 'custom');
+  root.classList.toggle('is-custom', c.v === 'custom');
+  $$('.tp-seg button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === c.v)));
+
+  const d = dash.data('commitments');
+  const dates = d.status === 'ok' ? [...new Set(d.data.map((r) => r.standup_date))].sort() : [];
+  const want = dash.params().day;
+  state.sel = dates.includes(want) ? want : dates[dates.length - 1] || null;
+  const i = dates.indexOf(state.sel);
+  state.prev = i > 0 ? dates[i - 1] : null;
+  daySel.replaceChildren(...[...dates].reverse().map((x) => new Option(dayLabel(x), x)));
+  if (state.sel) daySel.value = state.sel;
+
+  const P = who();
+  personSel.value = P || '';
+  $$('.tp-pp button').forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.person || '') === (P || ''))));
+  $$('.tp-who-label').forEach((el) => { el.textContent = P || 'team'; });
+  $$('.tp-who-across').forEach((el) => { el.textContent = P ? 'for ' + P : 'across the team'; });
+  const wl = dash.data('workload');
+  const team = wl.status === 'ok' ? wl.data.find((r) => r.person === (P || 'Team')) : null;
+  for (const el of $$('.tp-k4, .tp-k4-week, .tp-take-overdue, .tp-take-overdue2')) el.dataset.where = 'person=' + encodeURIComponent(P || 'Team');
+  setText($('.tp-k4'), team ? num(team.overdue) : '—', !!team);
+  setText($('.tp-k4-week'), team ? num(team.this_week) : '—', !!team);
+  setText($('.tp-take-overdue'), team ? num(team.overdue) : '—', !!team);
+  setText($('.tp-take-overdue2'), team ? num(team.overdue) : '—', !!team);
+
+  drawReminders();
+  syncLegends();
+  if (R) drawRangeView(c, d); else drawStandupView(d);
+  drawHistory(c);
+  drawLoadChart();
+});
+
+// Slide the toolbar indicators to the picked view and person; let the entrance animation play once.
+let tpSettle = null;
+dash.onData(() => {
+  syncInd();
+  if (!tpSettle && dash.data('commitments').status === 'ok') tpSettle = setTimeout(() => tpRoot.classList.add('tp-settled'), 1400);
+});
+</script>
+</body>
+</html>

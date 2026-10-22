@@ -1,0 +1,34 @@
+[
+ {
+  "id": "r1",
+  "reminder": "Get David included in websites built outside Webflow (Astro / code-stack sites)",
+  "about": "David",
+  "added": "2026-10-20",
+  "status": "open",
+  "note": ""
+ },
+ {
+  "id": "r2",
+  "reminder": "Start working on a simple GUI editor for our Astro sites that works like Webflow's Editor mode",
+  "about": "Astro sites",
+  "added": "2026-10-20",
+  "status": "open",
+  "note": ""
+ },
+ {
+  "id": "r3",
+  "reminder": "Add SE Ranking AI prompt tracking to the site launch process",
+  "about": "Launch process",
+  "added": "2026-10-21",
+  "status": "open",
+  "note": "David set it up for Madison Design Build; he also has SEO process tasks for Adam"
+ },
+ {
+  "id": "r4",
+  "reminder": "Use Olson Foundation as the model for moving sites off Webflow over the next 6 months, with Jamie reviewing each refresh for brand cohesion",
+  "about": "Webflow migrations",
+  "added": "2026-10-21",
+  "status": "open",
+  "note": "From the 10/21 standup"
+ }
+]

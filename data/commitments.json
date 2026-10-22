@@ -1,0 +1,452 @@
+[
+ {
+  "id": "2026-10-19-blair-1",
+  "standup_date": "2026-10-19",
+  "person": "Blair",
+  "commitment": "Automatic footer copyright date on all 9 client sites",
+  "project": "Maintenance",
+  "status": "done",
+  "evidence": "8 closed 10/19, ultranaturalshrimp.com closed 10/16",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-blair-2",
+  "standup_date": "2026-10-19",
+  "person": "Blair",
+  "commitment": "Update madak.com pricing from Adam's input",
+  "project": "madak.com",
+  "status": "progress",
+  "evidence": "Working, but dashboard integration left; due moved to 10/22",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-blair-3",
+  "standup_date": "2026-10-19",
+  "person": "Blair",
+  "commitment": "Clear the 3 held Innovation DuPage tasks",
+  "project": "Innovation DuPage",
+  "status": "handoff",
+  "evidence": "All 3 handed to Elli with notes on 10/19",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-jamie-1",
+  "standup_date": "2026-10-19",
+  "person": "Jamie",
+  "commitment": "JMU membership one-pager, front and back, ready to print",
+  "project": "JMU Rugby",
+  "status": "handoff",
+  "evidence": "Revised version to Adam 10/19; Josh handling print",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-jamie-2",
+  "standup_date": "2026-10-19",
+  "person": "Jamie",
+  "commitment": "First draft of the USRF 'Rugby is Better With You' mailer letter",
+  "project": "US Rugby Foundation",
+  "status": "handoff",
+  "evidence": "Worked through with Adam; with Adam for 10/21 client meeting",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-david-1",
+  "standup_date": "2026-10-19",
+  "person": "David",
+  "commitment": "Ride the Tide wrap-up: Search Console, admin access, Webflow code",
+  "project": "Ride the Tide",
+  "status": "done",
+  "evidence": "Launch Site and Site Verification closed 10/19; Elli's last tasks not yet sent",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-david-2",
+  "standup_date": "2026-10-19",
+  "person": "David",
+  "commitment": "Final pass on ECA and send to Blair for review",
+  "project": "ECA",
+  "status": "handoff",
+  "evidence": "Pass done; waiting on Blair's review",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-19-david-3",
+  "standup_date": "2026-10-19",
+  "person": "David",
+  "commitment": "Burn through overdue maintenance tasks",
+  "project": "Maintenance",
+  "status": "progress",
+  "evidence": "Time-sensitive items done; Meyer Art Center, NCCET and others still open",
+  "checked_on": "2026-10-20"
+ },
+ {
+  "id": "2026-10-20-blair-1",
+  "standup_date": "2026-10-20",
+  "person": "Blair",
+  "commitment": "Build TNT location pages and hand to Josh",
+  "project": "TNT Tuckpointing",
+  "status": "handoff",
+  "evidence": "Hub and City pages back to Josh 10/20 as all set",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-blair-2",
+  "standup_date": "2026-10-20",
+  "person": "Blair",
+  "commitment": "Wrap UltraNatural design: final content edits with Payton",
+  "project": "UltraNatural",
+  "status": "handoff",
+  "evidence": "Design wrapped; Peyton sent it to the client 10/20, review due 10/30",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-blair-3",
+  "standup_date": "2026-10-20",
+  "person": "Blair",
+  "commitment": "Start moving Olson Foundation off Webflow",
+  "project": "Olson Foundation",
+  "status": "done",
+  "evidence": "Site and portal live off Webflow 10/20, ahead of plan; final polish due 10/23",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-jamie-1",
+  "standup_date": "2026-10-20",
+  "person": "Jamie",
+  "commitment": "PathogenScout one-pager first draft to client",
+  "project": "SafeTraces",
+  "status": "handoff",
+  "evidence": "Draft with Elli per 10/21 standup; no Asana task to confirm",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-jamie-2",
+  "standup_date": "2026-10-20",
+  "person": "Jamie",
+  "commitment": "Recreate JMU schedule graphic with the bulldog mascot",
+  "project": "JMU Rugby",
+  "status": "handoff",
+  "evidence": "Options A and B to Adam 10/21 after two revision rounds",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-jamie-3",
+  "standup_date": "2026-10-20",
+  "person": "Jamie",
+  "commitment": "Crusaders documents for Thursday, once Adam sends materials",
+  "project": "Crusaders Global Academy",
+  "status": "waiting",
+  "evidence": "Still no materials from Adam; Jamie meeting him 10/21",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-david-1",
+  "standup_date": "2026-10-20",
+  "person": "David",
+  "commitment": "Madison Design Build SEO/AEO report and Webflow audit",
+  "project": "Madison Design Build",
+  "status": "done",
+  "evidence": "Report posted 10/20: site health 82 to 90, AI prompt tracking set up; Adam routed it to Peyton",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-david-2",
+  "standup_date": "2026-10-20",
+  "person": "David",
+  "commitment": "Final Meyer Art Center cleanup tasks",
+  "project": "Meyer Art Center",
+  "status": "progress",
+  "evidence": "Almost done; due moved to 10/21",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-david-3",
+  "standup_date": "2026-10-20",
+  "person": "David",
+  "commitment": "Finish the open NCCET task",
+  "project": "NCCET",
+  "status": "progress",
+  "evidence": "Hour Tracker passed to Elli 10/20 with no note; David says he'll finish it 10/21",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-20-david-4",
+  "standup_date": "2026-10-20",
+  "person": "David",
+  "commitment": "Confirm with Adam who designs the USRF landing page",
+  "project": "US Rugby Foundation",
+  "status": "done",
+  "evidence": "Asked Adam 10/20; Adam took the landing page task himself 10/21, due 10/23",
+  "checked_on": "2026-10-21"
+ },
+ {
+  "id": "2026-10-21-blair-1",
+  "standup_date": "2026-10-21",
+  "person": "Blair",
+  "commitment": "ECA email triage workflow updates after today's client meeting",
+  "project": "ECA",
+  "status": "waiting",
+  "evidence": "Vince wants a few more days for feedback; Email Command Center moved to 10/26",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-blair-2",
+  "standup_date": "2026-10-21",
+  "person": "Blair",
+  "commitment": "Innovation DuPage task (Intern+ page edits)",
+  "project": "Innovation DuPage",
+  "status": "done",
+  "evidence": "Elli closed Intern+ Page Edits 10/21; Blair says IDP is off her plate",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-blair-3",
+  "standup_date": "2026-10-21",
+  "person": "Blair",
+  "commitment": "Knock out 3 or 4 small Madak tasks",
+  "project": "Madak",
+  "status": "missed",
+  "evidence": "Not raised 10/22; no Madak tasks closed, only due dates moved",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-blair-4",
+  "standup_date": "2026-10-21",
+  "person": "Blair",
+  "commitment": "Send ECA design feedback back to David",
+  "project": "ECA",
+  "status": "missed",
+  "evidence": "Blair says not sent 10/21, sending today; Design Review moved to 10/26",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-jamie-1",
+  "standup_date": "2026-10-21",
+  "person": "Jamie",
+  "commitment": "Olson Foundation: 2027 grant guidelines and brand direction with Adam, then review Blair's refreshed site",
+  "project": "Olson Foundation",
+  "status": "handoff",
+  "evidence": "Grant guidelines with Adam; Jamie reviewed site 10/21, logo and colors left",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-jamie-2",
+  "standup_date": "2026-10-21",
+  "person": "Jamie",
+  "commitment": "Finish the 2026-27 season program and send to print",
+  "project": "Western Rugby Alumni",
+  "status": "handoff",
+  "evidence": "Program with Peyton since 10/21; Jamie says it's all set",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-jamie-3",
+  "standup_date": "2026-10-21",
+  "person": "Jamie",
+  "commitment": "SafeTraces web app updates, once Elli sends the attachments",
+  "project": "SafeTraces",
+  "status": "missed",
+  "evidence": "Bumped for Josh's last-minute GMU deck; Figma task due moved to 10/22",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-1",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "Phinney Ridge fireplace micro-service page",
+  "project": "Phinney Ridge Painting",
+  "status": "handoff",
+  "evidence": "Fireplace page with Peyton; client has staging link 10/21",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-2",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "Finish Meyer Art Center cleanup",
+  "project": "Meyer Art Center",
+  "status": "progress",
+  "evidence": "David says almost done, wrapping 10/22; task still open, due 10/22",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-3",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "Finish the NCCET task",
+  "project": "NCCET",
+  "status": "done",
+  "evidence": "David says done Tue 10/20; Hour Tracker with Elli since 10/20",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-4",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "Start Verified Inspections design in Claude Design",
+  "project": "Verified Inspections",
+  "status": "waiting",
+  "evidence": "Peyton paused Verified Design task 10/21; no activity since",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-5",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "ECA design edits once Blair sends feedback",
+  "project": "ECA",
+  "status": "waiting",
+  "evidence": "Blair's ECA feedback still not sent; she promised it 10/22",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-21-david-6",
+  "standup_date": "2026-10-21",
+  "person": "David",
+  "commitment": "Stanwood Camano Troll launch wrap-up: Search Console, analytics, sitemap, header photo",
+  "project": "Stanwood Camano Troll",
+  "status": "done",
+  "evidence": "Launch checklist closed 10/21 5:04 pm; GA set up, passed to Adam",
+  "checked_on": "2026-10-22"
+ },
+ {
+  "id": "2026-10-22-blair-1",
+  "standup_date": "2026-10-22",
+  "person": "Blair",
+  "commitment": "Rework the Ride the Tide section",
+  "project": "Ride the Tide Collective",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-blair-2",
+  "standup_date": "2026-10-22",
+  "person": "Blair",
+  "commitment": "Finish two GemaTEG tasks",
+  "project": "GemaTEG",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-blair-3",
+  "standup_date": "2026-10-22",
+  "person": "Blair",
+  "commitment": "Get the Madak task over to Adam",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-blair-4",
+  "standup_date": "2026-10-22",
+  "person": "Blair",
+  "commitment": "Send ECA design feedback to David",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-blair-5",
+  "standup_date": "2026-10-22",
+  "person": "Blair",
+  "commitment": "Create a task for Jamie to review the Olson site brand",
+  "project": "Olson Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-jamie-1",
+  "standup_date": "2026-10-22",
+  "person": "Jamie",
+  "commitment": "SafeTraces UX web app, about 9 pages",
+  "project": "SafeTraces",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-jamie-2",
+  "standup_date": "2026-10-22",
+  "person": "Jamie",
+  "commitment": "First 2 of 5 one-pagers, if time",
+  "project": "USA Youth & High School Rugby",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-jamie-3",
+  "standup_date": "2026-10-22",
+  "person": "Jamie",
+  "commitment": "Olson brand presentation for 12/2 board, done by 10/28",
+  "project": "Olson Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-jamie-4",
+  "standup_date": "2026-10-22",
+  "person": "Jamie",
+  "commitment": "Review Olson site brand: logo and colors",
+  "project": "Olson Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-david-1",
+  "standup_date": "2026-10-22",
+  "person": "David",
+  "commitment": "Wrap up Meyer Art Center cleanup",
+  "project": "Meyer Art Center",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-david-2",
+  "standup_date": "2026-10-22",
+  "person": "David",
+  "commitment": "Major progress on Ride the Tide punch list",
+  "project": "Ride the Tide Collective",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-david-3",
+  "standup_date": "2026-10-22",
+  "person": "David",
+  "commitment": "Leftover GMU maintenance tasks from Josh",
+  "project": "GMU",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-david-4",
+  "standup_date": "2026-10-22",
+  "person": "David",
+  "commitment": "Ask Josh what's actionable on Luis De Souza Pinto page",
+  "project": "JMU Rugby",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-22-david-5",
+  "standup_date": "2026-10-22",
+  "person": "David",
+  "commitment": "Research visual copy editor add-ons, options by 10/30",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ }
+]
