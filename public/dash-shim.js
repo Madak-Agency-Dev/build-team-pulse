@@ -38,6 +38,19 @@
   };
   window.btpAuth = { unlock, lock };
 
+  // Reminders can be checked off here; the page asks for it through this.
+  window.btpReminders = {
+    async set(id, status) {
+      const r = await fetch('/api/reminders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) });
+      if (r.status === 401) { lock('Your session ended. Sign in again.'); throw new Error('Sign in required'); }
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'Couldn’t save that.');
+      const st = state.reminders;
+      if (st) { Object.assign(st, { status: 'ok', refreshing: false }, normalize(j)); bump(); }
+      return j;
+    },
+  };
+
   const fill = (args) => {
     const out = {};
     for (const [k, v] of Object.entries(args)) {
@@ -76,7 +89,7 @@
     try {
       let res;
       if (def.kind === 'file') {
-        const r = await fetch('/api/data?name=' + encodeURIComponent(def.name));
+        const r = await fetch(def.name === 'reminders' ? '/api/reminders' : '/api/data?name=' + encodeURIComponent(def.name), { cache: 'no-store' });
         if (r.status === 401) { lock('Sign in to see the dashboard.'); throw new Error('Sign in required'); }
         if (!r.ok) throw new Error('Couldn’t load ' + def.name);
         res = normalize(await r.json());

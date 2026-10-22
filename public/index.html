@@ -161,7 +161,7 @@ html:not(.is-locked) .btp-login { display: none; }
 /* Toolbar: chip groups, the chosen chip in brand blue (a shape that slides between them) */
 .tp-rangebar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3) var(--sp-5); padding: 0 0 var(--sp-5); position: sticky; top: 0; z-index: 5;
   background: linear-gradient(var(--color-bg) 80%, transparent); padding-top: var(--sp-3); margin-top: calc(var(--sp-3) * -1); transition: background .5s var(--ease-io); }
-.tp-ctx { display: flex; align-items: center; gap: .375rem; }
+.tp-ctx { order: -1; display: flex; align-items: center; gap: .375rem; }
 .tp-tb-spacer { flex: 1 1 0; }
 .tp-seg, .tp-pp { position: relative; display: inline-flex; gap: .375rem; max-width: 100%; overflow-x: auto; scrollbar-width: none; isolation: isolate; }
 .tp-seg button, .tp-pp button { position: relative; z-index: 1; flex-shrink: 0; display: inline-flex; align-items: center; gap: var(--sp-2); padding: .6rem .85rem; border: 0; border-radius: var(--r-tiny);
@@ -278,18 +278,36 @@ html:not(.is-locked) .btp-login { display: none; }
 
 /* Reminders */
 #reminders { display: grid; grid-template-columns: minmax(8rem, 14rem) minmax(0, 1fr); align-items: start; gap: var(--sp-3) var(--sp-5); margin-bottom: var(--gap); }
+#reminders > .tp-rem-more { grid-column: 2; }
 #reminders h3 { font-size: var(--fs-sm); color: var(--color-fg-muted); padding-top: .55rem; }
 #reminders .tp-note { display: none; }
 .tp-reminders { list-style: none; margin: calc(var(--panel-pad) * -1 + var(--panel-inset)) calc(var(--panel-pad) * -1 + var(--panel-inset)) calc(var(--panel-pad) * -1 + var(--panel-inset)) 0;
   padding: 0; display: flex; flex-direction: column; gap: 2px; min-height: 1.5rem; }
-.tp-reminders li { display: grid; grid-template-columns: .875rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--sp-1) var(--sp-3); padding: var(--sp-3) var(--sp-4);
+.tp-reminders li { display: grid; grid-template-columns: 1.125rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--sp-1) var(--sp-3); padding: var(--sp-3) var(--sp-4);
   border-radius: var(--panel-r-in); background-color: var(--tint); font-size: var(--fs-md); line-height: 1.35; }
-.tp-reminders li::before { content: ""; width: .875rem; height: .875rem; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--color-fg-faint); transform: translateY(2px); }
-.tp-reminders li.is-done { color: var(--color-fg-faint); text-decoration: line-through; }
-.tp-reminders li.is-done::before { background-color: var(--mk-brand); box-shadow: none; }
+.tp-reminders li { overflow: hidden; }
+.tp-check { position: relative; align-self: start; width: 1.125rem; height: 1.125rem; margin: .05rem 0 0; padding: 0; border: 0; border-radius: 4px; background: transparent; cursor: pointer;
+  box-shadow: inset 0 0 0 1.5px var(--color-fg-faint); transition: box-shadow .2s var(--ease), background-color .2s var(--ease); }
+.tp-check::before { content: ""; position: absolute; inset: -.5rem; }
+@media (hover: hover) { .tp-check:not(:disabled):hover { box-shadow: inset 0 0 0 1.5px var(--color-fg); } }
+.tp-check:disabled { cursor: default; opacity: .6; }
+.tp-check svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 16; stroke-dashoffset: 16; }
+.tp-check[aria-checked="true"] { background-color: var(--mk-brand); box-shadow: none; }
+.tp-check[aria-checked="true"] svg { stroke-dashoffset: 0; transition: stroke-dashoffset .25s var(--ease) .05s; }
+.tp-reminders li.is-checked .tp-rem-text, .tp-reminders li.is-done .tp-rem-text { color: var(--color-fg-faint); text-decoration: line-through; text-decoration-thickness: 1px; transition: color .3s var(--ease); }
+.tp-reminders li.tp-rem-clear { display: block; background: none; color: var(--color-fg-faint); }
+.tp-rem-more { grid-column: 2; justify-self: start; margin: var(--sp-1) 0 0; padding: .45rem .7rem; border: 0; border-radius: var(--r-tiny); background-color: transparent; color: var(--color-fg-muted);
+  font-size: var(--fs-xs); font-weight: 500; cursor: pointer; transition: background-color .3s var(--ease); }
+@media (hover: hover) { .tp-rem-more:hover { background-color: var(--tint); color: var(--color-fg); } }
+.tp-toast { position: fixed; left: 50%; bottom: 1.5rem; z-index: 20; display: flex; align-items: center; gap: var(--sp-4); padding: .65rem .75rem .65rem 1rem; border-radius: var(--r-small);
+  background-color: #1f1d1e; color: #fff; font-size: var(--fs-sm); box-shadow: 0 16px 40px -12px rgba(0,0,0,.5); transform: translate(-50%, 1rem); opacity: 0; pointer-events: none;
+  transition: transform .45s var(--ease), opacity .3s var(--ease); }
+.tp[data-mode="dark"] .tp-toast { background-color: #fff; color: #1f1d1e; }
+.tp-toast.is-on { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+.tp-toast button { padding: .4rem .65rem; border: 0; border-radius: var(--r-tiny); background-color: var(--mk-brand); color: #fff; font-size: var(--fs-xs); font-weight: 500; cursor: pointer; }
 .tp-rem-meta { font-size: var(--fs-xs); color: var(--color-fg-faint); text-align: right; max-width: 26rem; }
 @media (max-width: 48rem) { #reminders { grid-template-columns: 1fr; } #reminders h3 { padding-top: 0; } .tp-reminders { margin-left: calc(var(--panel-pad) * -1 + var(--panel-inset)); }
-  .tp-reminders li { grid-template-columns: .875rem minmax(0, 1fr); } .tp-rem-meta { grid-column: 2; text-align: left; } }
+  .tp-reminders li { grid-template-columns: 1.125rem minmax(0, 1fr); } .tp-rem-meta { grid-column: 2; text-align: left; } }
 
 /* Data states */
 .tp [data-dash-source-state=empty] { color: transparent; }
@@ -1259,24 +1277,87 @@ function drawLoadChart() {
     .on('mouseleave', () => hideTip(box));
 }
 
+// Reminders: check one off and it leaves the list for everyone (saved on the team site), with a few seconds to undo.
+const remPending = {}; // id -> status while a save is in flight, so a redraw doesn't flash it back
+let remShowDone = false;
+let remToast = null;
+const remStatus = (x) => remPending[x.id] || (x.status === 'done' ? 'done' : 'open');
+const CHECK_SVG = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>';
+function remToastShow(text, undo) {
+  if (!remToast) {
+    remToast = document.createElement('div'); remToast.className = 'tp-toast'; remToast.setAttribute('role', 'status');
+    tpRoot.appendChild(remToast);
+  }
+  clearTimeout(remToast._t);
+  remToast.replaceChildren(document.createTextNode(text));
+  if (undo) {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = 'Undo';
+    b.addEventListener('click', () => { remToast.classList.remove('is-on'); undo(); });
+    remToast.appendChild(b);
+  }
+  requestAnimationFrame(() => remToast.classList.add('is-on'));
+  remToast._t = setTimeout(() => remToast.classList.remove('is-on'), 5000);
+}
+async function remSet(id, status) {
+  if (!window.btpReminders) return;
+  remPending[id] = status;
+  try { await window.btpReminders.set(id, status); }
+  catch (e) { delete remPending[id]; drawReminders(); remToastShow(e.message || 'Couldn’t save that.'); return; }
+  delete remPending[id];
+  drawReminders();
+}
+function remCheck(li, x) {
+  if (li.classList.contains('is-leaving')) return;
+  const box = li.querySelector('.tp-check');
+  box.setAttribute('aria-checked', 'true');
+  li.classList.add('is-checked');
+  remPending[x.id] = 'done';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const leave = () => {
+    li.classList.add('is-leaving');
+    const h = li.offsetHeight;
+    const anim = reduce ? null : li.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0, paddingTop: '0px', paddingBottom: '0px', marginTop: '-2px' }],
+      { duration: 420, easing: 'cubic-bezier(0.65, 0, 0.35, 1)', fill: 'forwards' });
+    const done = () => { drawReminders(); };
+    if (anim) anim.onfinish = done; else done();
+  };
+  setTimeout(leave, reduce ? 0 : 520);
+  remSet(x.id, 'done');
+  remToastShow('Checked off', () => remSet(x.id, 'open'));
+}
 function drawReminders() {
   const ul = $('.tp-reminders');
   const r = dash.data('reminders');
   ul.classList.toggle('dash-skeleton', r.status === 'loading');
+  if (r.status !== 'ok') { ul.replaceChildren(); return; }
+  const canEdit = !!window.btpReminders;
+  const all = [...r.data].sort((a, b) => String(b.added).localeCompare(String(a.added)));
+  const open = all.filter((x) => remStatus(x) !== 'done');
+  const done = all.filter((x) => remStatus(x) === 'done').sort((a, b) => String(b.done_at || '').localeCompare(String(a.done_at || '')));
+  const rows = remShowDone ? [...open, ...done] : open;
   ul.replaceChildren();
-  if (r.status !== 'ok') return;
-  const rows = [...r.data].sort((a, b) => (a.status === 'done') - (b.status === 'done') || String(b.added).localeCompare(String(a.added)));
   for (const x of rows) {
+    const isDone = remStatus(x) === 'done';
     const li = document.createElement('li');
-    if (x.status === 'done') li.classList.add('is-done');
-    const t = document.createElement('span'); t.textContent = x.reminder;
+    if (isDone) li.classList.add('is-done');
+    const box = document.createElement('button');
+    box.type = 'button'; box.className = 'tp-check'; box.setAttribute('role', 'checkbox'); box.setAttribute('aria-checked', String(isDone));
+    box.setAttribute('aria-label', (isDone ? 'Mark not done: ' : 'Check off: ') + x.reminder);
+    box.innerHTML = CHECK_SVG;
+    if (!canEdit) { box.disabled = true; box.title = 'Check reminders off on the team site'; }
+    else box.addEventListener('click', () => (isDone ? remSet(x.id, 'open') : remCheck(li, x)));
+    const t = document.createElement('span'); t.className = 'tp-rem-text'; t.textContent = x.reminder;
     t.dataset.source = 'reminders'; t.dataset.field = 'reminder'; t.dataset.where = 'id=' + encodeURIComponent(x.id);
     const m = document.createElement('span'); m.className = 'tp-rem-meta';
-    m.textContent = 'added ' + shortDay(String(x.added).slice(0, 10)) + (x.note ? ' · ' + x.note : '');
-    li.append(t, m);
+    m.textContent = isDone && x.done_at ? 'done ' + shortDay(etDay(new Date(x.done_at))) : 'added ' + shortDay(String(x.added).slice(0, 10)) + (x.note ? ' · ' + x.note : '');
+    li.append(box, t, m);
     ul.appendChild(li);
   }
-  if (!rows.length) { const li = document.createElement('li'); li.className = 'tp-empty'; li.textContent = 'No reminders.'; ul.appendChild(li); }
+  if (!open.length && !remShowDone) { const li = document.createElement('li'); li.className = 'tp-empty tp-rem-clear'; li.textContent = 'All clear. Nothing to come back to.'; ul.appendChild(li); }
+  let more = $('.tp-rem-more');
+  if (!more) { more = document.createElement('button'); more.type = 'button'; more.className = 'tp-rem-more'; more.addEventListener('click', () => { remShowDone = !remShowDone; drawReminders(); }); ul.after(more); }
+  more.hidden = !done.length;
+  more.textContent = remShowDone ? 'Hide completed' : `Show completed (${done.length})`;
 }
 
 function personCard(p) {
