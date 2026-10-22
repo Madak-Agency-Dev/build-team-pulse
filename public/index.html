@@ -223,7 +223,10 @@ html:not(.is-locked) .btp-login { display: none; }
 
 /* Headline figures */
 #kpis { gap: var(--gap); }
-.tp-kpi-label { margin: 0 0 var(--sp-6); font-size: var(--fs-sm); font-weight: 500; color: var(--color-fg-muted); }
+.tp-kpi-top { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); margin-bottom: var(--sp-6); min-height: 1.75rem; }
+.tp-kpi-label { margin: 0; font-size: var(--fs-lg); font-weight: 500; letter-spacing: -0.01em; color: var(--color-fg); }
+.tp-kpi-date { flex: none; display: inline-flex; padding: .35rem .55rem; border-radius: var(--r-tiny); background-color: var(--tint); font-size: .75rem; font-weight: 500; line-height: 1; color: var(--color-fg-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tp-kpi-date:empty { display: none; }
 .tp-kpi-value { font-weight: 500; font-size: clamp(2.75rem, 5vw, 4rem); line-height: .9; letter-spacing: var(--track-tight); font-variant-numeric: tabular-nums; min-height: .9em; }
 .tp-kpi-sub { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
 .tp-up { color: var(--color-ok); } .tp-down { color: var(--color-bad); }
@@ -279,7 +282,7 @@ html:not(.is-locked) .btp-login { display: none; }
 /* Reminders */
 #reminders { display: grid; grid-template-columns: minmax(8rem, 14rem) minmax(0, 1fr); align-items: start; gap: var(--sp-3) var(--sp-5); margin-bottom: var(--gap); }
 #reminders > .tp-rem-more { grid-column: 2; }
-#reminders h3 { font-size: var(--fs-sm); color: var(--color-fg-muted); padding-top: .55rem; }
+#reminders h3 { font-size: var(--fs-sm); line-height: 1.35; color: var(--color-fg-muted); margin-top: calc(var(--panel-inset) + var(--sp-3) - var(--panel-pad) + .125rem); }
 #reminders .tp-note { display: none; }
 .tp-reminders { list-style: none; margin: calc(var(--panel-pad) * -1 + var(--panel-inset)) calc(var(--panel-pad) * -1 + var(--panel-inset)) calc(var(--panel-pad) * -1 + var(--panel-inset)) 0;
   padding: 0; display: flex; flex-direction: column; gap: 2px; min-height: 1.5rem; }
@@ -306,7 +309,7 @@ html:not(.is-locked) .btp-login { display: none; }
 .tp-toast.is-on { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
 .tp-toast button { padding: .4rem .65rem; border: 0; border-radius: var(--r-tiny); background-color: var(--mk-brand); color: #fff; font-size: var(--fs-xs); font-weight: 500; cursor: pointer; }
 .tp-rem-meta { font-size: var(--fs-xs); color: var(--color-fg-faint); text-align: right; max-width: 26rem; }
-@media (max-width: 48rem) { #reminders { grid-template-columns: 1fr; } #reminders h3 { padding-top: 0; } .tp-reminders { margin-left: calc(var(--panel-pad) * -1 + var(--panel-inset)); }
+@media (max-width: 48rem) { #reminders { grid-template-columns: 1fr; } #reminders h3 { margin-top: 0; } .tp-reminders { margin-left: calc(var(--panel-pad) * -1 + var(--panel-inset)); }
   .tp-reminders li { grid-template-columns: 1.125rem minmax(0, 1fr); } .tp-rem-meta { grid-column: 2; text-align: left; } }
 
 /* For you */
@@ -428,24 +431,24 @@ html:not(.is-locked) .btp-login { display: none; }
 
   <section id="kpis" class="tp-grid" aria-label="Headline numbers">
     <div class="tp-card" id="kpi-followthrough">
-      <p class="tp-kpi-label">Follow-through, <span class="tp-only-standup tp-prev-label">previous standup</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-top"><p class="tp-kpi-label">Follow-through</p><span class="tp-kpi-date"><span class="tp-only-standup tp-prev-label">Previous standup</span><span class="tp-only-range tp-range-label"></span></span></div>
       <div class="tp-kpi-value dash-skeleton tp-k1" data-source="day_summary" data-field="rate">—</div>
       <div class="tp-kpi-sub"><span class="tp-k1-done" data-source="day_summary" data-field="completed">—</span> of <span class="tp-k1-checked" data-source="day_summary" data-field="checked">—</span> done or handed off</div>
     </div>
     <div class="tp-card" id="kpi-committed">
-      <p class="tp-kpi-label">Committed, <span class="tp-only-standup tp-sel-label">this standup</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-top"><p class="tp-kpi-label">Committed</p><span class="tp-kpi-date"><span class="tp-only-standup tp-sel-label">This standup</span><span class="tp-only-range tp-range-label"></span></span></div>
       <div class="tp-kpi-value dash-skeleton tp-k2" data-source="day_summary" data-field="total">—</div>
       <div class="tp-kpi-sub"><span class="tp-only-standup">to report on at the next standup</span><span class="tp-only-range">across <span class="tp-k2-standups">—</span> <span class="tp-k2-word">standups</span></span></div>
     </div>
     <div class="tp-card" id="kpi-closed">
-      <p class="tp-kpi-label">Asana tasks closed, <span class="tp-only-standup tp-week-label">this week</span><span class="tp-only-range tp-range-label"></span></p>
+      <div class="tp-kpi-top"><p class="tp-kpi-label">Closed</p><span class="tp-kpi-date"><span class="tp-only-standup tp-week-label">This week</span><span class="tp-only-range tp-range-label"></span></span></div>
       <div class="tp-kpi-value dash-skeleton tp-k3" data-source="weekly_done" data-field="n">—</div>
-      <div class="tp-kpi-sub"><span class="tp-k3-change" data-source="weekly_done" data-field="change">—</span> <span class="tp-only-standup">vs the week before</span><span class="tp-only-range tp-k3-vs"></span></div>
+      <div class="tp-kpi-sub">Asana tasks · <span class="tp-k3-change" data-source="weekly_done" data-field="change">—</span> <span class="tp-only-standup">vs the week before</span><span class="tp-only-range tp-k3-vs"></span></div>
     </div>
     <div class="tp-card" id="kpi-overdue">
-      <p class="tp-kpi-label">Overdue in Asana, <span class="tp-who-label">team</span><span class="tp-only-range">, right now</span></p>
+      <div class="tp-kpi-top"><p class="tp-kpi-label">Overdue</p><span class="tp-kpi-date"><span class="tp-who-label">Team</span><span class="tp-only-range"> · now</span></span></div>
       <div class="tp-kpi-value dash-skeleton tp-k4" data-source="workload" data-field="overdue" data-where="person=Team">—</div>
-      <div class="tp-kpi-sub"><span class="tp-k4-week" data-source="workload" data-field="this_week" data-where="person=Team">—</span> more due in the next 7 days</div>
+      <div class="tp-kpi-sub">In Asana · <span class="tp-k4-week" data-source="workload" data-field="this_week" data-where="person=Team">—</span> more due in the next 7 days</div>
     </div>
   </section>
 
@@ -1626,7 +1629,7 @@ function drawStandupView(d) {
   const ww = last ? 'week=' + last.week + '&person=' + encodeURIComponent(last.person) : null;
   mark(k3, 'weekly_done', 'n', ww);
   mark(k3c, 'weekly_done', 'change', ww);
-  if (last) $('.tp-week-label').textContent = 'week of ' + shortDay(last.week);
+  if (last) $('.tp-week-label').textContent = 'Week of ' + shortDay(last.week);
   setText(k3, last ? num(last.n) : '—', !!last);
   k3c.classList.remove('tp-up', 'tp-down', 'dash-skeleton');
   if (last && last.change !== null) { k3c.textContent = signed(last.change); k3c.classList.add(last.change >= 0 ? 'tp-up' : 'tp-down'); } else k3c.textContent = '—';
@@ -1692,7 +1695,7 @@ dash.onData(() => {
   const P = who();
   personSel.value = P || '';
   $$('.tp-pp button').forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.person || '') === (P || ''))));
-  $$('.tp-who-label').forEach((el) => { el.textContent = P || 'team'; });
+  $$('.tp-who-label').forEach((el) => { el.textContent = P || 'Team'; });
   $$('.tp-who-across').forEach((el) => { el.textContent = P ? 'for ' + P : 'across the team'; });
   const wl = dash.data('workload');
   const team = wl.status === 'ok' ? wl.data.find((r) => r.person === (P || 'Team')) : null;
