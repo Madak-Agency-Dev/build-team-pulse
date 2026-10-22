@@ -26,7 +26,11 @@
   // Sign-in gate: data requests wait until the session is confirmed.
   let authed = false; let waiters = [];
   const whenAuthed = () => (authed ? Promise.resolve() : new Promise((r) => waiters.push(r)));
-  const unlock = () => { authed = true; document.documentElement.classList.remove('is-locked'); waiters.splice(0).forEach((r) => r()); };
+  const loadFaces = () => fetch('/api/people', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : {})).then((faces) => {
+    window.BTP_FACES = faces || {};
+    bump();
+  }).catch(() => {});
+  const unlock = () => { authed = true; document.documentElement.classList.remove('is-locked'); waiters.splice(0).forEach((r) => r()); loadFaces(); };
   const lock = (msg) => {
     authed = false; document.documentElement.classList.add('is-locked');
     const m = document.querySelector('.btp-login-msg'); if (m && msg) m.textContent = msg;
