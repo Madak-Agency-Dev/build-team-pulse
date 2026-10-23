@@ -1,9 +1,65 @@
 [
- {"id":"2026-10-19-1","week_of":"2026-10-19","category":"Leadership","title":"Unblock first, then do your own work","detail":"On 10/21 two of your four commitments slipped, and one was ECA design feedback David was waiting on. It was still open the next day. Anything a teammate is waiting on goes first.","try":"Each morning, before your own list, ask: who is waiting on me? Clear those first. Name them at standup.","source":"Simon Sinek, Leaders Eat Last: leaders take care of their people first, so they feel safe to focus on the work."},
- {"id":"2026-10-19-2","week_of":"2026-10-19","category":"Leadership","title":"Open the week with the why","detail":"Standups are tight and tactical, which is good. Once a week, spend 60 seconds on why this week's work matters to a client: the Olson board on 12/2, a launch, a score that moved.","try":"Next Monday, open with one sentence: \"This week matters because…\", then go around as usual.","source":"Simon Sinek, Start With Why: people commit more when they understand the purpose behind the work."},
- {"id":"2026-10-19-3","week_of":"2026-10-19","category":"Process","title":"Protect the plan from same-day asks","detail":"Jamie's SafeTraces work was bumped by a last-minute deck, and Peyton paused David's Verified Inspections design. Interruptions are normal, but right now they land on the team without going through you.","try":"Agree with Adam and the strategists: same-day requests for the build team go through you, so you can trade something off visibly instead of it slipping quietly.","source":""},
- {"id":"2026-10-19-4","week_of":"2026-10-19","category":"Launches","title":"Make every launch a moment","detail":"David's Madison Design Build report had a real number in it (82 to 90). Wins like that and each launch disappear into Asana today.","try":"Post a short launch note in team chat for each launch or win: what shipped, one before-and-after number, and who did it. Thirty seconds, every time.","source":""},
- {"id":"2026-10-19-5","week_of":"2026-10-19","category":"Process","title":"One definition of done for launches","detail":"Stanwood Camano closed cleanly with a full checklist; other wrap-ups trailed for days (Ride the Tide's last items, Meyer Art Center cleanup). The difference was the checklist.","try":"Turn the post-launch checklist into the standard (now without Looker Studio) and run the site audit agent on staging before every launch.","source":""},
- {"id":"2026-10-19-6","week_of":"2026-10-19","category":"Feedback","title":"Pair every piece of praise with one push","detail":"You already notice good work. People grow fastest when they hear both what's working and the one thing to sharpen, said directly and with care.","try":"In your next 1:1s, give each person one specific thing that's working and one thing to level up this month.","source":"Kim Scott, Radical Candor: care personally and challenge directly."},
- {"id":"2026-10-19-7","week_of":"2026-10-19","category":"Tools","title":"Give Claude Design a home before it spreads","detail":"You and David are both moving design into Claude Design (UltraNatural, Verified Inspections), and you flagged that team file organization is chaotic. It's easier to set the structure now than after ten projects.","try":"Set one naming and folder pattern (client / project / version) and pin it in the build team chat this week.","source":""}
+ {
+  "id": "2026-10-19-1",
+  "week_of": "2026-10-19",
+  "category": "Leadership",
+  "title": "Clear what people are waiting on before your own list",
+  "detail": "David addressed Peyton's ECA comments on 10/20 at 3:07 pm; you replied \"will get back to you tomorrow\", promised it again at standup 10/21 and 10/22, and the V2 feedback landed 10/22 at 6:44 pm. That's two and a half days of David's design-to-dev runway, and the Design Review is now due Monday. Your own work moves fast (Olson was off Webflow a day early); the bottleneck is the reviews only you can give.",
+  "try": "Starting Monday, open your standup turn with \"Who's waiting on me?\" and give each a time today. Anything a teammate hands you for review gets an answer within one working day, even if the answer is \"Wednesday, here's why.\"",
+  "source": "Simon Sinek, Leaders Eat Last: a leader's job is to take care of the people doing the work, so they can focus on it."
+ },
+ {
+  "id": "2026-10-19-2",
+  "week_of": "2026-10-19",
+  "category": "Process",
+  "title": "Renegotiate due dates instead of rolling them",
+  "detail": "At midnight on 10/23, 13 of your Asana tasks moved to \"Today\" within one minute, leaving 17 open tasks all due today. madak.com WORK has moved four times since 10/19 and madak.com Pricing three times. When every date rolls, nobody (including you) can see which ones are real, and your 10/21 commitment to \"3 or 4 small Madak tasks\" quietly missed.",
+  "try": "This afternoon, pick the five tasks that truly matter next week and give the rest an honest date or move them to a Someday section. If a task rolls twice, cut its scope or hand it off rather than moving it a third time.",
+  "source": "Basecamp, Shape Up (Ryan Singer): fix the time you're willing to spend (the appetite) and cut scope to fit, rather than letting work run on."
+ },
+ {
+  "id": "2026-10-19-3",
+  "week_of": "2026-10-19",
+  "category": "Process",
+  "title": "Make every handoff carry its own context",
+  "detail": "Four handoffs this week arrived missing something: the NCCET Hour Tracker went to Elli with no note (10/20), Elli forgot the SafeTraces attachments (10/21), Josh sent David the Luis De Souza Pinto page with no explanation (10/22), and Sponsor Cards bounced David to Kolya to Adam and back in seven minutes over two unnamed logos (10/22). Each one cost a round-trip and someone's focus.",
+  "try": "At Monday's full-team meeting, propose a three-line handoff note for any task passed to the build team: what's done, what's needed, where the files are. Save it as an Asana task template so strategists can start from it.",
+  "source": ""
+ },
+ {
+  "id": "2026-10-19-4",
+  "week_of": "2026-10-19",
+  "category": "Culture",
+  "title": "Answer the AI worry directly",
+  "detail": "When you showed Claude Design on 10/20, Jamie said \"there goes my job\" and David said he didn't know how to feel about it. You answered with your own excitement, which is real, but not their worry. Meanwhile your plans give each of them a bigger role: Jamie as brand reviewer on every Webflow migration over the next six months, David moving into the Astro builds.",
+  "try": "In next week's 1:1s, tell each of them plainly how their role grows (Jamie: brand owner on every refresh, starting with Olson; David: Astro builds and the visual editor research), then ask which skill they want to get better at this quarter.",
+  "source": "Brené Brown, Dare to Lead: clear is kind, and leaving people to fill in the blanks about their future is unkind."
+ },
+ {
+  "id": "2026-10-19-5",
+  "week_of": "2026-10-19",
+  "category": "Leadership",
+  "title": "Check Jamie's load before Wednesday",
+  "detail": "Jamie is out 10/29 and 10/30, and the following are all aimed at Wednesday 10/28: the Olson brand presentation for the 12/2 board, the JMU graphic that Adam turned into a full brand presentation on 10/21, about nine SafeTraces web app screens, two USA Youth one-pagers and your Olson site review. Requests come from Adam, Elli, Josh and you, and SafeTraces already slipped once for Josh's last-minute GMU deck on 10/21.",
+  "try": "On Monday, list Jamie's week with her, rank it together, and agree with Adam which item moves past 10/28. Take your Olson site review off her critical path by pushing it to the week of 11/2.",
+  "source": ""
+ },
+ {
+  "id": "2026-10-19-6",
+  "week_of": "2026-10-19",
+  "category": "Tools",
+  "title": "Point David at Sanity's Presentation tool first",
+  "detail": "On 10/22 you asked David to find a Webflow-style click-to-edit layer for the Astro sites by 10/30. Sanity already does this: its Presentation tool and Visual Editing add click-to-edit overlays on a live preview, and the @sanity/astro integration supports it. madak.com already runs on Astro and Sanity, so it's a ready test bed.",
+  "try": "Give David a narrower brief: set up Presentation on one madak.com page in the Studio, have a strategist change a headline and an image, and report back by 10/30 on whether it's simple enough for clients.",
+  "source": ""
+ },
+ {
+  "id": "2026-10-19-7",
+  "week_of": "2026-10-19",
+  "category": "Launches",
+  "title": "Close the week with what shipped",
+  "detail": "A lot shipped this week and most of it passed quietly: Olson off Webflow ahead of plan (10/20), the JMU update page live the same evening (10/21), Stanwood Camano fully closed out (10/21), Madison Design Build site health from 82 to 90, the Western season program to print and the pre-order banner live in 38 minutes (10/22). Standups only look ahead to the next commitment, so nobody sees the whole week at once.",
+  "try": "At today's full-team meeting (and every Friday after), take five minutes: each build person names one thing they shipped this week and one person who helped them do it.",
+  "source": "Teresa Amabile and Steven Kramer, The Progress Principle: making progress on meaningful work is the strongest everyday boost to motivation, and it works best when people can see it."
+ }
 ]
