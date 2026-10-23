@@ -30,5 +30,21 @@
   "added": "2026-10-21",
   "status": "open",
   "note": "From the 10/21 standup"
+ },
+ {
+  "id": "r5",
+  "reminder": "Hold the growth strategy meeting with David next week: SEO, AEO, analytics, and traffic and ranking goals for madak.com",
+  "about": "Growth strategy",
+  "added": "2026-10-23",
+  "status": "open",
+  "note": "Pushed for about a month; from the Madak 3.0 meeting. Raised at the 10/23 standup"
+ },
+ {
+  "id": "r6",
+  "reminder": "Check Jamie’s load before Wednesday: five decks in progress, two more coming from Peyton, and Olson due 10/28",
+  "about": "Jamie",
+  "added": "2026-10-23",
+  "status": "open",
+  "note": "Jamie is out Thu–Fri 10/29–30"
  }
 ]

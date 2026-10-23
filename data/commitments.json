@@ -315,9 +315,9 @@
   "person": "Blair",
   "commitment": "Rework the Ride the Tide section",
   "project": "Ride the Tide Collective",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Reworked section to Elli for review 10/22",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-blair-2",
@@ -325,9 +325,9 @@
   "person": "Blair",
   "commitment": "Finish two GemaTEG tasks",
   "project": "GemaTEG",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Engineer button fix to Elli 10/22; home page v2 draft followed 10/23. Both in staging",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-blair-3",
@@ -335,9 +335,9 @@
   "person": "Blair",
   "commitment": "Get the Madak task over to Adam",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Weaver Brands Dashboard to Adam 10/22 with a staging link; V2 and a redesign the same day",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-blair-4",
@@ -345,9 +345,9 @@
   "person": "Blair",
   "commitment": "Send ECA design feedback to David",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "All feedback left in V2 and sent to David 10/22",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-blair-5",
@@ -355,9 +355,9 @@
   "person": "Blair",
   "commitment": "Create a task for Jamie to review the Olson site brand",
   "project": "Olson Foundation",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Review Website Brand Design assigned to Jamie 10/22, due 10/27; Jamie confirmed 10/23",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-jamie-1",
@@ -365,9 +365,9 @@
   "person": "Jamie",
   "commitment": "SafeTraces UX web app, about 9 pages",
   "project": "SafeTraces",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Nearly done in Figma; report and trends pages on pause; going to Elli after the 10/23 standup",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-jamie-2",
@@ -375,9 +375,9 @@
   "person": "Jamie",
   "commitment": "First 2 of 5 one-pagers, if time",
   "project": "USA Youth & High School Rugby",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Started 10/23; aiming to get both to Peyton by Monday 10/26",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-jamie-3",
@@ -386,8 +386,8 @@
   "commitment": "Olson brand presentation for 12/2 board, done by 10/28",
   "project": "Olson Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Not started; Olson is next after SafeTraces and USA Youth. Due 10/28",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-jamie-4",
@@ -396,8 +396,8 @@
   "commitment": "Review Olson site brand: logo and colors",
   "project": "Olson Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Asana task due 10/27; Olson is next after SafeTraces and USA Youth",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-david-1",
@@ -405,9 +405,9 @@
   "person": "David",
   "commitment": "Wrap up Meyer Art Center cleanup",
   "project": "Meyer Art Center",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Last cleanup round sent to Adam; Website Refinement closed 10/22. More edits likely from Adam and Peyton",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-david-2",
@@ -415,9 +415,9 @@
   "person": "David",
   "commitment": "Major progress on Ride the Tide punch list",
   "project": "Ride the Tide Collective",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Down to forwarding the client’s domains through Bluehost; RTT Updates still open, due 10/23",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-david-3",
@@ -425,9 +425,9 @@
   "person": "David",
   "commitment": "Leftover GMU maintenance tasks from Josh",
   "project": "GMU",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "David says done; footer-date tasks closed 10/23, but the JMU and Gators schedule rebuilds from Josh are still open",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-david-4",
@@ -435,9 +435,9 @@
   "person": "David",
   "commitment": "Ask Josh what's actionable on Luis De Souza Pinto page",
   "project": "JMU Rugby",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Asked Josh 10/22; he said keep the donation links as is. Task back with Josh",
+  "checked_on": "2026-10-23"
  },
  {
   "id": "2026-10-22-david-5",
@@ -445,6 +445,86 @@
   "person": "David",
   "commitment": "Research visual copy editor add-ons, options by 10/30",
   "project": "Madak",
+  "status": "pending",
+  "evidence": "Not raised 10/23. Due 10/30",
+  "checked_on": "2026-10-23"
+ },
+ {
+  "id": "2026-10-23-blair-1",
+  "standup_date": "2026-10-23",
+  "person": "Blair",
+  "commitment": "Innovation DuPage task with today’s hard deadline",
+  "project": "Innovation DuPage",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-blair-2",
+  "standup_date": "2026-10-23",
+  "person": "Blair",
+  "commitment": "Get the client portal ready for Adam’s client meeting Tue 10/27",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-jamie-1",
+  "standup_date": "2026-10-23",
+  "person": "Jamie",
+  "commitment": "Send the SafeTraces web app designs to Elli",
+  "project": "SafeTraces",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-jamie-2",
+  "standup_date": "2026-10-23",
+  "person": "Jamie",
+  "commitment": "Pathogen Scout graphic mockups",
+  "project": "SafeTraces",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-jamie-3",
+  "standup_date": "2026-10-23",
+  "person": "Jamie",
+  "commitment": "USA Youth one-pagers to Peyton by Monday",
+  "project": "USA Youth & High School Rugby",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-david-1",
+  "standup_date": "2026-10-23",
+  "person": "David",
+  "commitment": "Contact Bluehost to forward the Ride the Tide client’s domains",
+  "project": "Ride the Tide Collective",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-david-2",
+  "standup_date": "2026-10-23",
+  "person": "David",
+  "commitment": "Work through Blair’s ECA design feedback",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-23-david-3",
+  "standup_date": "2026-10-23",
+  "person": "David",
+  "commitment": "Clear the maintenance tasks due today",
+  "project": "Maintenance",
   "status": "pending",
   "evidence": "",
   "checked_on": ""
