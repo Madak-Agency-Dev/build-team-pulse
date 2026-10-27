@@ -97,5 +97,32 @@
   "why": "At standup 10/23 she was carrying five decks with two more coming from Peyton, alongside SafeTraces and USA Youth. She's checking every page of the Claude-generated decks because fonts and colors come back changed, and she called her load manageable by prioritizing.",
   "say": "I know the deck load is heavy right now, and you're still checking every page so the fonts and colors hold up when the AI versions come back broken. That care doesn't go unnoticed. Tell me when the stack gets to be too much and I'll help move things.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-10-27-david-1",
+  "date": "2026-10-27",
+  "person": "David",
+  "headline": "Finished the ECA design comments two days early",
+  "why": "At standup 10/26 Blair asked for the ECA design feedback to be worked through by Wednesday 10/28. David closed the Design Review at 5:44 pm that same day and passed the design to Peyton at 5:48 pm, while also closing Ride the Tide Development and starting on the roughly 15 tasks Adam sent over the weekend.",
+  "say": "I asked for ECA by Wednesday and you had it back to Peyton Monday evening, with a full weekend list from Adam on top. That gets the client moving and clears the way for the chatbot and dashboard work coming next. Nice work.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-10-27-david-2",
+  "date": "2026-10-27",
+  "person": "David",
+  "headline": "Gave the client portal its first real product call",
+  "why": "When Blair demoed the client portal at standup 10/26 and asked for first reactions, David was the one with a concrete note: tone down the page-to-page animation because it's a utility product and clients shouldn't feel overloaded. Blair took it on as a follow-up the same morning.",
+  "say": "Your call on the portal animation was right. It's a tool people come to get something done, and that kind of product thinking is exactly what I want from you as we build more of these. Keep pushing back on my stuff like that.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-10-27-jamie-1",
+  "date": "2026-10-27",
+  "person": "Jamie",
+  "headline": "Brought a ready-made handoff plan for her time off",
+  "why": "At standup 10/26, when Blair asked how coverage worked before, Jamie offered the system she and Chris used: a task listing every link and what's needed, tagging Adam and each project's strategist. She also set every deliverable (Olson, Adam's Thursday deck, Meyer posters and mailers, two Crusaders decks) to land by Wednesday before she's out 10/29–10/30, and took on the Crusaders content herself after Josh and Adam couldn't get to it.",
+  "say": "Thanks for walking in with an answer when I asked about coverage. The handoff task with links and the strategists tagged is exactly what I need, since I'm not close to your day-to-day. Let's make it how we handle anyone being out.",
+  "where": "1:1"
  }
 ]
