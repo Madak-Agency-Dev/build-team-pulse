@@ -546,8 +546,8 @@
   "commitment": "Finish Innovation DuPage New ID Requests today",
   "project": "Innovation DuPage",
   "status": "waiting",
-  "evidence": "Waiting on Anushka's approval per 2:19 pm comment; due moved to 10/27 (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "evidence": "Still waiting on Anushka per 10/27 standup; task open, due 10/27",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-blair-2",
@@ -555,9 +555,9 @@
   "person": "Blair",
   "commitment": "Complete the semantic tasks Adam assigned over the weekend",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "progress",
+  "evidence": "Read 'semantic' as MattaCast: mostly done 10/26, rest await live dashboard",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-blair-3",
@@ -565,9 +565,9 @@
   "person": "Blair",
   "commitment": "Reduce page-transition animation in the client portal",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "done",
+  "evidence": "Blair says page transitions removed from dashboard 10/26",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-blair-4",
@@ -575,9 +575,9 @@
   "person": "Blair",
   "commitment": "Touch base with David 10/27 a.m., take over some Gators tasks",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "done",
+  "evidence": "Built Alumni Weekend page, handed back to David 10/26; David confirmed helpful",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-blair-5",
@@ -585,9 +585,9 @@
   "person": "Blair",
   "commitment": "Look into Sanity Presentation as content editor for strategists and clients",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "done",
+  "evidence": "Reviewed Sanity Presentation 10/26, demoed it at 10/27 standup",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-david-1",
@@ -595,9 +595,9 @@
   "person": "David",
   "commitment": "Finish Ride the Tide, including Bluehost domain forwarding",
   "project": "Ride the Tide Collective",
-  "status": "progress",
-  "evidence": "Development and Website Build closed; offboarding started; Bluehost forwarding not confirmed (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "handoff",
+  "evidence": "Says Tide updates done, Bluehost sorted, sent to Elli; Development closed 10/26",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-david-2",
@@ -606,8 +606,8 @@
   "commitment": "Work through Blair's ECA design comments, done by 10/28",
   "project": "ECA",
   "status": "handoff",
-  "evidence": "Design Review closed; ECA design passed to Peyton for final review 5:48 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "evidence": "ECA revisions sent to Peyton; client review 10/27",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-david-3",
@@ -616,8 +616,8 @@
   "commitment": "Work through weekend maintenance tasks, Meyer Art Center before Gators",
   "project": "Meyer Art Center",
   "status": "progress",
-  "evidence": "Meyer Art Center tasks active, article width closed; Gators work started late (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "evidence": "Some maintenance done, article width closed 10/26; more left today",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-david-4",
@@ -625,9 +625,9 @@
   "person": "David",
   "commitment": "Evaluate Sanity and share findings or alternatives with Blair",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "missed",
+  "evidence": "No sign David tried Sanity yet; Blair re-asked for feedback by Friday",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-jamie-1",
@@ -636,8 +636,8 @@
   "commitment": "Finish Olson brand review and send feedback to Blair today",
   "project": "Olson Foundation",
   "status": "done",
-  "evidence": "Olson website feedback sent to Blair 2:57 pm; Blair addressed and closed it (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "evidence": "Olson website feedback sent to Blair 10/26; Blair addressed and closed it",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-jamie-2",
@@ -645,9 +645,9 @@
   "person": "Jamie",
   "commitment": "Finish the design presentation Adam needs for Thursday 10/29",
   "project": "Olson Foundation",
-  "status": "progress",
-  "evidence": "Olson brand guide shared in progress for Adam's Thursday presentation (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "handoff",
+  "evidence": "Jamie says all Olson items sent out; brand guide with Adam for 10/29",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-jamie-3",
@@ -655,9 +655,9 @@
   "person": "Jamie",
   "commitment": "Meyer Art Center posters and mailers, due 10/28",
   "project": "Meyer Art Center",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "progress",
+  "evidence": "Print pieces finished 10/27 a.m., not yet sent; task still open",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-jamie-4",
@@ -665,9 +665,9 @@
   "person": "Jamie",
   "commitment": "Content and design for two Crusaders PowerPoints this week",
   "project": "Crusaders Global Academy",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "status": "missed",
+  "evidence": "Jamie says didn't start Crusaders until 10/27; both decks due 10/28",
+  "checked_on": "2026-10-27"
  },
  {
   "id": "2026-10-26-jamie-5",
@@ -675,8 +675,168 @@
   "person": "Jamie",
   "commitment": "Before 10/29 time off, create handoff task with links, tag Adam and strategists",
   "project": "Madak",
+  "status": "missed",
+  "evidence": "No handoff task in Asana yet; not mentioned at 10/27 standup",
+  "checked_on": "2026-10-27"
+ },
+ {
+  "id": "2026-10-27-blair-1",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Get Innovation DuPage New ID Requests across the finish line",
+  "project": "Innovation DuPage",
   "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-26"
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-blair-2",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Wrap up Adam's last home page graphic change",
+  "project": "Meyer Art Center",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-blair-3",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Prep the plan for the 10/28 growth strategy meeting with David",
+  "project": "madak.com",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-blair-4",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Finish TNT Google Review Integration (switch the API)",
+  "project": "TNT Tuckpointing",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-blair-5",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Take one or two tasks off David's plate this afternoon",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-blair-6",
+  "standup_date": "2026-10-27",
+  "person": "Blair",
+  "commitment": "Look further into Ship Studio as an editing option",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-david-1",
+  "standup_date": "2026-10-27",
+  "person": "David",
+  "commitment": "Build Invest in the Present/Future landing page to go live 10/28",
+  "project": "Florida Gators Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-david-2",
+  "standup_date": "2026-10-27",
+  "person": "David",
+  "commitment": "Finish time-sensitive campaign tasks, incl. Before the Doors Open page",
+  "project": "Meyer Art Center",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-david-3",
+  "standup_date": "2026-10-27",
+  "person": "David",
+  "commitment": "Clear remaining maintenance tasks today",
+  "project": "Maintenance",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-david-4",
+  "standup_date": "2026-10-27",
+  "person": "David",
+  "commitment": "Reorganize task list after standup; ask Blair or strategists for help",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-david-5",
+  "standup_date": "2026-10-27",
+  "person": "David",
+  "commitment": "Try Sanity Presentation by Friday and share feedback with Blair",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-jamie-1",
+  "standup_date": "2026-10-27",
+  "person": "Jamie",
+  "commitment": "Send out finished print pieces for approval before 10/29 time off",
+  "project": "Meyer Art Center",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-jamie-2",
+  "standup_date": "2026-10-27",
+  "person": "Jamie",
+  "commitment": "Work on Crusaders player residency and coaching course presentations",
+  "project": "Crusaders Global Academy",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-jamie-3",
+  "standup_date": "2026-10-27",
+  "person": "Jamie",
+  "commitment": "Collect client collateral for MattaCast",
+  "project": "MattaCast",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-jamie-4",
+  "standup_date": "2026-10-27",
+  "person": "Jamie",
+  "commitment": "Ping Elli on SafeTraces one-pager; catch up with Blair 10/28 a.m. if blocked",
+  "project": "SafeTraces",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-10-27-jamie-5",
+  "standup_date": "2026-10-27",
+  "person": "Jamie",
+  "commitment": "Send David the Claude-built event landing page mock-up",
+  "project": "Meyer Art Center",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
  }
 ]
