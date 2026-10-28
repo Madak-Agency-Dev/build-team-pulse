@@ -124,5 +124,41 @@
   "why": "At standup 10/26, when Blair asked how coverage worked before, Jamie offered the system she and Chris used: a task listing every link and what's needed, tagging Adam and each project's strategist. She also set every deliverable (Olson, Adam's Thursday deck, Meyer posters and mailers, two Crusaders decks) to land by Wednesday before she's out 10/29–10/30, and took on the Crusaders content herself after Josh and Adam couldn't get to it.",
   "say": "Thanks for walking in with an answer when I asked about coverage. The handoff task with links and the strategists tagged is exactly what I need, since I'm not close to your day-to-day. Let's make it how we handle anyone being out.",
   "where": "1:1"
+ },
+ {
+  "id": "2026-10-28-david-1",
+  "date": "2026-10-28",
+  "person": "David",
+  "headline": "Landed both time-sensitive pages he named at standup",
+  "why": "At standup 10/27 David named two must-do items: the Gators Invest landing page and Meyer's Before the Doors Open row. He sent the Invest staging link to Adam at 2:40 pm, and had the Doors Open row on staging by 5:25 pm, took Adam's change at 5:52 pm and pushed it live by 6:52 pm. Adam thanked him on the task the next morning.",
+  "say": "Yesterday you told us the two things that couldn't slip, and both landed: the Invest page on staging by mid-afternoon and the Doors Open row live that evening, change included. That's exactly how I want a full plate handled: pick what matters and finish it.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-10-28-david-2",
+  "date": "2026-10-28",
+  "person": "David",
+  "headline": "Researched the Claude design workflow on his own",
+  "why": "At standup 10/27, right after Blair announced the AI-first shift, David had already done his own research into designing with Claude (design system and a home page first as context, then iterate) and asked Blair to compare notes, plus whether Figma still fits in.",
+  "say": "I noticed you'd already been reading up on how to design with Claude before I even pitched the shift. That's the curiosity that'll make this transition work. Let's swap workflows soon; I want to hear what you're finding.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-10-28-jamie-1",
+  "date": "2026-10-28",
+  "person": "Jamie",
+  "headline": "Cut both Crusaders decks to 11 tight pages",
+  "why": "Jamie only started the Crusaders work on the morning of 10/27, and by 2:24 pm she'd sent Adam both the Coaching Course and Player Residency decks, a day before their 10/28 due date. Each is 11 pages and still carries all of Grant's course details plus the key points from the website.",
+  "say": "Both Crusaders decks went to Adam in one afternoon, a day early, and you got each down to 11 pages without losing any of the details Grant sent. Editing that tight is the hard part, and it shows.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-10-28-jamie-2",
+  "date": "2026-10-28",
+  "person": "Jamie",
+  "headline": "Cleared Meyer print pieces before her days off",
+  "why": "At standup 10/27 she said she wanted the Meyer print work approved so nobody had to worry about it while she's out 10/29–10/30. At 3:37 pm she sent Adam the 11x17 poster and the double-sided mailer, and offered to prepare print-ready files as soon as they're approved.",
+  "say": "Thanks for getting the Meyer poster and mailer to Adam before your days off, with the print-ready files ready to go once he signs off. Thinking about what the rest of us would be stuck with while you're out makes a real difference.",
+  "where": "Direct message"
  }
 ]
