@@ -845,9 +845,9 @@
   "person": "Blair",
   "commitment": "Get growth strategy draft to David by end of day",
   "project": "madak.com",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Growth Plan active: pricing page live, templates task drafted; no send to David seen (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-blair-2",
@@ -856,8 +856,8 @@
   "commitment": "Set up Madak Agency OS in Claude Code",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-blair-3",
@@ -865,9 +865,9 @@
   "person": "Blair",
   "commitment": "Ping Anusha again on Innovation DuPage",
   "project": "Innovation DuPage",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Innovation DuPage calendar marked live, passed to Elli; no direct ping to Anusha seen (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-david-1",
@@ -876,8 +876,8 @@
   "commitment": "Wrap up Elli's latest Ride the Tide updates",
   "project": "Ride the Tide Collective",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-david-2",
@@ -885,9 +885,9 @@
   "person": "David",
   "commitment": "Finish remaining Meyer UI updates",
   "project": "Meyer Art Center",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Meyer hero, Ask grid, /give updates pushed live and assigned to Adam (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-david-3",
@@ -895,9 +895,9 @@
   "person": "David",
   "commitment": "Complete Gators alumni weekend task; review Blair's draft",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Alumni Weekend page due moved to Friday; /invest edits sent to Josh (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-david-4",
@@ -905,9 +905,9 @@
   "person": "David",
   "commitment": "Rebuild Florida match schedule from the JMU version",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Florida schedule layout rebuilt, link sent and assigned to Josh (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-david-5",
@@ -916,8 +916,8 @@
   "commitment": "Send Blair the tweet about the Slack-only agency",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-jamie-1",
@@ -925,9 +925,9 @@
   "person": "Jamie",
   "commitment": "Send SafeTraces content back to Elli",
   "project": "SafeTraces",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "PathogenScout logo files uploaded to Drive, task reassigned to Elli (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-jamie-2",
@@ -935,9 +935,9 @@
   "person": "Jamie",
   "commitment": "Meet Adam, take on time-sensitive tasks before 10/29 time off",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Jamie's OOO task set up, assigned to Adam: 'everything in a good place' (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  },
  {
   "id": "2026-10-28-jamie-3",
@@ -945,8 +945,8 @@
   "person": "Jamie",
   "commitment": "Create master handoff task under Adam, tag everyone",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Created 'Jamie's OOO' handoff task, tagged team, assigned to Adam (as of 7:15 pm)",
+  "checked_on": "2026-10-28"
  }
 ]
