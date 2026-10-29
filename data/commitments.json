@@ -845,9 +845,9 @@
   "person": "Blair",
   "commitment": "Get growth strategy draft to David by end of day",
   "project": "madak.com",
-  "status": "progress",
-  "evidence": "Growth Plan active: pricing page live, templates task drafted; no send to David seen (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "status": "handoff",
+  "evidence": "Growth Strategy First Look assigned to David 10/29 a.m., a day late",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-blair-2",
@@ -855,9 +855,9 @@
   "person": "Blair",
   "commitment": "Set up Madak Agency OS in Claude Code",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "status": "missed",
+  "evidence": "No 10/29 standup recording; no Asana or email activity seen",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-blair-3",
@@ -866,8 +866,8 @@
   "commitment": "Ping Anusha again on Innovation DuPage",
   "project": "Innovation DuPage",
   "status": "progress",
-  "evidence": "Innovation DuPage calendar marked live, passed to Elli; no direct ping to Anusha seen (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "Anusha replied via Elli 10/28; Blair sent calendar how-to, IDs due 10/29",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-david-1",
@@ -875,9 +875,9 @@
   "person": "David",
   "commitment": "Wrap up Elli's latest Ride the Tide updates",
   "project": "Ride the Tide Collective",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "status": "missed",
+  "evidence": "No RTT activity since 10/28; RTT tasks re-dated to 10/29",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-david-2",
@@ -886,8 +886,8 @@
   "commitment": "Finish remaining Meyer UI updates",
   "project": "Meyer Art Center",
   "status": "handoff",
-  "evidence": "Meyer hero, Ask grid, /give updates pushed live and assigned to Adam (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "Meyer updates live, with Adam; he closed /give 10/29, new asks",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-david-3",
@@ -896,8 +896,8 @@
   "commitment": "Complete Gators alumni weekend task; review Blair's draft",
   "project": "Florida Gators Rugby Alumni",
   "status": "progress",
-  "evidence": "Alumni Weekend page due moved to Friday; /invest edits sent to Josh (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "/invest 'very close' per Adam 10/29; Blair's draft only arrived 10/29",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-david-4",
@@ -906,8 +906,8 @@
   "commitment": "Rebuild Florida match schedule from the JMU version",
   "project": "Florida Gators Rugby Alumni",
   "status": "handoff",
-  "evidence": "Florida schedule layout rebuilt, link sent and assigned to Josh (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "Florida schedule rebuilt, sent and assigned to Josh 10/28",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-david-5",
@@ -915,9 +915,9 @@
   "person": "David",
   "commitment": "Send Blair the tweet about the Slack-only agency",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "status": "missed",
+  "evidence": "No 10/29 standup recording; no tweet seen in email or Asana",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-jamie-1",
@@ -925,9 +925,9 @@
   "person": "Jamie",
   "commitment": "Send SafeTraces content back to Elli",
   "project": "SafeTraces",
-  "status": "handoff",
-  "evidence": "PathogenScout logo files uploaded to Drive, task reassigned to Elli (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "status": "done",
+  "evidence": "PathogenScout files sent; Elli closed the logo task 10/28",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-jamie-2",
@@ -936,8 +936,8 @@
   "commitment": "Meet Adam, take on time-sensitive tasks before 10/29 time off",
   "project": "Madak",
   "status": "done",
-  "evidence": "Jamie's OOO task set up, assigned to Adam: 'everything in a good place' (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "OOO task set up with Adam 10/28: 'everything in a good place'",
+  "checked_on": "2026-10-29"
  },
  {
   "id": "2026-10-28-jamie-3",
@@ -946,7 +946,7 @@
   "commitment": "Create master handoff task under Adam, tag everyone",
   "project": "Madak",
   "status": "done",
-  "evidence": "Created 'Jamie's OOO' handoff task, tagged team, assigned to Adam (as of 7:15 pm)",
-  "checked_on": "2026-10-28"
+  "evidence": "'Jamie's OOO' handoff task created 10/28, team tagged, assigned to Adam",
+  "checked_on": "2026-10-29"
  }
 ]
