@@ -956,8 +956,8 @@
   "commitment": "Finish GemaTEG homepage rework",
   "project": "GemaTEG",
   "status": "handoff",
-  "evidence": "V2 draft changes made, sent to Elli; image subtask to Jamie (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "evidence": "V2 draft sent to Elli 10/29, image subtask to Jamie; Elli set due 11/2",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-blair-2",
@@ -965,9 +965,9 @@
   "person": "Blair",
   "commitment": "Finish today's new Innovation DuPage work",
   "project": "Innovation DuPage",
-  "status": "progress",
-  "evidence": "Replied to Elli on calendar ask; separate collection planned, not built (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "status": "done",
+  "evidence": "New calendar collection built 10/29; Anushka confirmed it works 10/30",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-blair-3",
@@ -976,8 +976,8 @@
   "commitment": "Set up Madak Agency OS once Adam sends credentials",
   "project": "Madak",
   "status": "waiting",
-  "evidence": "Still waiting on Adam's credentials; no setup activity seen (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "evidence": "Still no sign of Adam's credentials or setup activity by 10/30 noon",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-david-1",
@@ -986,8 +986,8 @@
   "commitment": "Finish Ride the Tide updates",
   "project": "Ride the Tide Collective",
   "status": "handoff",
-  "evidence": "RTT Updates done per doc, assigned to Elli 7:05 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "evidence": "RTT updates done per doc, assigned to Elli 10/29 7:05 pm",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-david-2",
@@ -996,8 +996,8 @@
   "commitment": "Finish Seattle Sports Commission Signature Events task",
   "project": "Seattle Sports Commission",
   "status": "handoff",
-  "evidence": "Date set to October 2027, back to Elli with Run X question (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "evidence": "Set to October 2027, back to Elli with Run X question 10/29",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-david-3",
@@ -1006,8 +1006,8 @@
   "commitment": "Finish Seattle Sports Commission New Updates task",
   "project": "Seattle Sports Commission",
   "status": "waiting",
-  "evidence": "Sent Elli questions on Girls Lead and Sports Star feedback (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "evidence": "Waiting on Elli's answers on Girls Lead, Sports Star banners since 10/29",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-david-4",
@@ -1015,9 +1015,9 @@
   "person": "David",
   "commitment": "Prioritize and work on Madak SEO/AEO plan (presenting next week)",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "status": "missed",
+  "evidence": "No SEO/AEO plan task or activity seen; 10/30 standup not yet held",
+  "checked_on": "2026-10-30"
  },
  {
   "id": "2026-10-29-david-5",
@@ -1025,8 +1025,8 @@
   "person": "David",
   "commitment": "Add recurring weekly 2-hour SEO/AEO calendar block",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm; David's calendar not visible (as of 7:15 pm)",
-  "checked_on": "2026-10-29"
+  "status": "missed",
+  "evidence": "No SEO/AEO block on calendars seen; David's calendar not visible",
+  "checked_on": "2026-10-30"
  }
 ]
