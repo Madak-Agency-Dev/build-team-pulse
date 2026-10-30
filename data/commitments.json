@@ -1028,5 +1028,75 @@
   "status": "missed",
   "evidence": "No SEO/AEO block on calendars seen; David's calendar not visible",
   "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-blair-1",
+  "standup_date": "2026-10-30",
+  "person": "Blair",
+  "commitment": "Build SEO/AEO report page in client dashboard once David sends specifics",
+  "project": "Madak",
+  "status": "waiting",
+  "evidence": "Waiting on David's specifics task; none assigned to Blair yet (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-blair-2",
+  "standup_date": "2026-10-30",
+  "person": "Blair",
+  "commitment": "Send David the LinkedIn post on agencies replacing decks with Claude sites",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-blair-3",
+  "standup_date": "2026-10-30",
+  "person": "Blair",
+  "commitment": "Schedule session next week to walk David through Vercel/GitHub site setup",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-david-1",
+  "standup_date": "2026-10-30",
+  "person": "David",
+  "commitment": "Send Blair a task with SEO/AEO report page specifics",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-david-2",
+  "standup_date": "2026-10-30",
+  "person": "David",
+  "commitment": "Accept Vercel and GitHub team invites",
+  "project": "Madak",
+  "status": "progress",
+  "evidence": "Joined Madak Vercel team today; GitHub acceptance not visible (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-david-3",
+  "standup_date": "2026-10-30",
+  "person": "David",
+  "commitment": "Work through maintenance tasks via Claude and report back",
+  "project": "Madak",
+  "status": "progress",
+  "evidence": "SSC nav/footer updated, sent to Elli 4:29 pm; more tasks open (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
+ },
+ {
+  "id": "2026-10-30-david-4",
+  "standup_date": "2026-10-30",
+  "person": "David",
+  "commitment": "Block a couple hours next week to build with Claude",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-10-30"
  }
 ]
