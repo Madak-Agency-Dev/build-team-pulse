@@ -61,5 +61,68 @@
   "detail": "A lot shipped this week and most of it passed quietly: Olson off Webflow ahead of plan (10/20), the JMU update page live the same evening (10/21), Stanwood Camano fully closed out (10/21), Madison Design Build site health from 82 to 90, the Western season program to print and the pre-order banner live in 38 minutes (10/22). Standups only look ahead to the next commitment, so nobody sees the whole week at once.",
   "try": "At today's full-team meeting (and every Friday after), take five minutes: each build person names one thing they shipped this week and one person who helped them do it.",
   "source": "Teresa Amabile and Steven Kramer, The Progress Principle: making progress on meaningful work is the strongest everyday boost to motivation, and it works best when people can see it."
+ },
+ {
+  "id": "2026-10-26-1",
+  "week_of": "2026-10-26",
+  "category": "Leadership",
+  "title": "Finish one of your builds before starting the next",
+  "detail": "Between 10/27 and 10/29 you pitched or started the Agency OS, an Asana maintenance bot, a thin-task context bot, Ship Studio and Stacky evaluations, and built the Scribblio clone on the night of 10/28. Over the same nights, /strategic-roadmap & /proposal, Email Command Center and Claude Bootcamp were each re-dated four times (10/27 through 10/30), the growth strategy reached David a day late (10/29 a.m., so the 10/28 meeting moved to 11/2), and the Agency OS setup you named on 10/28 didn't happen. The energy is great for the team; the cost is that your own commitments are the ones that slip.",
+  "try": "On Monday, name at standup the one personal build you'll finish this week, and don't start another until it ships or you've cut it. Put the three tasks that rolled all week on a real date or give them back to Adam.",
+  "source": "Greg McKeown, Essentialism: doing fewer things, chosen deliberately, gets more of what matters done than spreading effort across everything."
+ },
+ {
+  "id": "2026-10-26-2",
+  "week_of": "2026-10-26",
+  "category": "Process",
+  "title": "Set a Monday triage for weekend requests",
+  "detail": "David started the week with about 15 tasks Adam sent over the weekend (10/26), and by 10/29 he said the load was \"definitely feeling like a lot.\" The SEO/AEO SOP has been open since 7/30 and re-dated on 10/1, 10/2, 10/9 and 10/27, and Adam's 10/13 ask to turn the Part Works audit into a task template has rolled about a dozen times. On 10/29 David agreed to a recurring 2-hour SEO/AEO block; nothing was on record by that evening.",
+  "try": "Agree with Adam on Monday that build requests sent after Friday get their due dates set at Monday standup, not by the sender. In the same standup, have David put the weekly SEO/AEO block on his calendar while you're all on the call.",
+  "source": "Cal Newport, Deep Work: protect focused time on the calendar in advance, or shallow, urgent work will fill every hour."
+ },
+ {
+  "id": "2026-10-26-3",
+  "week_of": "2026-10-26",
+  "category": "Process",
+  "title": "Check every figure before a data page goes to review",
+  "detail": "The Gators /invest page changed hands about nine times between 10/27 and 10/30. On 10/28 at 6:37 pm Josh caught four errors at once: the ten-year endowment still showed $500,000, the women's gap bar used the men's numbers, every year label read May 2026, and the endowment button pointed to the wrong link. Adam was still sending final tweaks this morning. Donor pages carry real money and a client's credibility, so careless numbers cost more than a round-trip.",
+  "try": "Add a figures check to the build team's definition of done for any page with numbers: paste the source (Adam's comment or the deck) and the staging link into Claude, ask it to list every figure that doesn't match, and write \"figures checked\" in the handoff comment. Start with the new Alumni Memories page.",
+  "source": ""
+ },
+ {
+  "id": "2026-10-26-4",
+  "week_of": "2026-10-26",
+  "category": "Leadership",
+  "title": "Hand David the visual editor decision",
+  "detail": "You asked David on 10/26 to evaluate Sanity, then reviewed Sanity Presentation yourself that day, demoed it on 10/27, and went on to Ship Studio and Stacky on 10/28. David's evaluation is still due today with no activity, and it's now mostly a second opinion on work you already did. Your open reminders say to bring David into the Astro builds and the editor; owning a decision does that better than another research task.",
+  "try": "On Monday, give David the call: the criteria (strategists and clients can edit copy and CMS without help), the three candidates, and a date to recommend one at standup. Tell him you'll advise, not decide.",
+  "source": "Daniel Pink, Drive: autonomy over the task, along with mastery and purpose, is what sustains motivation in creative work."
+ },
+ {
+  "id": "2026-10-26-5",
+  "week_of": "2026-10-26",
+  "category": "Launches",
+  "title": "Have the builder show the launch",
+  "detail": "You showed something at every standup this week: the client dashboard (10/26), Sanity Presentation and the AI-first plan (10/27, which ran over), the Agency OS plan (10/28) and the Scribblio clone (10/29). Meanwhile David's /invest page went live on gatorsrugby.com (10/29), he put Meyer's /give page live and the new hero on seven pages (10/28), and Jamie sent both Crusaders decks a day early (10/27). None of these were shown to the team. This builds on last week's Friday wins: seeing the live page lands harder than hearing its name.",
+  "try": "Starting next Friday, give the team meeting a five-minute \"show it live\" slot: whoever shipped shares their screen and walks through it. Move your own demos into the same slot so standups stay on commitments.",
+  "source": "Teresa Amabile and Steven Kramer, The Progress Principle: visible progress on meaningful work is the strongest everyday driver of motivation."
+ },
+ {
+  "id": "2026-10-26-6",
+  "week_of": "2026-10-26",
+  "category": "Tools",
+  "title": "Build Jamie a brand-locked deck skill",
+  "detail": "On 10/28 Jamie named Google Slides as the part of her job she'd most like to lose, and you said it needs to be a bigger priority for you. On 10/27 she said Claude's PowerPoint exports come back with odd layouts, and she's been checking every page because fonts and colors change. Claude Skills can package a client's fonts, colors, logo rules and a master .pptx template, so Claude builds from the template instead of guessing.",
+  "try": "Next week, spend 45 minutes with Jamie building a Skill for one client (Crusaders, since both decks are fresh). Then have her regenerate one slide from each deck and compare it with what she sent Adam.",
+  "source": ""
+ },
+ {
+  "id": "2026-10-26-7",
+  "week_of": "2026-10-26",
+  "category": "Feedback",
+  "title": "Ask David which growth goal he'd bet against",
+  "detail": "You sent David the growth strategy on 10/29 and asked whether the campaign goals are realistic or could be more aggressive; his answer was \"All right.\" He's reviewing his own manager's plan, presented as nearly final, which makes candid pushback hard. Monday's 11/2 meeting is the moment that decides whether he treats this as his plan or yours.",
+  "try": "Open Monday's meeting with one specific question: \"Which goal would you bet against, and why?\" Wait through the silence, then change at least one thing in the plan based on his answer and tell him you did.",
+  "source": "Kim Scott, Radical Candor: ask for criticism with a specific question, stay quiet long enough for a real answer, and reward the candor so it keeps coming."
  }
 ]
