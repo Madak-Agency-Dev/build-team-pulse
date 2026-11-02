@@ -223,5 +223,23 @@
   "why": "At standup 10/29 he said the workload felt like a lot, then moved everything he named: RTT handed off at 7:05 pm, Seattle Sports Signature Events set to October 2027 with a Run X question for Elli (5:24 pm), and New Updates sent back with specific questions on Girls Lead and Sports Star (5:34 pm). He also took the Gators /invest page live 20 minutes after Adam's 6:37 pm note.",
   "say": "You told me yesterday the load felt heavy, and you still moved every item you named, with sharp questions to Elli instead of guesses. I see it. Let's make sure that SEO/AEO block on your calendar actually stays protected.",
   "where": "1:1"
+ },
+ {
+  "id": "2026-11-02-david-1",
+  "date": "2026-11-02",
+  "person": "David",
+  "headline": "Cleared four Gators Rugby pages for Adam in one afternoon",
+  "why": "On 10/30, right after standup, he put the Invest page in the nav and footer (1:52 pm, 23 minutes after Adam assigned it), updated the Strategic Plan PDF (2:08 pm, and fixed the stale file nine minutes after Adam flagged it), rebuilt Alumni Memories with its CMS settings (2:49 pm), then pushed Alumni Weekend live at 7:45 pm once Adam okayed it. Adam closed all four the same day.",
+  "say": "You cleared all four Gators pages for Adam on Friday, and when he flagged the PDF you had it fixed in nine minutes. That kind of turnaround is why Adam trusts the build team.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-02-david-2",
+  "date": "2026-11-02",
+  "person": "David",
+  "headline": "Pitched a branded SEO report page instead of PDFs",
+  "why": "At standup 10/30 he proposed giving SEO/AEO clients a curated, branded report inside the client dashboard for strategists to walk them through, in place of a PDF. He's also building Claude skills that pull the SEO data and assemble the light and heavy SEO decks Adam asked for, so strategists can repeat it without him.",
+  "say": "The SEO report page turns a PDF nobody opens into something clients log in to see, and building skills so strategists can run SEO without you is exactly the leverage I want. Send me the specifics and I'll get it built.",
+  "where": "1:1"
  }
 ]
