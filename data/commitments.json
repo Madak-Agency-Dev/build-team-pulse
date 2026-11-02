@@ -1036,8 +1036,8 @@
   "commitment": "Build SEO/AEO report page in client dashboard once David sends specifics",
   "project": "Madak",
   "status": "waiting",
-  "evidence": "Waiting on David's specifics task; none assigned to Blair yet (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "evidence": "No specifics task from David; 11/2 Blair now sending him a layout task",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-10-30-blair-2",
@@ -1055,9 +1055,9 @@
   "person": "Blair",
   "commitment": "Schedule session next week to walk David through Vercel/GitHub site setup",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "status": "progress",
+  "evidence": "Process task made 11/1; meeting not booked yet, re-committed 11/2",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-10-30-david-1",
@@ -1065,9 +1065,9 @@
   "person": "David",
   "commitment": "Send Blair a task with SEO/AEO report page specifics",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "status": "missed",
+  "evidence": "No task sent to Blair by 11/2; Blair took over, sending David a task",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-10-30-david-2",
@@ -1076,8 +1076,8 @@
   "commitment": "Accept Vercel and GitHub team invites",
   "project": "Madak",
   "status": "progress",
-  "evidence": "Joined Madak Vercel team today; GitHub acceptance not visible (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "evidence": "Joined Madak Vercel 10/30; no GitHub acceptance seen by 11/2",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-10-30-david-3",
@@ -1086,8 +1086,8 @@
   "commitment": "Work through maintenance tasks via Claude and report back",
   "project": "Madak",
   "status": "progress",
-  "evidence": "SSC nav/footer updated, sent to Elli 4:29 pm; more tasks open (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "evidence": "SSC nav, MAC grid sent for review 10/30; Florida, rugby left 11/2",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-10-30-david-4",
@@ -1095,8 +1095,108 @@
   "person": "David",
   "commitment": "Block a couple hours next week to build with Claude",
   "project": "Madak",
+  "status": "missed",
+  "evidence": "No build block seen on shared calendars; not mentioned 11/2",
+  "checked_on": "2026-11-02"
+ },
+ {
+  "id": "2026-11-02-blair-1",
+  "standup_date": "2026-11-02",
+  "person": "Blair",
+  "commitment": "Schedule meeting with David this week on website process outside Webflow",
+  "project": "Madak",
   "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-10-30"
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-blair-2",
+  "standup_date": "2026-11-02",
+  "person": "Blair",
+  "commitment": "Send David a task on SEO/AEO report and dashboard layout",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-blair-3",
+  "standup_date": "2026-11-02",
+  "person": "Blair",
+  "commitment": "Send Jamie and David two-week tasks on optimizing their jobs with AI",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-blair-4",
+  "standup_date": "2026-11-02",
+  "person": "Blair",
+  "commitment": "Finish one or two web-team operational process tasks",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-david-1",
+  "standup_date": "2026-11-02",
+  "person": "David",
+  "commitment": "Finish SEO/AEO SOP and build out its task",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-david-2",
+  "standup_date": "2026-11-02",
+  "person": "David",
+  "commitment": "Finish branding update and website banners",
+  "project": "Florida Gators Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-david-3",
+  "standup_date": "2026-11-02",
+  "person": "David",
+  "commitment": "Work through leftover maintenance tasks from Friday",
+  "project": "Various clients",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-jamie-1",
+  "standup_date": "2026-11-02",
+  "person": "Jamie",
+  "commitment": "Fill gaps in the 2026 Annual Report from last year's version and site",
+  "project": "US Rugby Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-jamie-2",
+  "standup_date": "2026-11-02",
+  "person": "Jamie",
+  "commitment": "Ask Elli whether her AI website images are approved before redoing",
+  "project": "GemaTEG",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-02-jamie-3",
+  "standup_date": "2026-11-02",
+  "person": "Jamie",
+  "commitment": "Complete Madak brand audit and cleanup with visual brand map (due 11/13)",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
  }
 ]
