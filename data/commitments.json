@@ -1105,9 +1105,9 @@
   "person": "Blair",
   "commitment": "Schedule meeting with David this week on website process outside Webflow",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Website Dev Stack meeting booked Thu 11/12; David accepted (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-blair-2",
@@ -1116,8 +1116,8 @@
   "commitment": "Send David a task on SEO/AEO report and dashboard layout",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-blair-3",
@@ -1126,8 +1126,8 @@
   "commitment": "Send Jamie and David two-week tasks on optimizing their jobs with AI",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-blair-4",
@@ -1136,8 +1136,8 @@
   "commitment": "Finish one or two web-team operational process tasks",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-david-1",
@@ -1146,8 +1146,8 @@
   "commitment": "Finish SEO/AEO SOP and build out its task",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-david-2",
@@ -1155,9 +1155,9 @@
   "person": "David",
   "commitment": "Finish branding update and website banners",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Banner click tracking live on gatorsrugby.com; Website Banners task passed to Adam (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-david-3",
@@ -1166,8 +1166,8 @@
   "commitment": "Work through leftover maintenance tasks from Friday",
   "project": "Various clients",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-jamie-1",
@@ -1176,8 +1176,8 @@
   "commitment": "Fill gaps in the 2026 Annual Report from last year's version and site",
   "project": "US Rugby Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-jamie-2",
@@ -1185,9 +1185,9 @@
   "person": "Jamie",
   "commitment": "Ask Elli whether her AI website images are approved before redoing",
   "project": "GemaTEG",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "New GemaTEG images delivered to Elli; Elli marked image task complete (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  },
  {
   "id": "2026-11-02-jamie-3",
@@ -1196,7 +1196,7 @@
   "commitment": "Complete Madak brand audit and cleanup with visual brand map (due 11/13)",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-02"
  }
 ]
