@@ -241,5 +241,32 @@
   "why": "At standup 10/30 he proposed giving SEO/AEO clients a curated, branded report inside the client dashboard for strategists to walk them through, in place of a PDF. He's also building Claude skills that pull the SEO data and assemble the light and heavy SEO decks Adam asked for, so strategists can repeat it without him.",
   "say": "The SEO report page turns a PDF nobody opens into something clients log in to see, and building skills so strategists can run SEO without you is exactly the leverage I want. Send me the specifics and I'll get it built.",
   "where": "1:1"
+ },
+ {
+  "id": "2026-11-03-jamie-1",
+  "date": "2026-11-03",
+  "person": "Jamie",
+  "headline": "Delivered GemaTEG's realistic homepage images on her first day back",
+  "why": "Back from OOO on 11/2, she checked with Elli first like she said at standup, then delivered the Problem and Application images by 6:14 pm. She kept the originals that already worked, fixed small rendering issues, added the GemaTEG logo, and swapped Remote Regions for a harsher-climate shot to match the copy. Elli closed it that evening.",
+  "say": "Nice work on the GemaTEG images. You checked with Elli before starting, kept what already worked, and changed the Remote Regions shot so it matches the copy. That's exactly the judgment that client needs.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-03-david-1",
+  "date": "2026-11-03",
+  "person": "David",
+  "headline": "Untangled Ride the Tide's Kit forms and renamed the culprit",
+  "why": "On 11/2 Elli's client couldn't tell which Kit form fed which automation. By 3:04 pm David had found that \"Copy of CYC Book WAITLIST\" was really the newsletter form. He renamed it \"Newsletter Page Form - Webflow\" so nobody mixes them up again, and explained that the footer form is a hidden one he built so data goes straight into Kit.",
+  "say": "Good catch on the Ride the Tide Kit forms. You didn't stop at answering the question: renaming that form means nobody hits the same confusion next time, and your explanation was clear enough for Elli to pass straight to the client.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-03-david-2",
+  "date": "2026-11-03",
+  "person": "David",
+  "headline": "Launched Meyer's new Ask grid and handled Adam's follow-ups within the hour",
+  "why": "On 11/2 he pushed the four-card Ask section live on meyerartcenter.org at 5:54 pm (a roughly 2,784px stack cut to about 1,140px). When Adam flagged the missing campaign tracker, David had it back live by 6:19 pm, and he pushed the /give thermometer three minutes after Adam asked at 6:49 pm.",
+  "say": "The new Ask grid on Meyer looks great, and the page is less than half as long now. You also stayed on it while Adam was sending changes live and turned each one around in minutes. That's what lets us launch with confidence.",
+  "where": "Standup"
  }
 ]
