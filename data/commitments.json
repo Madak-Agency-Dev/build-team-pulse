@@ -1206,8 +1206,8 @@
   "commitment": "Send David the SEO/AEO report and dashboard layout task",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-blair-2",
@@ -1215,9 +1215,9 @@
   "person": "Blair",
   "commitment": "Update ECA build and deliver to Vince (target Thu 11/5)",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "ECA AI call with Peyton at 1 pm; three ECA build tasks assigned, due Thu (as of 7:15 pm)",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-blair-3",
@@ -1226,8 +1226,8 @@
   "commitment": "Build Moonshot landing page",
   "project": "Moonshot 2031",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-blair-4",
@@ -1236,8 +1236,8 @@
   "commitment": "Add AI instructions/rules in Webflow to all active client sites",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-david-1",
@@ -1245,9 +1245,9 @@
   "person": "David",
   "commitment": "Sweep CAC service area hub, state and metro pages for cohesion before Thu launch",
   "project": "CAC Wall Panels",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Service area pages pushed live on cacwallpanels.com; Peyton approved and closed task (as of 7:15 pm)",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-david-2",
@@ -1256,8 +1256,8 @@
   "commitment": "Finish SEO/AEO system workflow and build it out in Asana",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-david-3",
@@ -1266,8 +1266,8 @@
   "commitment": "Start Husky Rugby copy and content updates",
   "project": "Husky Rugby",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-david-4",
@@ -1276,8 +1276,8 @@
   "commitment": "Run through remaining Meyer tasks",
   "project": "Meyer Art Center",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Meyer Testimonials and Sponsors due dates moved to Mon 11/9; no work logged (as of 7:15 pm)",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-jamie-1",
@@ -1286,8 +1286,8 @@
   "commitment": "Finish 2026 Annual Report items and graphics, send to Josh",
   "project": "US Rugby Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Jamie activity on report; Adam asked to discuss it in 1:1 (as of 7:15 pm)",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-jamie-2",
@@ -1295,9 +1295,9 @@
   "person": "Jamie",
   "commitment": "Do Madak 2026 social profile graphics",
   "project": "madak.com",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Two profile pic options posted in Figma; task passed to Adam (as of 7:15 pm)",
+  "checked_on": "2026-11-03"
  },
  {
   "id": "2026-11-03-jamie-3",
@@ -1306,7 +1306,7 @@
   "commitment": "Start 12-page winter fest booklet and select images",
   "project": "Phinney Ridge Painting",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-03"
  }
 ]
