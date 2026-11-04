@@ -1205,9 +1205,9 @@
   "person": "Blair",
   "commitment": "Send David the SEO/AEO report and dashboard layout task",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No Asana task or email to David by 11/4 midday; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-blair-2",
@@ -1216,8 +1216,8 @@
   "commitment": "Update ECA build and deliver to Vince (target Thu 11/5)",
   "project": "ECA",
   "status": "progress",
-  "evidence": "ECA AI call with Peyton at 1 pm; three ECA build tasks assigned, due Thu (as of 7:15 pm)",
-  "checked_on": "2026-11-03"
+  "evidence": "Three ECA build tasks open, due 11/5; Astro/Sanity plan set 11/3",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-blair-3",
@@ -1225,9 +1225,9 @@
   "person": "Blair",
   "commitment": "Build Moonshot landing page",
   "project": "Moonshot 2031",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No Moonshot activity in Asana or email by 11/4; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-blair-4",
@@ -1235,9 +1235,9 @@
   "person": "Blair",
   "commitment": "Add AI instructions/rules in Webflow to all active client sites",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No Webflow AI-rules activity in Asana by 11/4; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-david-1",
@@ -1246,8 +1246,8 @@
   "commitment": "Sweep CAC service area hub, state and metro pages for cohesion before Thu launch",
   "project": "CAC Wall Panels",
   "status": "done",
-  "evidence": "Service area pages pushed live on cacwallpanels.com; Peyton approved and closed task (as of 7:15 pm)",
-  "checked_on": "2026-11-03"
+  "evidence": "Service area pages live; Peyton closed task 11/3",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-david-2",
@@ -1255,9 +1255,9 @@
   "person": "David",
   "commitment": "Finish SEO/AEO system workflow and build it out in Asana",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "SEO/AEO SOP task untouched since 11/3, now overdue; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-david-3",
@@ -1265,9 +1265,9 @@
   "person": "David",
   "commitment": "Start Husky Rugby copy and content updates",
   "project": "Husky Rugby",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No Husky Rugby activity in Asana by 11/4; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-david-4",
@@ -1275,9 +1275,9 @@
   "person": "David",
   "commitment": "Run through remaining Meyer tasks",
   "project": "Meyer Art Center",
-  "status": "pending",
-  "evidence": "Meyer Testimonials and Sponsors due dates moved to Mon 11/9; no work logged (as of 7:15 pm)",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "Testimonials/Sponsors pushed to 11/9; nothing closed; Adam added Newsletters 11/4",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-jamie-1",
@@ -1285,9 +1285,9 @@
   "person": "Jamie",
   "commitment": "Finish 2026 Annual Report items and graphics, send to Josh",
   "project": "US Rugby Foundation",
-  "status": "pending",
-  "evidence": "No Jamie activity on report; Adam asked to discuss it in 1:1 (as of 7:15 pm)",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No report activity since Adam's 11/3 comment; nothing to Josh seen",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-jamie-2",
@@ -1296,8 +1296,8 @@
   "commitment": "Do Madak 2026 social profile graphics",
   "project": "madak.com",
   "status": "handoff",
-  "evidence": "Two profile pic options posted in Figma; task passed to Adam (as of 7:15 pm)",
-  "checked_on": "2026-11-03"
+  "evidence": "Two options to Adam 11/3; Adam gave feedback 11/4, back to Jamie",
+  "checked_on": "2026-11-04"
  },
  {
   "id": "2026-11-03-jamie-3",
@@ -1305,8 +1305,8 @@
   "person": "Jamie",
   "commitment": "Start 12-page winter fest booklet and select images",
   "project": "Phinney Ridge Painting",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-03"
+  "status": "missed",
+  "evidence": "No Jamie work logged; Peyton posted layout guidance 11/4; no 11/4 standup recording",
+  "checked_on": "2026-11-04"
  }
 ]
