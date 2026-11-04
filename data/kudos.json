@@ -268,5 +268,32 @@
   "why": "On 11/2 he pushed the four-card Ask section live on meyerartcenter.org at 5:54 pm (a roughly 2,784px stack cut to about 1,140px). When Adam flagged the missing campaign tracker, David had it back live by 6:19 pm, and he pushed the /give thermometer three minutes after Adam asked at 6:49 pm.",
   "say": "The new Ask grid on Meyer looks great, and the page is less than half as long now. You also stayed on it while Adam was sending changes live and turned each one around in minutes. That's what lets us launch with confidence.",
   "where": "Standup"
+ },
+ {
+  "id": "2026-11-04-david-1",
+  "date": "2026-11-04",
+  "person": "David",
+  "headline": "Swept and launched CAC's service area pages two days early",
+  "why": "Handed the CAC task at standup on 11/3, he sent Peyton the cleaned-up Service Area hub and state template by 1:04 pm, checked the Services and Markets pages when she asked, and pushed it all live on cacwallpanels.com at 3:23 pm, ahead of the Thursday launch. He replied to each of Peyton's comments within about 35 minutes, the same day you asked him to respond faster in Asana.",
+  "say": "You took the note about Asana replies and ran with it on CAC. Peyton never waited more than half an hour, you brought in the site's own sections so the pages don't read as AI-built, and it went live two days early. That's how to win back a strategist's trust.",
+  "where": "1:1"
+ },
+ {
+  "id": "2026-11-04-jamie-1",
+  "date": "2026-11-04",
+  "person": "Jamie",
+  "headline": "Turned Meyer's surprise print ad into a cleaner, print-ready piece",
+  "why": "Adam dropped the CAA quarter-page ad on her at 2:13 pm on 11/3 with a same-day due date. By 3:04 pm she had set it up and tightened it to the brand: square-cornered CTA, semibold type, refined kerning, with both bleed and non-bleed print files in the folder.",
+  "say": "Nice work on the Meyer CAA ad. Adam asked for a setup and you gave him a better ad: the square CTA, semibold type and kerning fixes, plus both print versions so nobody has to come back and ask. That's real designer judgment.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-04-jamie-2",
+  "date": "2026-11-04",
+  "person": "Jamie",
+  "headline": "Still delivered the Madak profile graphics on a pulled-in day",
+  "why": "At standup on 11/3 she said the Madak social profile graphics would get done that day. Between the annual report and the unplanned Meyer ad, she still posted two profile options in Figma by 5:54 pm, and Adam replied \"nice...\" and set up a review today.",
+  "say": "Thanks for getting the Madak profile options in yesterday even after Adam pulled you onto the Meyer ad. Doing what you said at standup, on a day that got away from you, is what lets me plan around you.",
+  "where": "Standup"
  }
 ]
