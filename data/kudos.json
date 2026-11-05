@@ -295,5 +295,32 @@
   "why": "At standup on 11/3 she said the Madak social profile graphics would get done that day. Between the annual report and the unplanned Meyer ad, she still posted two profile options in Figma by 5:54 pm, and Adam replied \"nice...\" and set up a review today.",
   "say": "Thanks for getting the Madak profile options in yesterday even after Adam pulled you onto the Meyer ad. Doing what you said at standup, on a day that got away from you, is what lets me plan around you.",
   "where": "Standup"
+ },
+ {
+  "id": "2026-11-05-david-1",
+  "date": "2026-11-05",
+  "person": "David",
+  "headline": "Shipped Camano's renewal page tested, explained and ready to email",
+  "why": "On 11/4 he put the legacy member renewal page live at 1:20 pm, after testing both the card and check paths with dummy accounts. In the same comment he explained to Peyton why linking to Create an Account would break (\"email already in use\" errors, duplicate profiles) and drafted the two lines for her member email. Peyton closed it that afternoon.",
+  "say": "The Camano renewal handoff was a model one. You tested both payment paths, explained why the page has to exist, and even wrote Peyton's email lines, so she had nothing left to chase.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-05-david-2",
+  "date": "2026-11-05",
+  "person": "David",
+  "headline": "Cleared three strategist fixes in under two hours",
+  "why": "On 11/4 he pushed Adam's one-sentence Meyer footer live at 12:03 pm, hid the WWU presale merch for Josh at 1:24 pm, and fixed the Gators membership form at 1:45 pm, 24 minutes after Josh assigned it. Each one came back with a live link and a note that he could revisit it.",
+  "say": "Thanks for clearing Adam's and Josh's small asks so fast yesterday, with a live link on each one. Quick, clean turnarounds like that keep the strategists confident handing you work.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-05-jamie-1",
+  "date": "2026-11-05",
+  "person": "Jamie",
+  "headline": "Gave Josh the full WWU logo set in 13 minutes",
+  "why": "Josh assigned the WWU logo at 12:27 pm on 11/4, and by 12:40 pm she had uploaded vertical and horizontal versions plus the standalone Viking mark, all as SVGs. That afternoon she also turned Adam's Madak profile feedback around in about an hour.",
+  "say": "Josh asked for a logo and you gave him every version he'll need, as SVGs, in 13 minutes. Anticipating the next request like that saves everyone a round trip.",
+  "where": "Direct message"
  }
 ]
