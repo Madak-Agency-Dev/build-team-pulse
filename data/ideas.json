@@ -124,5 +124,68 @@
   "detail": "You sent David the growth strategy on 10/29 and asked whether the campaign goals are realistic or could be more aggressive; his answer was \"All right.\" He's reviewing his own manager's plan, presented as nearly final, which makes candid pushback hard. Monday's 11/2 meeting is the moment that decides whether he treats this as his plan or yours.",
   "try": "Open Monday's meeting with one specific question: \"Which goal would you bet against, and why?\" Wait through the silence, then change at least one thing in the plan based on his answer and tell him you did.",
   "source": "Kim Scott, Radical Candor: ask for criticism with a specific question, stay quiet long enough for a real answer, and reward the candor so it keeps coming."
+ },
+ {
+  "id": "2026-11-02-1",
+  "week_of": "2026-11-02",
+  "category": "Leadership",
+  "title": "Send the task before standup ends",
+  "detail": "The SEO/AEO report and dashboard layout task for David was yours to send on 11/2 (\"sometime today\"), again on 11/3 (\"I'll do that after this meeting\"), and Asana shows only two tasks created by you all week, neither of them his. The two-week AI task you promised David on 11/2 hasn't gone out either, while Jamie got hers on 11/3. On the same 11/3 call you told David that a week without answering Peyton isn't great; he has now waited a week on you.",
+  "try": "Next week, when you say \"I'll send you a task\" at standup, make it before the call ends: dictate it to Claude or Asana while everyone is still on and confirm the person can see it. Start Monday with David's SEO/AEO report task and his AI task.",
+  "source": "Simon Sinek, Leaders Eat Last: trust comes from leaders holding themselves to the standard they set, before asking it of others."
+ },
+ {
+  "id": "2026-11-02-2",
+  "week_of": "2026-11-02",
+  "category": "Feedback",
+  "title": "Close the loop on David's Peyton fix",
+  "detail": "On 11/3 you told David in front of Jamie that Peyton's CAC comment had gone seven days without a reply. He took it straight on: he sent Peyton the hub and state template by 1:04 pm, answered each of her comments within about 35 minutes, and had CAC live on 11/3, two days before the Thursday launch. Nobody has told him the correction worked, and the last thing he heard on the topic was the criticism.",
+  "try": "On Monday, tell David one-on-one that the CAC turnaround is exactly what you meant, naming the 35-minute replies. Next time a correction is needed, give it to him privately right after standup, not during it.",
+  "source": "Kim Scott, Radical Candor: praise in public, criticize in private, and keep the feedback specific so people know what to repeat."
+ },
+ {
+  "id": "2026-11-02-3",
+  "week_of": "2026-11-02",
+  "category": "Meetings",
+  "title": "Keep standup running when you're out",
+  "detail": "Only two standups were recorded this week (11/2 and 11/3). On 11/4 you had focus time and on 11/5 you were out from 11 to 1, so there's no record of what David and Jamie committed to. This morning you declined today's build team meeting and the team huddle too. The commitment loop holds the team together, and right now it only runs when you're on the call.",
+  "try": "Make Wispr Flow record standup whoever opens it, and name a stand-in for next week (David Mon–Wed, Jamie Thu–Fri). The stand-in runs the same three questions: what landed, what's next, what's blocked. Tell them at Monday's standup.",
+  "source": "Patrick Lencioni, Death by Meeting: a short daily check-in keeps a team aligned only if it happens every day, without fail."
+ },
+ {
+  "id": "2026-11-02-4",
+  "week_of": "2026-11-02",
+  "category": "Process",
+  "title": "Give the SEO/AEO SOP a fixed two hours",
+  "detail": "David's SEO/AEO SOP task has been open since 7/30. Asana shows it untouched and overdue since 11/3, after he said on 11/2 and 11/3 that it was planned and he was \"just really trying to tweak it.\" His content and AEO feedback on the growth plan was also due today. He's been shipping client work fast all week, so the trouble isn't effort: an internal doc with no end point keeps losing to client work and to polishing.",
+  "try": "On Monday, agree with David on a two-hour appetite for v1: whatever exists at the end goes into Asana as-is (brain-dumped into Claude, as you suggested on 11/3) and he walks you through it at Tuesday's standup. Improvements go on a v2 list.",
+  "source": "Ryan Singer, Shape Up (Basecamp): set an appetite, fix the time and let the scope flex, so the work ships instead of being polished indefinitely."
+ },
+ {
+  "id": "2026-11-02-5",
+  "week_of": "2026-11-02",
+  "category": "Leadership",
+  "title": "Give Jamie's brand weeks protected hours",
+  "detail": "On 11/2 Jamie told you Wednesdays are when Adam \"dumps everything\" on her, and you moved the brand audit to 11/13 for that reason. The week went that way anyway: an annual report, Phinney Ridge's booklet, a same-day CAA print ad from Adam on 11/3, and WWU logos for Josh; she turned the ad and logos around in under an hour each. The audit has no Asana activity yet. And the \"Designer of the Future\" task you described as two weeks of thinking is due today, 11/6.",
+  "try": "On Monday, put two 2-hour \"Madak brand\" holds on Jamie's calendar for Tuesday and Thursday, tell Adam at the team meeting that brand work is happening then, and move Designer of the Future to 11/16 so it matches the two weeks you promised.",
+  "source": "Cal Newport, Deep Work: creative work needs blocks set aside in advance, or reactive requests will fill the week."
+ },
+ {
+  "id": "2026-11-02-6",
+  "week_of": "2026-11-02",
+  "category": "Launches",
+  "title": "Celebrate the handoff, not just the builder",
+  "detail": "The best moment of the week was a chain: on 11/4 Jamie fixed the Ride the Tide homepage image and caught a warped smile no one had asked about, Elli passed it along at 6:11 pm, and David had it live with a link back to her at 6:22 pm. CAC went live two days early because David cleared Peyton's sweep within a day of getting it. Recognition usually goes to whoever pushed publish, but these launches happened because each handoff was clean.",
+  "try": "In next Friday's show-it-live slot, have Jamie and David walk the Ride the Tide fix together, from her file to his publish, and name each person in the chain. Ask the team which handoff they want to be that fast next.",
+  "source": "Teresa Amabile and Steven Kramer, The Progress Principle: people are most motivated by visible progress on meaningful work, and by others' help getting there."
+ },
+ {
+  "id": "2026-11-02-7",
+  "week_of": "2026-11-02",
+  "category": "Tools",
+  "title": "Pilot Vercel comments on ECA before cutting Figma seats",
+  "detail": "On 11/3 you laid out the plan: only the three of you keep Figma and Paper seats, and strategists and clients review working prototypes through Claude artifact links and Vercel's comment toolbar. ECA is the first build heading that way, to Vince this week. Vercel Comments on preview deployments are generally available, and you can invite people outside the team to view and comment. Running it once, on a real project, will show whether Peyton and the client actually leave feedback there before the whole team depends on it.",
+  "try": "When ECA's next preview goes out, turn on comments, invite Peyton and Vince to comment directly on the page, and ask Peyton afterward what was easier or harder than Figma. Decide on the seats after that.",
+  "source": ""
  }
 ]
