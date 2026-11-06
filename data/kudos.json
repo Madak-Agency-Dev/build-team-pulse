@@ -322,5 +322,23 @@
   "why": "Josh assigned the WWU logo at 12:27 pm on 11/4, and by 12:40 pm she had uploaded vertical and horizontal versions plus the standalone Viking mark, all as SVGs. That afternoon she also turned Adam's Madak profile feedback around in about an hour.",
   "say": "Josh asked for a logo and you gave him every version he'll need, as SVGs, in 13 minutes. Anticipating the next request like that saves everyone a round trip.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-06-jamie-1",
+  "date": "2026-11-06",
+  "person": "Jamie",
+  "headline": "Caught and fixed a distorted smile nobody asked about",
+  "why": "Elli handed her the Ride the Tide homepage image at 2:13 pm on 11/4. By 3:35 pm Jamie had fixed it and flagged that the edit had also warped the woman's smile, so she corrected that too and attached the new version. Elli closed the task on 11/5.",
+  "say": "Good eye on the Ride the Tide image. Elli asked for one fix and you spotted the smile had gone wrong too and fixed it before anyone saw it on the site. That kind of care is what makes a client's photo look like them.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-06-david-1",
+  "date": "2026-11-06",
+  "person": "David",
+  "headline": "Put Jamie's Ride the Tide image live in 11 minutes, after hours",
+  "why": "Elli passed Jamie's corrected homepage image to him at 6:11 pm on 11/4, and he had it live on ridethetidecollective.com with a link back to her at 6:22 pm. Jamie's fix went from her desk to the live site the same day.",
+  "say": "Jamie fixed the Ride the Tide image and David had it live 11 minutes after Elli asked, in the evening. That's the design-to-dev handoff working exactly how it should.",
+  "where": "Standup"
  }
 ]
