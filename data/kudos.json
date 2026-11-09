@@ -340,5 +340,14 @@
   "why": "Elli passed Jamie's corrected homepage image to him at 6:11 pm on 11/4, and he had it live on ridethetidecollective.com with a link back to her at 6:22 pm. Jamie's fix went from her desk to the live site the same day.",
   "say": "Jamie fixed the Ride the Tide image and David had it live 11 minutes after Elli asked, in the evening. That's the design-to-dev handoff working exactly how it should.",
   "where": "Standup"
+ },
+ {
+  "id": "2026-11-09-david-1",
+  "date": "2026-11-09",
+  "person": "David",
+  "headline": "Built Meyer's Afternoon of the Arts page from Adam's artifact",
+  "why": "Adam asked on 11/2 to knock out this one Meyer page even after pushing the rest to next week. On 11/3 David rebuilt it from Adam's artifact by 1:38 pm and asked where the new buttons should go, then had it live 9 minutes after Adam answered at 4:19 pm. Adam signed it off on 11/7.",
+  "say": "Adam pushed most of the Meyer pages but asked for Afternoon of the Arts anyway, and you turned his artifact into a live page the same day, checking with him on the buttons instead of guessing. He closed it out this weekend with nothing left to fix.",
+  "where": "Direct message"
  }
 ]
