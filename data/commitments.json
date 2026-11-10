@@ -1315,9 +1315,9 @@
   "person": "Blair",
   "commitment": "Complete three SCAF tasks: header color, staff/board positions, ways to give",
   "project": "SCAF",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Header color and Ways to Give updated, passed to Elli; she closed Ways to Give (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-blair-2",
@@ -1325,9 +1325,9 @@
   "person": "Blair",
   "commitment": "Fix USRF .com domain not forwarding to .org",
   "project": "US Rugby Foundation",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Domain fix sent to Elli 3:10 pm; she reports still failing in Chrome (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-blair-3",
@@ -1335,9 +1335,9 @@
   "person": "Blair",
   "commitment": "Review passed-back Creative Timelines, Designer, Growth Strategy tasks and respond",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Replied on several passed-back tasks; Creative Timelines/Growth Strategy replies not found (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-blair-4",
@@ -1345,9 +1345,9 @@
   "person": "Blair",
   "commitment": "Go back to Adam on madak.com copy so it says something specific",
   "project": "madak.com",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Pushed Adam for specific H1; agreed on option G, madak.com hero now live (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-david-1",
@@ -1355,9 +1355,9 @@
   "person": "David",
   "commitment": "Run through maintenance tasks: JMU, Florida Gators, Ride the Tide, Seattle Sports, Meyer",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Gators annual events live, sent to Adam; Seattle Sports and Meyer tasks touched (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-david-2",
@@ -1366,8 +1366,8 @@
   "commitment": "Start Husky Rugby fixes, done by end of week",
   "project": "Husky Rugby",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-david-3",
@@ -1376,8 +1376,8 @@
   "commitment": "Share SEO Claude skills with the org so the team can test",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-jamie-1",
@@ -1385,9 +1385,9 @@
   "person": "Jamie",
   "commitment": "Revise JMU brand logos and send to Adam today for 11/10 presentation",
   "project": "JMU Rugby",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Revised JMU logo deck sent to Adam in Asana at 4:22 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-jamie-2",
@@ -1395,9 +1395,9 @@
   "person": "Jamie",
   "commitment": "First draft of PNA Winterfest portfolio booklet, today or early 11/10",
   "project": "Phinney Ridge Painting",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "First booklet draft attached and passed to Peyton at 4:09 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-09"
  },
  {
   "id": "2026-11-09-jamie-3",
@@ -1406,7 +1406,7 @@
   "commitment": "Start Madak brand audit and cleanup (Drive, password vault)",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-09"
  }
 ]
