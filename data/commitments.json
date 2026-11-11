@@ -1415,9 +1415,9 @@
   "person": "Blair",
   "commitment": "Review Growth Strategy, Creative Timelines and Designer of the Future decks",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Commented on Growth Strategy First Look; adjusting plan before Adam review (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-blair-2",
@@ -1426,8 +1426,8 @@
   "commitment": "Redo homepage design (\"Gemma Tag\" in transcript)",
   "project": "Gemma Tag (unconfirmed)",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-blair-3",
@@ -1435,9 +1435,9 @@
   "person": "Blair",
   "commitment": "Finish remaining SCAF task",
   "project": "SCAF",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "SCAF hour counter built, sent to Adam; Adam passed to Elli (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-blair-4",
@@ -1446,8 +1446,8 @@
   "commitment": "Figure out USRF domain forwarding failing in Chrome",
   "project": "US Rugby Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-blair-5",
@@ -1456,8 +1456,8 @@
   "commitment": "Schedule ECA walkthrough with David, likely Thu 11/12",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No ECA walkthrough on calendar Thu 11/12 yet (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-david-1",
@@ -1465,9 +1465,9 @@
   "person": "David",
   "commitment": "Clear ~8 maintenance tasks: Crusaders, USRF, Florida Gators",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "USRF task closed by Adam; Crusaders and Facelift tasks still open (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-david-2",
@@ -1476,8 +1476,8 @@
   "commitment": "Start Husky Rugby work after lunch",
   "project": "Husky Rugby",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-david-3",
@@ -1486,8 +1486,8 @@
   "commitment": "Reserve 4-5 hrs Thu/Fri for ECA Astro build, due 11/17",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Peyton assigned ECA Development to David, Astro, due 11/16 (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-david-4",
@@ -1496,8 +1496,8 @@
   "commitment": "Update Seattle Sports Commission partners once sponsor list arrives",
   "project": "Seattle Sports Commission",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-jamie-1",
@@ -1505,9 +1505,9 @@
   "person": "Jamie",
   "commitment": "Edit Western Rugby coach headshots to look tougher for site and program",
   "project": "Western Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Edited Weir headshot, recommended last year's set to Adam in program task (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-jamie-2",
@@ -1516,8 +1516,8 @@
   "commitment": "Build Florida Gators logo usage/misuse landing page (~half day)",
   "project": "Florida Gators Rugby Alumni",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Only change: Gators History & Brand Pages due moved to 11/11 (as of 7:15 pm)",
+  "checked_on": "2026-11-10"
  },
  {
   "id": "2026-11-10-jamie-3",
@@ -1526,7 +1526,7 @@
   "commitment": "Continue Madak brand audit cleanup through Friday",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-10"
  }
 ]
