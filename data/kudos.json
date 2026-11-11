@@ -385,5 +385,32 @@
   "why": "Back from his move on 11/9, he published the new T1 landing page on usayhs.rugby at 6:14 pm and removed the old one, closing a page that had been waiting on client feedback since October. In the same half hour he finished Elli's Ride the Tide podcast edits and the Seattle Sports nav, and she closed both within 30 minutes.",
   "say": "First day back after moving, and you cleared the T1 Rugby launch plus Elli's podcast and nav updates in one evening. Thanks for getting Peyton's page live and the old one out of the way, it's been sitting since October.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-11-jamie-1",
+  "date": "2026-11-11",
+  "person": "Jamie",
+  "headline": "Turned flat coach headshots into ones Adam was thrilled with",
+  "why": "Adam asked late on 11/10 for this year's Western Rugby coach photos to be made less flat and more dynamic. By 9:20 am on 11/11 she had edited all of them, updated the season program (new team photo, Adam's letter out of the blue box, coach profiles) and put the new headshots live on wwurugby.org. Adam replied: \"Thank you - the first versions of those headshots were killing me.\"",
+  "say": "Adam asked for tougher coach headshots overnight and you had every one edited, the program updated and the site live before 9:30. He said the old ones were killing him, so you clearly fixed a real problem for him. Nice work making those photos look like a rugby staff.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-11-david-1",
+  "date": "2026-11-11",
+  "person": "David",
+  "headline": "Cleared Adam's Meyer list the same afternoon",
+  "why": "At standup on 11/10 he said Adam had given him about 8 small tasks with three days to finish them. Between 3:40 and 6:45 pm he shipped five Meyer Art Center updates (sponsors grid, testimonial quotes, newsletter section, teacher headshot crops, Afternoon of the Arts cleanup), and Adam closed all five by 7:02 pm, calling the quotes \"perfect\". He also took USRF's What's Going Right live and pulled the WWU banner for Peyton.",
+  "say": "Adam gave you three days for the Meyer list and you had it done and approved the same afternoon, plus USRF and the WWU banner. That's exactly the kind of clearing that frees you up for Husky and ECA.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-11-david-2",
+  "date": "2026-11-11",
+  "person": "David",
+  "headline": "Built Ride the Tide playlists as a system, not pages",
+  "why": "For Elli's playlist/season pages (handed off 11/9, closed 11/11) he made a Podcast Playlists CMS collection with one template, let episodes belong to several playlists, set meta and schema on the template, and added a 301 from the old season URL. He skipped building seasons that are moving to evergreen numbering and wrote the client a three-step guide for adding new ones.",
+  "say": "I liked how you handled the Ride the Tide playlists. One template with schema built in, episodes in more than one list, the 301 from the old URL and a three-step guide so they can add their own. That's the kind of thinking that keeps a client from needing us for every small change.",
+  "where": "Direct message"
  }
 ]
