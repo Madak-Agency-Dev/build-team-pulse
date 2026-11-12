@@ -1535,9 +1535,9 @@
   "person": "Blair",
   "commitment": "Finish GemmaTech homepage updates",
   "project": "GemmaTech",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "GemaTEG homepage cleaned up, hero swapped, handed to Elli 6:11 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-blair-2",
@@ -1546,8 +1546,8 @@
   "commitment": "Use Thu 11/12 meeting with David for ECA walkthrough",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm; walkthrough set for Thu 11/12 meeting (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-blair-3",
@@ -1556,8 +1556,8 @@
   "commitment": "Work on redoing Adam's site",
   "project": "adamlejeunekopp.com",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-blair-4",
@@ -1565,9 +1565,9 @@
   "person": "Blair",
   "commitment": "Start Western Rugby app (iOS, possibly Android)",
   "project": "Western Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "WWU App: Blair commented 1:59 pm, speccing it out (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-david-1",
@@ -1575,9 +1575,9 @@
   "person": "David",
   "commitment": "Maintenance: Crusaders, Meyer Art Center, Florida Gators, Seattle Sports, Western Rugby",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Crusaders, Meyer sections to Adam; Gators tweaks; USRF Open Graph closed; SSC feedback new (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-david-2",
@@ -1586,8 +1586,8 @@
   "commitment": "Final feedback for Ride the Tide",
   "project": "Ride the Tide Collective",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm; RTT Final Feedback edited 6:09 pm, no comment (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-david-3",
@@ -1596,8 +1596,8 @@
   "commitment": "Keep progressing Husky Rugby Alumni, finish by Fri 11/13",
   "project": "Husky Rugby Alumni",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-jamie-1",
@@ -1606,8 +1606,8 @@
   "commitment": "Update and send Madak social profile graphics to Adam today",
   "project": "madak.com",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-jamie-2",
@@ -1615,9 +1615,9 @@
   "person": "Jamie",
   "commitment": "Finish report banners/graphics for USRF and USA Youth & High School docs by Fri",
   "project": "US Rugby Foundation",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Goff banners to Josh 3:23 pm; Adam asked simpler, evergreen version (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  },
  {
   "id": "2026-11-11-jamie-3",
@@ -1625,8 +1625,8 @@
   "person": "Jamie",
   "commitment": "Meet Adam on brand and logo guidelines after standup",
   "project": "Brand guidelines",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Figma updated from Adam's feedback, landing pages task sent to Adam 4:18 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-11"
  }
 ]
