@@ -412,5 +412,41 @@
   "why": "For Elli's playlist/season pages (handed off 11/9, closed 11/11) he made a Podcast Playlists CMS collection with one template, let episodes belong to several playlists, set meta and schema on the template, and added a 301 from the old season URL. He skipped building seasons that are moving to evergreen numbering and wrote the client a three-step guide for adding new ones.",
   "say": "I liked how you handled the Ride the Tide playlists. One template with schema built in, episodes in more than one list, the 301 from the old URL and a three-step guide so they can add their own. That's the kind of thinking that keeps a client from needing us for every small change.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-12-david-1",
+  "date": "2026-11-12",
+  "person": "David",
+  "headline": "Found the real reason Madison's map broke, fixed in 45 minutes",
+  "why": "Peyton handed him the broken Madison Design Build homepage map at 12:43 pm on 11/11. By 1:15 pm he had traced it to the Google Cloud free trial ending, which paused the Maps and Places APIs, offered to hide the stuck \"Lorem ipsum\" reviews in the meantime, flagged the billing question for you, and had the site fixed by 1:26 pm.",
+  "say": "Nice work on the Madison map. You found the actual cause, a lapsed Google Cloud trial, instead of patching around it, kept visitors from seeing placeholder text, and had it fixed in under an hour.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-12-david-2",
+  "date": "2026-11-12",
+  "person": "David",
+  "headline": "Turned an all-maintenance day into five closed loops",
+  "why": "He called 11/11 \"all maintenance\" at standup and delivered on it: Sport Star banners live for Elli by 3:07 pm, Adam's USRF Open Graph task (assigned 4:01 pm) closed by 6:15 pm, both wwurugby.org pages Adam asked for updated by 7:40 pm, plus the Madison map fix and a Camano note for Peyton explaining the image aspect-ratio cause so the client can avoid it.",
+  "say": "I know maintenance days don't feel like much, but you closed out work for Seattle Sports, USRF, Western, Madison and Camano on 11/11, and each one came back with a link or a clear explanation. That steady follow-through is what keeps the strategists confident, and I notice it.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-12-jamie-1",
+  "date": "2026-11-12",
+  "person": "Jamie",
+  "headline": "Turned one Adam meeting into a plan across every client",
+  "why": "Right after her brand guidelines meeting with Adam on 11/11, she set up a Brand/Logo Landing Pages master task (1:32 pm) with about 15 client subtasks she thought would benefit, from Gators and JMU to Madison and GemaTEG, then had the Figma updated from his feedback by 4:18 pm. Adam replied overnight: \"the list looks good - please get started.\"",
+  "say": "I liked what you did after your meeting with Adam. You didn't just take notes on the Gators page, you turned it into a plan for every client that could use one and got his sign-off the same day. That's thinking like an owner.",
+  "where": "1:1"
+ },
+ {
+  "id": "2026-11-12-jamie-2",
+  "date": "2026-11-12",
+  "person": "Jamie",
+  "headline": "Rebranded Strive to the Fellowship in under an hour",
+  "why": "Josh assigned her the Strive one-pager rebrand at 4:05 pm on 11/10 because Shane was meeting someone in DC that day. She had the rebranded deck in Adam's hands by 5:01 pm, dropping her brand audit to do it, and talked about it at standup on 11/11 without a word of complaint.",
+  "say": "Thanks for jumping on the Fellowship rebrand for Shane. Turning that around in under an hour so he had it for DC made Josh and the whole team look good.",
+  "where": "Team chat"
  }
 ]
