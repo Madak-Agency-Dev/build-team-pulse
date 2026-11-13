@@ -1545,9 +1545,9 @@
   "person": "Blair",
   "commitment": "Use Thu 11/12 meeting with David for ECA walkthrough",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "Slot is 12:15 pm 11/12 Dev Stack meeting w/ David; not yet confirmed",
-  "checked_on": "2026-11-12"
+  "status": "done",
+  "evidence": "ECA walkthrough held 11/12 after standup; David set up ECA repo + Vercel staging",
+  "checked_on": "2026-11-13"
  },
  {
   "id": "2026-11-11-blair-3",
