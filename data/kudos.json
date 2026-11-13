@@ -448,5 +448,41 @@
   "why": "Josh assigned her the Strive one-pager rebrand at 4:05 pm on 11/10 because Shane was meeting someone in DC that day. She had the rebranded deck in Adam's hands by 5:01 pm, dropping her brand audit to do it, and talked about it at standup on 11/11 without a word of complaint.",
   "say": "Thanks for jumping on the Fellowship rebrand for Shane. Turning that around in under an hour so he had it for DC made Josh and the whole team look good.",
   "where": "Team chat"
+ },
+ {
+  "id": "2026-11-13-david-1",
+  "date": "2026-11-13",
+  "person": "David",
+  "headline": "Brought CAC Wall Panels' site back and fixed the cause",
+  "why": "Peyton flagged the site as down and urgent at 10:08 am on 11/12. By 1:22 pm David had it restored, traced it to the client's app setup pointing cacwallpanels.com at the app, and laid out the fix so it can't recur: host the app on app.cacwallpanels.com and he'll add the DNS record. Peyton closed it with a thank-you minutes later.",
+  "say": "Nice work on CAC Wall Panels. You didn't just get the site back up, you worked out why it went down and gave Peyton a plan so the client's app can't take it down again.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-13-david-2",
+  "date": "2026-11-13",
+  "person": "David",
+  "headline": "Cleared three overdue Adam tasks with extra care",
+  "why": "On 11/12 between 1:33 and 2:45 pm he gave the Gators schedule a thicker outline and a subtle shadow to make it stand out, published the Crusaders Player Residency section, and fixed the Alumni Weekend hotel alt text, asking Adam for the Bloomerang link up front so the ticket buttons can go live the moment it exists. Adam closed all three that night, and David fixed Elli's Seattle Sports mobile nav link 34 minutes after she sent it at 4:23 pm.",
+  "say": "I noticed the little things on Adam's tasks yesterday, like the shadow on the Gators schedule and asking for the Bloomerang link before it was blocking you. That's what makes people trust your work.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-13-jamie-1",
+  "date": "2026-11-13",
+  "person": "Jamie",
+  "headline": "Delivered the evergreen Goff banners on the day due",
+  "why": "At standup on 11/11 the USRF report banners were due 11/12 in Adam's simpler evergreen version. She updated the folder at 1:50 pm on 11/12, and when Adam asked at 10:03 pm for the USRF logo to be added, she had it done by 9:30 am on 11/13.",
+  "say": "Thanks for getting the evergreen Goff banners to Adam on the day you said, and for adding the USRF logo first thing this morning. That kind of follow-through is exactly what I want to see.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-13-jamie-2",
+  "date": "2026-11-13",
+  "person": "Jamie",
+  "headline": "Kept Peyton and Elli moving on the same day",
+  "why": "Alongside Adam's banners on 11/12, she updated Peyton's USA Youth & High School development deck to match the T1 document by 9:53 am, and at 3:56 pm added lockup options for Elli's \"She Belongs in Seattle\" sticker and Giphy for the FIFA Women's World Cup work.",
+  "say": "You kept three strategists moving on Thursday, from Peyton's development deck to Elli's sticker lockups, without anything stalling. That spread is a big help to the whole team.",
+  "where": "Standup"
  }
 ]
