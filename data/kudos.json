@@ -484,5 +484,32 @@
   "why": "Alongside Adam's banners on 11/12, she updated Peyton's USA Youth & High School development deck to match the T1 document by 9:53 am, and at 3:56 pm added lockup options for Elli's \"She Belongs in Seattle\" sticker and Giphy for the FIFA Women's World Cup work.",
   "say": "You kept three strategists moving on Thursday, from Peyton's development deck to Elli's sticker lockups, without anything stalling. That spread is a big help to the whole team.",
   "where": "Standup"
+ },
+ {
+  "id": "2026-11-16-david-1",
+  "date": "2026-11-16",
+  "person": "David",
+  "headline": "Taught the SEO/AEO system so the team can run it",
+  "why": "At the Friday 11/13 huddle he walked everyone through roles, the maintenance and growth tiers, the escalation path and the six Asana templates. When Peyton and Josh said keyword research was new to them, he offered to train them himself and asked for suggestions on his first version. Peyton thanked him on the call, and Adam said it had been loose for a while and now feels tidied up.",
+  "say": "Friday's SEO/AEO walkthrough was the moment it became a team system instead of something only David can do. Offering to train Peyton and Josh yourself is what will make it stick.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-16-david-2",
+  "date": "2026-11-16",
+  "person": "David",
+  "headline": "Gave Elli the straight story on Girls Lead signatures",
+  "why": "When Elli asked on 11/12 (5:51 pm) how to show the roughly 100 signatures already collected, he found the old form had never stored them. He set the counter to 105 from Webflow's submission count, made the form record real signatures from now on and fixed the dropdown, all by 6:55 pm. On 11/13 he hid the signature list eight minutes after Elli asked.",
+  "say": "I liked how you handled Girls Lead. You told Elli plainly why the old signatures were gone, used the real form count so the number stayed accurate, and made sure new ones get saved. That honesty is worth a lot with clients.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-16-david-3",
+  "date": "2026-11-16",
+  "person": "David",
+  "headline": "Built Friday's fixes to last, not just close",
+  "why": "On 11/13 he made the Gators Alumni Weekend section a CMS collection so Adam can update it later (2:06 pm). He built Phinney Ridge's thank-you page and sent the estimate form to it through Pipedrive, then tested it end to end (2:45 pm). He also added the Partners button to Seattle Sports' sticky nav an hour after Elli asked.",
+  "say": "Friday you kept doing the extra step nobody asked for: a CMS collection for Gators so it's easy to update, and testing the Phinney Ridge form through Pipedrive before handing it back. Thanks for building it so we don't have to come back to it.",
+  "where": "Direct message"
  }
 ]
