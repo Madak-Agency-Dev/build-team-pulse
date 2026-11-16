@@ -1628,5 +1628,75 @@
   "status": "done",
   "evidence": "Figma updated from Adam's feedback; Adam approved client list 11/12",
   "checked_on": "2026-11-12"
+ },
+ {
+  "id": "2026-11-16-blair-1",
+  "standup_date": "2026-11-16",
+  "person": "Blair",
+  "commitment": "Finish ECA Email Command Center for client demo Tue 11/17",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-blair-2",
+  "standup_date": "2026-11-16",
+  "person": "Blair",
+  "commitment": "Build client dashboard with Stripe and client onboarding",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-blair-3",
+  "standup_date": "2026-11-16",
+  "person": "Blair",
+  "commitment": "Review and edit Florida Gators logo guidelines page once Jamie sends it",
+  "project": "Florida Gators Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-jamie-1",
+  "standup_date": "2026-11-16",
+  "person": "Jamie",
+  "commitment": "Make Women's World Cup tagline assets for social, blogs and emails (for Elli)",
+  "project": "Seattle FIFA Women's World Cup",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-jamie-2",
+  "standup_date": "2026-11-16",
+  "person": "Jamie",
+  "commitment": "Update USRF brand guide for new logos/pages incl. Fellowship; fix Hall of Fame logo kerning",
+  "project": "US Rugby Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-jamie-3",
+  "standup_date": "2026-11-16",
+  "person": "Jamie",
+  "commitment": "Send Florida Gators logo guidelines page to Blair today",
+  "project": "Florida Gators Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-16-jamie-4",
+  "standup_date": "2026-11-16",
+  "person": "Jamie",
+  "commitment": "Collect logos and send remaining client logo guideline pages (16-17 clients) by Fri 11/20",
+  "project": "Brand guidelines",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
  }
 ]
