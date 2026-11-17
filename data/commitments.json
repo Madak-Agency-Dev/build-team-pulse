@@ -1636,8 +1636,8 @@
   "commitment": "Finish ECA Email Command Center for client demo Tue 11/17",
   "project": "ECA",
   "status": "handoff",
-  "evidence": "Email system ready for Tue demo; reassigned to Peyton with comment (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "evidence": "Done per standup; handed to Peyton 11/16; client demo moved to 11/18",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-blair-2",
@@ -1645,9 +1645,9 @@
   "person": "Blair",
   "commitment": "Build client dashboard with Stripe and client onboarding",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm; Stripe task touched 6:54 pm, no update (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "status": "waiting",
+  "evidence": "Waiting on Adam for account access per 11/17 standup; Stripe task untouched",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-blair-3",
@@ -1655,9 +1655,9 @@
   "person": "Blair",
   "commitment": "Review and edit Florida Gators logo guidelines page once Jamie sends it",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "Jamie's Gators page arrived 4:24 pm; no review activity yet (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "status": "missed",
+  "evidence": "Not reviewed before 11/17 standup; Blair starting review today",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-jamie-1",
@@ -1665,9 +1665,9 @@
   "person": "Jamie",
   "commitment": "Make Women's World Cup tagline assets for social, blogs and emails (for Elli)",
   "project": "Seattle FIFA Women's World Cup",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "status": "handoff",
+  "evidence": "Jamie says sent back to Elli 11/16; no Asana record found",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-jamie-2",
@@ -1675,9 +1675,9 @@
   "person": "Jamie",
   "commitment": "Update USRF brand guide for new logos/pages incl. Fellowship; fix Hall of Fame logo kerning",
   "project": "US Rugby Foundation",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "status": "handoff",
+  "evidence": "Guide PDF updated for Adam's Hall of Fame review per standup; no Asana comment",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-jamie-3",
@@ -1686,8 +1686,8 @@
   "commitment": "Send Florida Gators logo guidelines page to Blair today",
   "project": "Florida Gators Rugby Alumni",
   "status": "done",
-  "evidence": "Sent Gators logo landing page task to Blair 4:24 pm with Figma, files (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "evidence": "Gators logo page task sent to Blair 11/16 4:24 pm with Figma, files",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-16-jamie-4",
@@ -1696,7 +1696,107 @@
   "commitment": "Collect logos and send remaining client logo guideline pages (16-17 clients) by Fri 11/20",
   "project": "Brand guidelines",
   "status": "progress",
-  "evidence": "Gators logo files collected; other brands listed as subtasks, doc to follow (as of 7:15 pm)",
-  "checked_on": "2026-11-16"
+  "evidence": "Gators page sent 11/16; guidelines doc for other brands starts 11/17",
+  "checked_on": "2026-11-17"
+ },
+ {
+  "id": "2026-11-17-blair-1",
+  "standup_date": "2026-11-17",
+  "person": "Blair",
+  "commitment": "Review Florida Gators logo page; set up agent to auto-update subtasks",
+  "project": "Florida Gators Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-blair-2",
+  "standup_date": "2026-11-17",
+  "person": "Blair",
+  "commitment": "Build Stripe dashboard, onboarding and receipts in agency OS once Adam grants access",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-blair-3",
+  "standup_date": "2026-11-17",
+  "person": "Blair",
+  "commitment": "Meet Jose on ECA CRM architecture; pull David in and keep him posted",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-david-1",
+  "standup_date": "2026-11-17",
+  "person": "David",
+  "commitment": "Write Ride the Tide final feedback",
+  "project": "Ride the Tide Collective",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-david-2",
+  "standup_date": "2026-11-17",
+  "person": "David",
+  "commitment": "Catch up on maintenance tasks from time away",
+  "project": "Maintenance",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-david-3",
+  "standup_date": "2026-11-17",
+  "person": "David",
+  "commitment": "Create Sanity project and connect ECA CMS incl. presentation views and env vars",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-david-4",
+  "standup_date": "2026-11-17",
+  "person": "David",
+  "commitment": "Fix ECA site issues: nav hover bug, events date layout, SEO/AEO pass",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-jamie-1",
+  "standup_date": "2026-11-17",
+  "person": "Jamie",
+  "commitment": "Build logo guidelines doc for remaining brands so pages can be swapped quickly",
+  "project": "Brand guidelines",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-jamie-2",
+  "standup_date": "2026-11-17",
+  "person": "Jamie",
+  "commitment": "Work on custom rugby balls for Western (for Josh)",
+  "project": "Western Rugby Alumni",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-17-jamie-3",
+  "standup_date": "2026-11-17",
+  "person": "Jamie",
+  "commitment": "Work on USRF documents",
+  "project": "US Rugby Foundation",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
  }
 ]
