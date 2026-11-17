@@ -511,5 +511,23 @@
   "why": "On 11/13 he made the Gators Alumni Weekend section a CMS collection so Adam can update it later (2:06 pm). He built Phinney Ridge's thank-you page and sent the estimate form to it through Pipedrive, then tested it end to end (2:45 pm). He also added the Partners button to Seattle Sports' sticky nav an hour after Elli asked.",
   "say": "Friday you kept doing the extra step nobody asked for: a CMS collection for Gators so it's easy to update, and testing the Phinney Ridge form through Pipedrive before handing it back. Thanks for building it so we don't have to come back to it.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-17-jamie-1",
+  "date": "2026-11-17",
+  "person": "Jamie",
+  "headline": "Handed off the Gators logo page as a template for 16 brands",
+  "why": "Promised the Florida Gators logo guidelines page at Monday's standup and sent it that afternoon (11/16, 4:24 pm) with the Figma, a Drive folder of Gators logo files for the zip download, and a subtask for each of the other brands. She also offered to put together a doc of every brand's logos and guidelines so they can be swapped in quickly.",
+  "say": "The Gators logo page came in the same day you said it would, and you set it up so it's easy to build on: the files gathered, every brand in a subtask, and a doc on the way. Building once and rolling it out to 16 clients only works because of that prep. Thank you.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-17-jamie-2",
+  "date": "2026-11-17",
+  "person": "Jamie",
+  "headline": "Fixed my upload problem before I finished asking",
+  "why": "At the 11/16 standup Blair had just passed her a file that was too large to upload to the website; she remembered the high-res images from last time, found a compressed version she'd kept, and had it back to him before standup started.",
+  "say": "That compressed file was a quiet save. You remembered the size issue from last time and had the fix back before I'd even explained it. That kind of thinking ahead makes my day easier.",
+  "where": "Direct message"
  }
 ]
