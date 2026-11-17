@@ -1635,9 +1635,9 @@
   "person": "Blair",
   "commitment": "Finish ECA Email Command Center for client demo Tue 11/17",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Email system ready for Tue demo; reassigned to Peyton with comment (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-blair-2",
@@ -1646,8 +1646,8 @@
   "commitment": "Build client dashboard with Stripe and client onboarding",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm; Stripe task touched 6:54 pm, no update (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-blair-3",
@@ -1656,8 +1656,8 @@
   "commitment": "Review and edit Florida Gators logo guidelines page once Jamie sends it",
   "project": "Florida Gators Rugby Alumni",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Jamie's Gators page arrived 4:24 pm; no review activity yet (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-jamie-1",
@@ -1666,8 +1666,8 @@
   "commitment": "Make Women's World Cup tagline assets for social, blogs and emails (for Elli)",
   "project": "Seattle FIFA Women's World Cup",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-jamie-2",
@@ -1676,8 +1676,8 @@
   "commitment": "Update USRF brand guide for new logos/pages incl. Fellowship; fix Hall of Fame logo kerning",
   "project": "US Rugby Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-jamie-3",
@@ -1685,9 +1685,9 @@
   "person": "Jamie",
   "commitment": "Send Florida Gators logo guidelines page to Blair today",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "Sent Gators logo landing page task to Blair 4:24 pm with Figma, files (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  },
  {
   "id": "2026-11-16-jamie-4",
@@ -1695,8 +1695,8 @@
   "person": "Jamie",
   "commitment": "Collect logos and send remaining client logo guideline pages (16-17 clients) by Fri 11/20",
   "project": "Brand guidelines",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Gators logo files collected; other brands listed as subtasks, doc to follow (as of 7:15 pm)",
+  "checked_on": "2026-11-16"
  }
 ]
