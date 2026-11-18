@@ -1705,9 +1705,9 @@
   "person": "Blair",
   "commitment": "Review Florida Gators logo page; set up agent to auto-update subtasks",
   "project": "Florida Gators Rugby Alumni",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-17"
+  "status": "missed",
+  "evidence": "No Asana activity on Gators logo page; not raised at 11/18 standup",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-blair-2",
@@ -1716,8 +1716,8 @@
   "commitment": "Build Stripe dashboard, onboarding and receipts in agency OS once Adam grants access",
   "project": "Madak",
   "status": "handoff",
-  "evidence": "Stripe receipts and onboarding wizard set up; handed to Elli with Loom 5:22 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "evidence": "Stripe receipts and onboarding wizard handed to Elli with Loom 11/17",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-blair-3",
@@ -1726,8 +1726,8 @@
   "commitment": "Meet Jose on ECA CRM architecture; pull David in and keep him posted",
   "project": "ECA",
   "status": "progress",
-  "evidence": "ECA CRM meeting with Jose booked, moved to Wed 3 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "evidence": "ECA CRM meeting with Jose set for 11/18 3 pm; Blair to update David",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-david-1",
@@ -1736,8 +1736,8 @@
   "commitment": "Write Ride the Tide final feedback",
   "project": "Ride the Tide Collective",
   "status": "progress",
-  "evidence": "Final Feedback task edited 5:33 pm, still open, no comment (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "evidence": "Final Feedback still open; only due date moved to 11/18, not discussed",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-david-2",
@@ -1746,8 +1746,8 @@
   "commitment": "Catch up on maintenance tasks from time away",
   "project": "Maintenance",
   "status": "progress",
-  "evidence": "Answered Mailchimp question, rescheduled PRP and CTI/CAC QA tasks (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "evidence": "Closed SEO/AEO SOP 11/18; rescheduled PRP, Mailchimp, Gators, Meyer tasks",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-david-3",
@@ -1755,9 +1755,9 @@
   "person": "David",
   "commitment": "Create Sanity project and connect ECA CMS incl. presentation views and env vars",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-17"
+  "status": "progress",
+  "evidence": "Sanity implemented in ECA site; needs Vercel republish, studio deduped 11/18",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-david-4",
@@ -1765,9 +1765,9 @@
   "person": "David",
   "commitment": "Fix ECA site issues: nav hover bug, events date layout, SEO/AEO pass",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-17"
+  "status": "progress",
+  "evidence": "Said he worked on ECA 11/17; fixes not confirmed, no Asana activity",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-jamie-1",
@@ -1775,9 +1775,9 @@
   "person": "Jamie",
   "commitment": "Build logo guidelines doc for remaining brands so pages can be swapped quickly",
   "project": "Brand guidelines",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm",
-  "checked_on": "2026-11-17"
+  "status": "progress",
+  "evidence": "Brand template for logo pages started; plugging in, due to Blair/David 11/19",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-jamie-2",
@@ -1785,9 +1785,9 @@
   "person": "Jamie",
   "commitment": "Work on custom rugby balls for Western (for Josh)",
   "project": "Western Rugby Alumni",
-  "status": "progress",
-  "evidence": "Josh sent updated ball copy back to Jamie 5:16 pm; due tomorrow (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "status": "handoff",
+  "evidence": "Jamie says Western balls sent 11/17; Josh returned copy edits, task open",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-17-jamie-3",
@@ -1795,8 +1795,108 @@
   "person": "Jamie",
   "commitment": "Work on USRF documents",
   "project": "US Rugby Foundation",
+  "status": "handoff",
+  "evidence": "Jamie says USRF docs sent 11/17; Adam asked for date edits 11/18",
+  "checked_on": "2026-11-18"
+ },
+ {
+  "id": "2026-11-18-blair-1",
+  "standup_date": "2026-11-18",
+  "person": "Blair",
+  "commitment": "Show the ECA site to the client today",
+  "project": "ECA",
   "status": "pending",
-  "evidence": "Only USRF Brand due date pushed to tomorrow, no work logged (as of 7:15 pm)",
-  "checked_on": "2026-11-17"
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-blair-2",
+  "standup_date": "2026-11-18",
+  "person": "Blair",
+  "commitment": "Keep David posted on ECA CRM work with Jose",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-blair-3",
+  "standup_date": "2026-11-18",
+  "person": "Blair",
+  "commitment": "Push Adam to move decks from Google Slides to Claude Slides by 1/1",
+  "project": "Madak",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-david-1",
+  "standup_date": "2026-11-18",
+  "person": "David",
+  "commitment": "Republish ECA site with Sanity in Vercel",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-david-2",
+  "standup_date": "2026-11-18",
+  "person": "David",
+  "commitment": "Have Claude build the ECA Sanity presentation view",
+  "project": "ECA",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-david-3",
+  "standup_date": "2026-11-18",
+  "person": "David",
+  "commitment": "Work through maintenance tasks",
+  "project": "Maintenance",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-jamie-1",
+  "standup_date": "2026-11-18",
+  "person": "Jamie",
+  "commitment": "Finish brand template for logo landing pages; assign to Blair or David by 11/19",
+  "project": "Brand/Logo Landing Pages",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-jamie-2",
+  "standup_date": "2026-11-18",
+  "person": "Jamie",
+  "commitment": "Meet Adam on Ohio State rugby hype deck",
+  "project": "OSU Rugby",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-jamie-3",
+  "standup_date": "2026-11-18",
+  "person": "Jamie",
+  "commitment": "Work on another custom rugby ball with Adam",
+  "project": "Custom rugby balls",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
+ },
+ {
+  "id": "2026-11-18-jamie-4",
+  "standup_date": "2026-11-18",
+  "person": "Jamie",
+  "commitment": "Seattle FIFA Women's World Cup social and email graphics for Elli",
+  "project": "Seattle Sports Commission",
+  "status": "pending",
+  "evidence": "",
+  "checked_on": ""
  }
 ]
