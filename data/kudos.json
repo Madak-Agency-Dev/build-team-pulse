@@ -529,5 +529,41 @@
   "why": "At the 11/16 standup Blair had just passed her a file that was too large to upload to the website; she remembered the high-res images from last time, found a compressed version she'd kept, and had it back to him before standup started.",
   "say": "That compressed file was a quiet save. You remembered the size issue from last time and had the fix back before I'd even explained it. That kind of thinking ahead makes my day easier.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-18-david-1",
+  "date": "2026-11-18",
+  "person": "David",
+  "headline": "Answered Elli's 'easier way?' with a reusable banner component",
+  "why": "Elli asked on 11/16 at 9:14 pm for new Sports Star banners and whether there was an easier way to do it herself. By 12:47 pm on 11/17 he had swapped the banner, added the mascot and photo-of-the-year ads to the main and event pages, and built a Banner Ad Section component she can fill with just an image and a link, already mobile-ready.",
+  "say": "The banner component for Seattle Sports was a smart move. Elli asked if there was an easier way, and instead of just doing the banners again you gave her a way to do them herself. That's the kind of fix that keeps paying off.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-18-david-2",
+  "date": "2026-11-18",
+  "person": "David",
+  "headline": "Shipped Camano's cling and certificate form, tested end to end",
+  "why": "Peyton passed on Jessica's fields on 11/16. On 11/17 at 1:13 pm he had a live Thanks for Renewing page with the cling, certificate and mailing address questions, names and emails filled from the member account, tested with a dummy account. When Peyton asked at 2:29 pm about members who'd already renewed, he answered within a minute.",
+  "say": "Nice work on the Camano renewal form. You tested it with a dummy account before handing it over and had Peyton's follow-up answered in a minute, so she could go straight back to the client.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-18-jamie-1",
+  "date": "2026-11-18",
+  "person": "Jamie",
+  "headline": "Turned Adam's mailer fixes around in 30 minutes and overnight",
+  "why": "Adam asked at 3:35 pm on 11/17 for a signature on the one-page black-and-white mailer; she had it added by 4:05 pm. When he flagged the USRF logo at 10:39 pm, she found it had been squashed and had it fixed by 9:00 am on 11/18, due the same day.",
+  "say": "Saw how fast you handled Adam's mailer changes, the signature in half an hour and the logo fixed first thing this morning. That kind of turnaround is what keeps print jobs on schedule.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-18-jamie-2",
+  "date": "2026-11-18",
+  "person": "Jamie",
+  "headline": "Picked up the Olson logo rollout within minutes",
+  "why": "When I posted that the new Olson logo was live on 11/17 at 1:56 pm, she had Meyer's Afternoon of the Arts page updated by 2:07 pm, moved the Olson logo page task under the Brand/Logo Landing Pages parent so it stays organized, and asked Adam whether to close it out.",
+  "say": "Thanks for jumping on the Olson rollout so fast. You updated the Afternoon of the Arts page within ten minutes and tidied the tasks under the logo pages project without being asked, so nothing gets lost.",
+  "where": "Direct message"
  }
 ]
