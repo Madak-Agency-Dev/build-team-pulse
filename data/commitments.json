@@ -1706,8 +1706,8 @@
   "commitment": "Review Florida Gators logo page; set up agent to auto-update subtasks",
   "project": "Florida Gators Rugby Alumni",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-blair-2",
@@ -1715,9 +1715,9 @@
   "person": "Blair",
   "commitment": "Build Stripe dashboard, onboarding and receipts in agency OS once Adam grants access",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Stripe receipts and onboarding wizard set up; handed to Elli with Loom 5:22 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-blair-3",
@@ -1725,9 +1725,9 @@
   "person": "Blair",
   "commitment": "Meet Jose on ECA CRM architecture; pull David in and keep him posted",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "ECA CRM meeting with Jose booked, moved to Wed 3 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-david-1",
@@ -1735,9 +1735,9 @@
   "person": "David",
   "commitment": "Write Ride the Tide final feedback",
   "project": "Ride the Tide Collective",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Final Feedback task edited 5:33 pm, still open, no comment (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-david-2",
@@ -1745,9 +1745,9 @@
   "person": "David",
   "commitment": "Catch up on maintenance tasks from time away",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Answered Mailchimp question, rescheduled PRP and CTI/CAC QA tasks (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-david-3",
@@ -1756,8 +1756,8 @@
   "commitment": "Create Sanity project and connect ECA CMS incl. presentation views and env vars",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-david-4",
@@ -1766,8 +1766,8 @@
   "commitment": "Fix ECA site issues: nav hover bug, events date layout, SEO/AEO pass",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-jamie-1",
@@ -1776,8 +1776,8 @@
   "commitment": "Build logo guidelines doc for remaining brands so pages can be swapped quickly",
   "project": "Brand guidelines",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-jamie-2",
@@ -1785,9 +1785,9 @@
   "person": "Jamie",
   "commitment": "Work on custom rugby balls for Western (for Josh)",
   "project": "Western Rugby Alumni",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "Josh sent updated ball copy back to Jamie 5:16 pm; due tomorrow (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  },
  {
   "id": "2026-11-17-jamie-3",
@@ -1796,7 +1796,7 @@
   "commitment": "Work on USRF documents",
   "project": "US Rugby Foundation",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "Only USRF Brand due date pushed to tomorrow, no work logged (as of 7:15 pm)",
+  "checked_on": "2026-11-17"
  }
 ]
