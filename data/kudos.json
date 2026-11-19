@@ -565,5 +565,32 @@
   "why": "When I posted that the new Olson logo was live on 11/17 at 1:56 pm, she had Meyer's Afternoon of the Arts page updated by 2:07 pm, moved the Olson logo page task under the Brand/Logo Landing Pages parent so it stays organized, and asked Adam whether to close it out.",
   "say": "Thanks for jumping on the Olson rollout so fast. You updated the Afternoon of the Arts page within ten minutes and tidied the tasks under the logo pages project without being asked, so nothing gets lost.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-19-david-1",
+  "date": "2026-11-19",
+  "person": "David",
+  "headline": "Took CAC's mobile speed from 58 to 91",
+  "why": "In the November CAC Wall Panels tech check (posted 11/18, 5:13 pm), he cut main content load from 10.4s to 3.3s, got accessibility and best practices to 100, fixed two 404 template links, added redirects for two old indexed URLs, corrected the business schema, and shortened meta descriptions on all 10 state pages.",
+  "say": "The CAC tech check was a big one. Mobile from 58 to 91 and load time down from 10 seconds to 3 is a real result for the client, and your write-up made it easy for Peyton to show them exactly what changed.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-19-david-2",
+  "date": "2026-11-19",
+  "person": "David",
+  "headline": "Made the Seattle Rugby site look cohesive again",
+  "why": "He worked through the Seattle Rugby updates sweep and facelift, including the /pathway fixes on 11/17 (aligned columns, navy arrows, matching icons). On 11/18 Kolya wrote that the site 'looks a lot more cohesive and clean', and Adam closed both tasks that night.",
+  "say": "Kolya said the Seattle Rugby site looks a lot more cohesive and clean after your pass, and Adam closed it out the same night. Thanks for sweating the details on that one.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-19-jamie-1",
+  "date": "2026-11-19",
+  "person": "Jamie",
+  "headline": "Set up the USRF scholarship PDFs for next year",
+  "why": "Adam asked at 12:10 pm on 11/18 for the scholarship PDF to use general dates. By 2:41 pm she had the Graham Downes PDF updated on the site and, unasked, made a subtask for each of the roughly 20 scholarships so the new PDFs are attached and ready for the 2027 update.",
+  "say": "Setting up a subtask for every USRF scholarship was smart. You fixed what Adam asked for and made next year's update easy before anyone thought to ask.",
+  "where": "Direct message"
  }
 ]
