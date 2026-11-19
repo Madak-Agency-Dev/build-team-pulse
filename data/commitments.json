@@ -1805,9 +1805,9 @@
   "person": "Blair",
   "commitment": "Show the ECA site to the client today",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "done",
+  "evidence": "ECA x Madak client call 4 pm; Peyton logged client site feedback 5:27 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-blair-2",
@@ -1815,9 +1815,9 @@
   "person": "Blair",
   "commitment": "Keep David posted on ECA CRM work with Jose",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "ECA CRM call with Jose held 3 pm; follow-up Fri; no David update seen (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-blair-3",
@@ -1826,8 +1826,8 @@
   "commitment": "Push Adam to move decks from Google Slides to Claude Slides by 1/1",
   "project": "Madak",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-david-1",
@@ -1835,9 +1835,9 @@
   "person": "David",
   "commitment": "Republish ECA site with Sanity in Vercel",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "QA'd ECA site on Vercel, ready for client; handed to Peyton 2:47 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-david-2",
@@ -1846,8 +1846,8 @@
   "commitment": "Have Claude build the ECA Sanity presentation view",
   "project": "ECA",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-david-3",
@@ -1855,9 +1855,9 @@
   "person": "David",
   "commitment": "Work through maintenance tasks",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "WWU sponsors to Adam (closed), SSC partner slots to Elli; Meyer tasks touched (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-jamie-1",
@@ -1866,8 +1866,8 @@
   "commitment": "Finish brand template for logo landing pages; assign to Blair or David by 11/19",
   "project": "Brand/Logo Landing Pages",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-jamie-2",
@@ -1875,9 +1875,9 @@
   "person": "Jamie",
   "commitment": "Meet Adam on Ohio State rugby hype deck",
   "project": "OSU Rugby",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "progress",
+  "evidence": "OSU hype deck open; only due date moved to Fri 11/20 (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-jamie-3",
@@ -1885,9 +1885,9 @@
   "person": "Jamie",
   "commitment": "Work on another custom rugby ball with Adam",
   "project": "Custom rugby balls",
-  "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "status": "handoff",
+  "evidence": "Updated Western rugby ball, handed to Adam with Drive link 2:05 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  },
  {
   "id": "2026-11-18-jamie-4",
@@ -1896,7 +1896,7 @@
   "commitment": "Seattle FIFA Women's World Cup social and email graphics for Elli",
   "project": "Seattle Sports Commission",
   "status": "pending",
-  "evidence": "",
-  "checked_on": ""
+  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
+  "checked_on": "2026-11-18"
  }
 ]
