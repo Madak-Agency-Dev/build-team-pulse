@@ -592,5 +592,41 @@
   "why": "Adam asked at 12:10 pm on 11/18 for the scholarship PDF to use general dates. By 2:41 pm she had the Graham Downes PDF updated on the site and, unasked, made a subtask for each of the roughly 20 scholarships so the new PDFs are attached and ready for the 2027 update.",
   "say": "Setting up a subtask for every USRF scholarship was smart. You fixed what Adam asked for and made next year's update easy before anyone thought to ask.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-20-david-1",
+  "date": "2026-11-20",
+  "person": "David",
+  "headline": "Answered the Meyer 'cut-off heads' question for good",
+  "why": "On 11/19 at 4:34 pm Adam asked why Meyer photos can't be dragged off and why heads keep getting cut off, a question the client had been raising. By 5:31 pm David had re-cropped the CTA photo and written a plain-language explanation (Lumos image defaults, AVIF, fixed-ratio cropping) plus a rule for future photos; Adam thanked him for the clarification and closed it.",
+  "say": "Your note to Adam on the Meyer photos was great. You fixed the cropped head, but you also explained why it happens in words he can pass to the client, and gave them a rule so it stops coming up.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-20-david-2",
+  "date": "2026-11-20",
+  "person": "David",
+  "headline": "Fixed Meyer's event filtering across the whole site",
+  "why": "On the Meyer events calendar task (11/19, 2:44 pm) he matched the page to the artifact, fixed the filtering, and unasked applied the same fix to the other event pages on the site. Adam replied 'great work' with a new grouping, and David had it in place by 3:00 pm.",
+  "say": "Nice call on the Meyer events work. You didn't stop at the calendar page, you fixed filtering everywhere events show up, and then turned Adam's new grouping around in 15 minutes.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-20-jamie-1",
+  "date": "2026-11-20",
+  "person": "Jamie",
+  "headline": "Delivered the Ohio State hype deck the day she promised",
+  "why": "At the 11/19 standup she said she'd finish the OSU Rugby hype deck that day, and she posted it for Adam at 2:12 pm, a day ahead of his Friday 1 pm PT meeting. She was upfront that the copy was placeholder and that she'd run short on photos.",
+  "say": "Thanks for getting the Ohio State hype deck to Adam yesterday like you said you would. Flagging the placeholder copy and the photo gaps up front was the right move, it gives him time to fill them before his meeting.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-20-jamie-2",
+  "date": "2026-11-20",
+  "person": "Jamie",
+  "headline": "Made a real design call on the Vikings 70 Years ball",
+  "why": "Adam asked on 11/19 (9:23 am) to shrink the '70 years' on the custom rugby ball because the 70 was hard to read. An hour later she sent new files with her reasoning: move the 'Years' down so both parts read clearly while the graphic stays centered and reads as one mark.",
+  "say": "I liked how you handled Adam's note on the 70 Years ball. You didn't just shrink it, you explained the layout choice that keeps it readable and still one mark. That's exactly the kind of thinking that carries over to web design.",
+  "where": "Direct message"
  }
 ]
