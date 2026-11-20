@@ -187,5 +187,68 @@
   "detail": "On 11/3 you laid out the plan: only the three of you keep Figma and Paper seats, and strategists and clients review working prototypes through Claude artifact links and Vercel's comment toolbar. ECA is the first build heading that way, to Vince this week. Vercel Comments on preview deployments are generally available, and you can invite people outside the team to view and comment. Running it once, on a real project, will show whether Peyton and the client actually leave feedback there before the whole team depends on it.",
   "try": "When ECA's next preview goes out, turn on comments, invite Peyton and Vince to comment directly on the page, and ask Peyton afterward what was easier or harder than Figma. Decide on the seats after that.",
   "source": ""
+ },
+ {
+  "id": "2026-11-16-1",
+  "week_of": "2026-11-16",
+  "category": "Leadership",
+  "title": "Stop the nightly roll on your own due dates",
+  "detail": "Something running under your name moves your overdue Asana dates forward at about 11 pm every night. adamlejeunekopp.com has moved nine times since 11/9, even after you told Adam 'something in front of you tomorrow' on 11/12 and 'ready Thursday' on 11/17. 15 of your tasks show as due today, including Claude Bootcamp and the AI SOP. Rolling dates hides which promises are slipping, from you and from the people waiting on them, and you're asking the team to keep the commitments they make at standup.",
+  "try": "Change that automation so a task that has rolled twice gets flagged instead of moved. On Monday, pick the three tasks that matter this short week, give each of the others a real date or drop it, and tell Adam the new date for his site yourself.",
+  "source": "Chris McChesney, Sean Covey and Jim Huling, The 4 Disciplines of Execution: pick a few wildly important goals, because the whirlwind of everything else will otherwise consume all your time."
+ },
+ {
+  "id": "2026-11-16-2",
+  "week_of": "2026-11-16",
+  "category": "Leadership",
+  "title": "Let Jamie build the next logo page herself",
+  "detail": "Jamie sent you the Gators logo page at 4:24 pm on 11/16, the day she promised. You committed to reviewing it on 11/16 and again on 11/17, and both days slipped. The parent task for all 16–17 client pages is now in your Asana, due today, so every page is waiting on one reviewer, and that reviewer is also carrying ECA, the CRM and Adam's site. Jamie is learning web design, and this is a repeatable page she designed and is turning into a template.",
+  "try": "Book 30 minutes with Jamie early next week to build the Gators page together. She then builds the next client's page from her template and assigns it to you for review, and your review takes no more than a day.",
+  "source": "Liz Wiseman, Multipliers: the best leaders stretch people with work just beyond what they can do now, instead of doing it for them, and get more from the team as a result."
+ },
+ {
+  "id": "2026-11-16-3",
+  "week_of": "2026-11-16",
+  "category": "Feedback",
+  "title": "Ask David which of your ECA calls he'd undo",
+  "detail": "While David was out, you took his ECA build \"to the finish line\" (11/16–17). Along the way you changed the map, the team modal, the contact form (now multi-step), the events calendar, partner logos (now shown on hover) and the condensed copy, and told him to \"feel free to go back.\" On 11/18 the client asked for his original map back. On 11/17 you told him to 'create a new project' in Sanity when you meant inside the Madak org, which left the site with two studios and used up most of the 11/18 standup. When you change someone's work without spelling out why, they stop owning it.",
+  "try": "Next week, go through your six ECA changes with David and let him decide which ones stay. Next time you hand him something, write two lines first: the outcome you want and which decisions are his. Then ask him to reply 'I intend to…' before he starts.",
+  "source": "L. David Marquet, Turn the Ship Around!: leaders hand down intent and decision-making rather than instructions, and people respond by stating 'I intend to…' instead of asking for permission."
+ },
+ {
+  "id": "2026-11-16-4",
+  "week_of": "2026-11-16",
+  "category": "Process",
+  "title": "Ask for named tasks, not \"maintenance\"",
+  "detail": "David committed to \"maintenance tasks\" on 11/17, 11/18 and 11/19. Each time, the only Asana change was due dates moving, and six of his tasks moved overnight again into today. Ride the Tide final feedback has slipped since the week of 11/9: missed 11/11, back on 11/17, still open. Adam said at the 11/16 team meeting that closing it is what gets that client to buy hours. A commitment like \"maintenance\" can't miss, so it never tells either of you anything.",
+  "try": "At Monday's standup, ask David to name up to three specific tasks, where done means closed or handed off in Asana by the next standup. Make Ride the Tide final feedback the first one, posted before noon.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-16-5",
+  "week_of": "2026-11-16",
+  "category": "Tools",
+  "title": "Set up main's guardrails before strategists open pull requests",
+  "detail": "On 11/19 you said that within a month strategists will be sending pull requests on the code sites, and that right now every commit shows as 'Claude', so nobody can see who broke the nav. You also mentioned a branches issue on ECA the same day. Commit names solve only half of this. The other half is making sure nothing reaches main, which deploys straight to production on Vercel, without you or David seeing it first.",
+  "try": "Give each person GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_COMMITTER_NAME and GIT_COMMITTER_EMAIL in their Claude environment variables, or the env block of their Claude Code user settings. The email must match their GitHub account, or commits won't link to them. Then add a GitHub ruleset on main that requires a pull request with one approval, plus a CODEOWNERS file that requests you and David automatically. Organization rulesets work on GitHub's Team plan.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-16-6",
+  "week_of": "2026-11-16",
+  "category": "Launches",
+  "title": "Put David on the ECA launch call",
+  "detail": "On 11/17 you told David you wished he could be in the client meeting to present ECA, since \"you and Peyton did the bulk of the work.\" The 11/18 client call was you, Peyton, Vince and Devan. Launch is now waiting on Vince's weekend copy review and the Vercel comments you're adding to staging. That gives you another chance to get the designer in front of the client he designed for.",
+  "try": "Invite David to the next ECA review. Have him walk Vince and Devan through the Vercel comment toolbar and Sanity's Publish button, and have him send the 'it's live' note to the client and the team when it ships.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-16-7",
+  "week_of": "2026-11-16",
+  "category": "Culture",
+  "title": "Give David's Claude-to-Figma workflow ten minutes",
+  "detail": "On 11/19 you asked if anyone had been trying new AI tools. Jamie said not really, and David described designing in Claude and sending it straight to Figma through the Figma MCP, with Lumos variables and text styles already set up. You agreed it fits client work better than Paper and suggested the new SafeTraces-related site as the place to try it. When one person on a small team finds a better way to work, sharing it is how the rest of the team catches up.",
+  "try": "Ask David to show the workflow for ten minutes at Monday's team meeting (11/23), with Jamie there since she's learning web design. Then name it as the default approach for the next new design project that comes in.",
+  "source": ""
  }
 ]
