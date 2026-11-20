@@ -1905,9 +1905,9 @@
   "person": "Blair",
   "commitment": "Finish ECA touch-ups and sort out the branches issue",
   "project": "ECA",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "missed",
+  "evidence": "No ECA Asana/email activity since 11/19 standup; no 11/20 recording",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-blair-2",
@@ -1915,9 +1915,9 @@
   "person": "Blair",
   "commitment": "Build the three Innovation DuPage pages",
   "project": "Innovation DuPage",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "missed",
+  "evidence": "Clean Energy/Spark pages task: only due date moved to 11/20",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-blair-3",
@@ -1925,9 +1925,9 @@
   "person": "Blair",
   "commitment": "Finish Olson Foundation success story (Stability Hub, Stanwood)",
   "project": "Olson Foundation",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "done",
+  "evidence": "Stability Hub story live 11/19 1:05 pm; Peyton closed, told CRC",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-blair-4",
@@ -1935,9 +1935,9 @@
   "person": "Blair",
   "commitment": "Finish Adam's site today",
   "project": "adamlejeunekopp.com",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "handoff",
+  "evidence": "Site sent to Adam for review 11/20 11:22 am; placeholder copy remains",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-blair-5",
@@ -1945,9 +1945,9 @@
   "person": "Blair",
   "commitment": "Standardize commit name attribution via Claude env variables for the team",
   "project": "Madak",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "missed",
+  "evidence": "No Asana or email trace of commit attribution work",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-david-1",
@@ -1956,8 +1956,8 @@
   "commitment": "Polish lingering ECA hover-state bugs (last 5%)",
   "project": "ECA",
   "status": "progress",
-  "evidence": "ECA updates pushed to Vercel 4:28 pm; hover-state fixes not called out (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "evidence": "ECA updates pushed 11/19 4:28 pm; hover fixes not called out",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-david-2",
@@ -1966,8 +1966,8 @@
   "commitment": "Apply Peyton's ECA client updates: original map, button copy",
   "project": "ECA",
   "status": "handoff",
-  "evidence": "Comment 4:28 pm: Peyton's updates made, task reassigned to Peyton (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "evidence": "Peyton's updates made, reassigned to Peyton 11/19 4:28 pm",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-david-3",
@@ -1975,9 +1975,9 @@
   "person": "David",
   "commitment": "Maintenance tasks: Meyer Art Center, Western, Sports Commission",
   "project": "Maintenance",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "progress",
+  "evidence": "Meyer events calendar fixed, Adam closed 11/19; no Western/SSC activity",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-jamie-1",
@@ -1986,8 +1986,8 @@
   "commitment": "Finish the Ohio State rugby hype deck today",
   "project": "OSU Rugby",
   "status": "handoff",
-  "evidence": "Hype deck posted, assigned to Adam 2:12 pm; copy still placeholder (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "evidence": "Deck posted, assigned to Adam 11/19 2:12 pm; copy still placeholder",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-jamie-2",
@@ -1995,9 +1995,9 @@
   "person": "Jamie",
   "commitment": "Phinney printed book updates once Peyton sends them",
   "project": "Phinney Ridge Painting",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm; Peyton sent PRP feedback 4:32 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "handoff",
+  "evidence": "PRP booklet updates done, back to Peyton with questions 11/20 12:23 pm",
+  "checked_on": "2026-11-20"
  },
  {
   "id": "2026-11-19-jamie-3",
@@ -2005,8 +2005,8 @@
   "person": "Jamie",
   "commitment": "Add pages to USA Youth & High School T1 docs once Peyton sends updates",
   "project": "USA Youth & High School Rugby",
-  "status": "pending",
-  "evidence": "No Asana activity by 7:15 pm (as of 7:15 pm)",
-  "checked_on": "2026-11-19"
+  "status": "waiting",
+  "evidence": "No Peyton updates or T1 Asana activity since 11/19",
+  "checked_on": "2026-11-20"
  }
 ]
