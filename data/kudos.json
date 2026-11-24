@@ -664,5 +664,50 @@
   "why": "Her 11/18 brief for updating Madak's social accounts included the asset folder, both profile image options with Adam's preference, and a Clutch header graphic just in case. Jose finished it on 11/19 and she closed it out on 11/20.",
   "say": "Your handoff to Jose on the Madak social profiles was really clear: the files, both options, what Adam prefers, and even a Clutch header just in case. That's why it got done in a day without back and forth.",
   "where": "1:1"
+ },
+ {
+  "id": "2026-11-24-david-1",
+  "date": "2026-11-24",
+  "person": "David",
+  "headline": "Fixed WWU's roster so the client can run it",
+  "why": "Kolya loaded the full 26/27 men's roster into the CMS on 11/20 but nothing changed when she published. On 11/23 by 12:15 pm David switched the filter to 2026-27 and, unasked, made the CMS filter editable from the component so the next season's switch doesn't need us.",
+  "say": "Nice catch on the WWU roster. You didn't just flip it to 26/27, you made it so Kolya can do it herself next year, which is exactly the kind of fix that saves us tickets later.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-24-david-2",
+  "date": "2026-11-24",
+  "person": "David",
+  "headline": "Shipped a year filter for the Sports Star archive",
+  "why": "He staged the Sports Star archive on the test site for Elli on 11/20 (3:03 pm) with a new Year filter that shows each year's winners on every award card, plus a 'See the past winners' button. After her review he made her changes and pushed it live on 11/23 at 7:45 pm.",
+  "say": "The Sports Star archive came out really well. Putting it on staging with clear steps for Elli before going live was the right way to do it, and the year filter makes nine decades of winners easy to browse.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-24-jamie-1",
+  "date": "2026-11-24",
+  "person": "Jamie",
+  "headline": "Took the PRP booklet to client-approved in one afternoon",
+  "why": "On 11/20 she sent Peyton the booklet updates at 12:23 pm, looking up the neighborhoods for three new projects herself, relabeling a spread 'Featured service' because it wasn't a single project, and flagging a leftover TBD. When Peyton answered, she added it and attached a print-ready PDF unasked (3:56 pm). Peyton: 'Client loves it' at 5:37 pm.",
+  "say": "The Phinney Ridge booklet went from updates to client-approved in an afternoon. Looking up the neighborhoods yourself and sending the print-ready PDF before anyone asked is what got it there.",
+  "where": "Standup"
+ },
+ {
+  "id": "2026-11-24-jamie-2",
+  "date": "2026-11-24",
+  "person": "Jamie",
+  "headline": "Carried Elli's World Cup graphics through four rounds",
+  "why": "For Seattle's Women's World Cup bid she delivered the toolkits on 11/13, then on 11/18 designed the email graphic as one continuous Notes-app page instead of separate sections. She turned Elli's date change around in 7 minutes on 11/19 and had Friday's copy changes done by 9:22 am Monday; Elli closed it 11/23.",
+  "say": "Thanks for sticking with the World Cup graphics through every round with Elli. The Notes-app email idea was a smart design call, and the quick turnarounds kept the campaign on schedule.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-24-jamie-3",
+  "date": "2026-11-24",
+  "person": "Jamie",
+  "headline": "Planned ahead to keep work moving around a family service",
+  "why": "On 11/23 she told Elli she'll work part of Wednesday and that her hours may be sporadic around 11/30 and 12/2 for travel to a funeral service on 12/1, so nothing outstanding slips.",
+  "say": "Thanks for the heads-up and for planning around it. Please take the time you need next week. We'll cover anything that comes up, so don't worry about the work.",
+  "where": "Direct message"
  }
 ]
