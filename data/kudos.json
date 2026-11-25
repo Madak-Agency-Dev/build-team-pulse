@@ -709,5 +709,23 @@
   "why": "On 11/23 she told Elli she'll work part of Wednesday and that her hours may be sporadic around 11/30 and 12/2 for travel to a funeral service on 12/1, so nothing outstanding slips.",
   "say": "Thanks for the heads-up and for planning around it. Please take the time you need next week. We'll cover anything that comes up, so don't worry about the work.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-25-david-1",
+  "date": "2026-11-25",
+  "person": "David",
+  "headline": "Steered the Gators hero back to Upcoming Matches",
+  "why": "On the Gators home page task (11/23, 7:56 pm) he pointed out the section is titled \"Upcoming Matches\", so alumni events didn't belong there, and fixed the cramped spacing beside the VS while he was in it. Adam agreed (\"lets stick to Upcoming Matches\"), and on 11/24 at 12:26 pm David set up conditional visibility to hide alumni events there.",
+  "say": "Good call on the Gators hero. You noticed the heading said matches and made the case instead of just adding the events, and Adam agreed. Fixing the VS spacing nobody asked about was a nice touch too.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-25-david-2",
+  "date": "2026-11-25",
+  "person": "David",
+  "headline": "Cleared four overdue Adam tasks across three clients",
+  "why": "On 11/24 he worked through Adam's overdue items: Gators events (12:26 pm), the JMU Open Graph image with Adam's logo and heading changes (12:43 pm), Meyer's home page events ordered Meyer events, then classes, then community (6:20 pm), and the Meyer volunteer page's second button (6:37 pm). Adam closed all four that night without asking for another round.",
+  "say": "You cleared four of Adam's overdue tasks yesterday across Gators, JMU and Meyer, and he closed every one without sending anything back. That's a clean day before the holiday.",
+  "where": "Standup"
  }
 ]
