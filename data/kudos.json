@@ -727,5 +727,32 @@
   "why": "On 11/24 he worked through Adam's overdue items: Gators events (12:26 pm), the JMU Open Graph image with Adam's logo and heading changes (12:43 pm), Meyer's home page events ordered Meyer events, then classes, then community (6:20 pm), and the Meyer volunteer page's second button (6:37 pm). Adam closed all four that night without asking for another round.",
   "say": "You cleared four of Adam's overdue tasks yesterday across Gators, JMU and Meyer, and he closed every one without sending anything back. That's a clean day before the holiday.",
   "where": "Standup"
+ },
+ {
+  "id": "2026-11-26-david-1",
+  "date": "2026-11-26",
+  "person": "David",
+  "headline": "Turned Meyer's messy tags into one clean system",
+  "why": "After Adam flagged mismatched and doubled-up tags on 11/24, David asked a sharp clarifying question at 12:14 pm on 11/25, then by 3:58 pm had six on/off tags in the CMS, tabs that match the cards exactly, and empty sections that hide. He wrote it up so plainly that Adam closed it with \"David, great work! Looks awesome.\"",
+  "say": "The Meyer tags write-up was the model of a good handoff: you checked the one thing that was unclear, built it so Adam can tag anything any way, and explained it so nobody had to ask a follow-up. That's exactly how I want us closing tasks.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-26-david-2",
+  "date": "2026-11-26",
+  "person": "David",
+  "headline": "Put three JMU pages live the afternoon Elli asked",
+  "why": "Elli asked at 1:49 pm on 11/25 to push the Alumni Weekend and In Memoriam pages live and add scholarship links. By 3:06 pm both pages were live on jmurugby.com, and by 4:10 pm he'd added Learn more buttons to the CMS cards and Scholarships to the nav, all the day before Thanksgiving.",
+  "say": "Elli asked for three JMU pieces Wednesday afternoon and they were all live before end of day. Thanks for getting that out the door before the holiday instead of letting it sit.",
+  "where": "Team chat"
+ },
+ {
+  "id": "2026-11-26-david-3",
+  "date": "2026-11-26",
+  "person": "David",
+  "headline": "Owned a Seattle Rugby roster bug and fixed it fast",
+  "why": "When Kolya reported at 1:05 pm on 11/25 that men's positions still weren't showing on hover, David replied 24 minutes later: \"Fixed, there was a bug on my end. Should all be showing now.\" Kolya closed it with a thanks.",
+  "say": "I noticed how you handled Kolya's roster issue: no excuses, just \"bug on my end\" and fixed in under half an hour. Owning it that cleanly is what makes clients trust us.",
+  "where": "Direct message"
  }
 ]
