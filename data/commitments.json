@@ -1945,9 +1945,9 @@
   "person": "Blair",
   "commitment": "Standardize commit name attribution via Claude env variables for the team",
   "project": "Madak",
-  "status": "missed",
-  "evidence": "No Asana or email trace of commit attribution work",
-  "checked_on": "2026-11-20"
+  "status": "progress",
+  "evidence": "Walked team through env vars at 11/20 ECA CRM call; some wait on access",
+  "checked_on": "2026-11-27"
  },
  {
   "id": "2026-11-19-david-1",
