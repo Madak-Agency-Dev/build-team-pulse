@@ -250,5 +250,68 @@
   "detail": "On 11/19 you asked if anyone had been trying new AI tools. Jamie said not really, and David described designing in Claude and sending it straight to Figma through the Figma MCP, with Lumos variables and text styles already set up. You agreed it fits client work better than Paper and suggested the new SafeTraces-related site as the place to try it. When one person on a small team finds a better way to work, sharing it is how the rest of the team catches up.",
   "try": "Ask David to show the workflow for ten minutes at Monday's team meeting (11/23), with Jamie there since she's learning web design. Then name it as the default approach for the next new design project that comes in.",
   "source": ""
+ },
+ {
+  "id": "2026-11-23-1",
+  "week_of": "2026-11-23",
+  "category": "Leadership",
+  "title": "Switch off the rule that rolls your due dates",
+  "detail": "Every night this week at about 11:05 pm ET, all of your overdue tasks moved to the next day within the same second, including Thanksgiving night. AI SOP has moved nine times since 11/18, Elli's Client Dashboard SOP has moved every day since she handed it to you on 11/19, and \"Madak brand: lock it in by Thanksgiving\" went past Thanksgiving. You have 11 tasks due today. Because an automation is doing the rolling, last week's idea to stop the roll couldn't take hold, and the dates no longer tell Elli or Adam anything.",
+  "try": "On Monday, pause the rule. Then give each of the 11 tasks one of three answers: a real date this week, a handoff with a note, or a \"Later\" section with no date. Reply on the Client Dashboard SOP task with the date Elli can actually expect it.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-23-2",
+  "week_of": "2026-11-23",
+  "category": "Meetings",
+  "title": "Keep Adam's calls off the standup slot",
+  "detail": "On Wednesday 11/25 the build team's standup was on the calendar for 12:00 to 12:15 ET, but your recording from 12:03 to 12:29 is the Connection Helix call with Adam. No standup was recorded all week, so for the first time since tracking began, commitments.json has nothing for the week. David and Jamie still delivered, but nobody said out loud what they'd do or followed up the next day.",
+  "try": "Tell Adam that 12:00 to 12:15 is fixed for the build team and offer him 12:20 for anything that comes up. If a call can't move, message David by 11:45 asking him to run standup and record it in Wispr Flow.",
+  "source": "Patrick Lencioni, Death by Meeting: a short daily check-in that happens no matter what keeps a team aligned"
+ },
+ {
+  "id": "2026-11-23-3",
+  "week_of": "2026-11-23",
+  "category": "Launches",
+  "title": "Launch Adam's site without the made-up testimonial",
+  "detail": "Adam's go-live note on adamlejeunekopp.com (11/27, around 1 am ET) says \"I am making up one for launch\" next to a quote from \"Les, VP of Sales\" claiming close rates rose from 18% to 27%. The FTC's Consumer Reviews and Testimonials Rule (16 CFR 465, in force since October 2024, with warning letters already going out) bans testimonials from people who don't exist. The same note changes the Strategic Deep Dive to $500 on madak.com/pricing, which means a new Stripe price and an update to STRIPE_PRICE_DEEP_DIVE in Vercel, not just a copy edit.",
+  "try": "Before you go live, turn Adam's note into a checklist on the task. Launch the testimonials section with real, approved quotes only (check with Adam that Susan's quote is real) or leave it hidden. Make the $500 change in Stripe, Vercel and the Site-wide copy together, then test checkout on the preview.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-23-4",
+  "week_of": "2026-11-23",
+  "category": "Feedback",
+  "title": "Name David's two judgment calls out loud",
+  "detail": "With no standups this week, David's run went unremarked: Sports Star live on 11/23, four overdue Adam tasks cleared on 11/24, Meyer's tag system and three JMU pages live on 11/25, and a Seattle Rugby bug owned and fixed in 24 minutes. Two of these were judgment calls nobody asked for. He made WWU's season filter editable so the client can switch seasons without us (11/23), and he kept GTM off the ECA previews so our own visits don't skew the data (11/25). Those are the instincts you want him to repeat.",
+  "try": "At Monday's team meeting, take two minutes for those two calls specifically. Say what he did and why it matters to a client, not just \"great week.\"",
+  "source": "Kim Scott, Radical Candor: praise should be as specific and sincere as criticism"
+ },
+ {
+  "id": "2026-11-23-5",
+  "week_of": "2026-11-23",
+  "category": "Process",
+  "title": "Stop accepting tasks that arrive already due",
+  "detail": "Elli assigned you \"New Ask\" (Innovation DuPage) at 4:21 pm on 11/24, due 11/24, and the Client Dashboard SOP at 4:19 pm on 11/19, due 11/19. Adam assigned David the Meyer SEO/AEO report at 7:23 pm on 11/25, due 11/25, the night before Thanksgiving, and assigned you two tasks between 1 and 2 am on 11/27, due the same day. When work arrives already overdue, the real deadlines get lost in the red, and the builder looks late from the start.",
+  "try": "At Monday's meeting, propose two rules: whoever assigns a task sets the date they actually need it, and anything assigned after 3 pm is due the next business day at the earliest. Start by asking Adam for real dates on the Alumni Advancement Update and adamlejeunekopp.com.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-23-6",
+  "week_of": "2026-11-23",
+  "category": "Process",
+  "title": "Close Sports Star with the live link",
+  "detail": "The Sports Star Archive task has bounced between David and Elli six times since 11/18. David wrote \"pushed live\" with the URL on 11/23, Elli sent it back on 11/25 with \"Please push live\", and it's still open and overdue with David. Either something didn't publish or the two of them mean different things by \"live\". A task that's done but still open hides the win and adds to David's overdue count.",
+  "try": "On Monday, ask David to check the live seattlesports.org pages against Elli's 11/20 notes, post the links, and close the task. Agree as a team that whoever publishes a change closes the task with the live URL.",
+  "source": ""
+ },
+ {
+  "id": "2026-11-23-7",
+  "week_of": "2026-11-23",
+  "category": "Leadership",
+  "title": "Ask David about print before the plan is set",
+  "detail": "On 11/25 Adam pointed out that Jamie has only two tasks and asked about a short-term print plan. He also wants you mostly on Ask Helix if it sells, with \"somebody else working on websites.\" You said David could take print in Figma, but you hadn't talked to him yet. Both changes affect David's job and Jamie's, and they should hear about them from you before any Asana reassignments show up.",
+  "try": "Before Monday's meeting, spend 20 minutes with David. Ask which print or design work and which code builds he'd want to own, and let him pick; don't assign it. Hold the conversation with Jamie until she's back from travel, on 12/3 or later.",
+  "source": "Daniel Pink, Drive: autonomy over what you work on fuels motivation"
  }
 ]
