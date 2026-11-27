@@ -754,5 +754,23 @@
   "why": "When Kolya reported at 1:05 pm on 11/25 that men's positions still weren't showing on hover, David replied 24 minutes later: \"Fixed, there was a bug on my end. Should all be showing now.\" Kolya closed it with a thanks.",
   "say": "I noticed how you handled Kolya's roster issue: no excuses, just \"bug on my end\" and fixed in under half an hour. Owning it that cleanly is what makes clients trust us.",
   "where": "Direct message"
+ },
+ {
+  "id": "2026-11-27-david-1",
+  "date": "2026-11-27",
+  "person": "David",
+  "headline": "Wired up ECA tracking without counting test visits",
+  "why": "On 11/25 at 5:15 pm ET he installed the GTM container on the live ECA site and deliberately left it off the previews and review link so our own test visits don't skew the numbers. He then gave Jose a two-step handoff (create the GA4 property, add the Google Tag) and Jose confirmed it done by 5:21 pm.",
+  "say": "Keeping GTM off the previews on ECA was a detail most people would miss, and it means the client's numbers are clean from day one. The handoff to Jose was clear enough that he closed it in minutes.",
+  "where": "Direct message"
+ },
+ {
+  "id": "2026-11-27-david-2",
+  "date": "2026-11-27",
+  "person": "David",
+  "headline": "Explained Meyer's Singapore traffic in client-ready terms",
+  "why": "When Adam asked on 11/24 whether anything could be done about Singapore visits, David answered at 6:52 pm ET that it's bot traffic from data-center hubs (Singapore, Ashburn, San Jose, Dallas), that the real visitors are Seattle, Camano and Mount Vernon, and that geo-blocking would need Cloudflare and could hurt SEO. Blair backed the call on 11/25 and Adam closed it.",
+  "say": "Your Singapore answer for Meyer was exactly right: you explained why it's bots, why blocking would hurt SEO, and what to tell the client, all in one comment. That's the kind of judgment that lets the strategists trust your recommendations.",
+  "where": "Team chat"
  }
 ]
